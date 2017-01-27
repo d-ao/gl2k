@@ -1,0 +1,78 @@
+/* DROPDOWN MENÜ */
+  header .dropdown-menu a {
+  background-color: #dbdbdb !important;
+    color: 000;
+    text-transform: capitalize !important;
+  }
+  header .dropdown-menu a:hover {
+    background-color: #9c9c9c !important;
+    color: white !important;
+  }
+  header .dropdown-menu a:active {
+    background-color: #83c03b !important;
+    color: #ffffff !important;
+  }
+
+  footer a {
+    color: black;
+  }
+  footer a:hover {
+      text-decoration: none;
+  }
+
+  /* Product Page */
+.ppt_opc #wsd-checkout-box img.product-image {
+  display: none;
+}
+
+
+#website_cookie_notice {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.55)!important;
+    overflow: hidden;
+    z-index: 9001;
+}
+#website_cookie_notice a {
+    color: #83c03b;
+}
+#website_cookie_notice a.btn.btn-primary {
+    color: white;
+}
+
+.ppt_opc .price_donate {
+    padding: 10px !important;
+    width: 70%;
+    margin: auto;
+}
+.price_donate .form-control {
+    color: black !important;
+}
+
+#wsd_checkout_form .form-control-feedback {
+    top: 0px !important;
+}
+#wsd_checkout_form .billing-fields .form-control-feedback {
+    top: 25px !important;
+  }
+.has-error .control-label {
+    color: #e72e30;
+}
+.text-danger {
+    color: #e72e30;
+}
+
+#wsd_checkout_form select[name="payment_interval_id"] {
+    width: 60%;
+    margin: auto;
+}
+.wsd_confirmation_page .row.wsd_confirmation_page_status {
+    text-align: center;
+}
+
+#payment_method .nav>li>a {
+  padding: 10px 10px;
+}
