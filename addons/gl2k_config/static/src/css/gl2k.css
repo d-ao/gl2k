@@ -193,6 +193,9 @@ footer h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: black !important;
 }
 
+.has-feedback .form-control {
+    padding-right: initial;
+}
 #wsd_checkout_form .form-control-feedback {
     top: 0px !important;
 }
