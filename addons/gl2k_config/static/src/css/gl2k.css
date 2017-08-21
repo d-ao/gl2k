@@ -309,3 +309,9 @@ label.control-label.mandatory.text-danger:after {
 #wsd_checkout_steps_header {
     display: none;
 }
+[data-name='frst-submit-button'] {
+    max-width: 100%;
+}
+[data-name='ogonedadi-submit-button'] {
+    max-width: 100%;
+}
