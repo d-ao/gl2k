@@ -296,8 +296,8 @@ joe end */
     /*content: "\f16b";*/
     content: "\f06c";
 }
-#wsd_checkout_from .mandatory.text-danger {
-    color: black;
+label.control-label.mandatory.text-danger {
+    color: #000000;
 }
 
 /* OnePage Checkout end */
