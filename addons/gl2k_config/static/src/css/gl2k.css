@@ -310,8 +310,8 @@ label.control-label.mandatory.text-danger:after {
     display: none;
 }
 [data-name='frst-submit-button'] {
-    max-width: 100%;
+    max-width: 100% !important;
 }
 [data-name='ogonedadi-submit-button'] {
-    max-width: 100%;
+    max-width: 100% !important;
 }
