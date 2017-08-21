@@ -273,3 +273,39 @@ joe end */
     width: 100%;
 }
 */
+
+/* Checkout Page neu ENDE */
+/* Iframe Modal Box behavior */
+
+#wsd_checkout_form .form-group {
+        position: relative !important;
+}
+.modal-open .modal {
+        overflow: visible !important;
+}
+.modal {
+    position: absolute !important;
+}
+/* BODY SCROLL AFTER ADDING MODAL BEHAVIOR -- STILL NEED TESTS */
+#wsd_checkout_steps_nav > div > div > a.btn.btn-primary.navbar-btn {
+  display: none;
+}
+/* Login buttons end */
+/* Shopping Cart Mini Icon */
+.fa-shopping-cart:before {
+    /*content: "\f16b";*/
+    content: "\f06c";
+}
+#wsd_checkout_from .mandatory.text-danger {
+    color: black;
+}
+
+/* OnePage Checkout end */
+/* Spendenformular Anpassung Pflichtfelder */
+label.control-label.mandatory.text-danger:after {
+    content: '*';
+    color: red;
+}
+#wsd_checkout_steps_header {
+    display: none;
+}
