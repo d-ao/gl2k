@@ -286,6 +286,11 @@ joe end */
 .modal {
     position: absolute !important;
 }
+.modal-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 /* BODY SCROLL AFTER ADDING MODAL BEHAVIOR -- STILL NEED TESTS */
 #wsd_checkout_steps_nav > div > div > a.btn.btn-primary.navbar-btn {
   display: none;
