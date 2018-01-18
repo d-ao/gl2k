@@ -320,3 +320,7 @@ label.control-label.mandatory.text-danger:after {
 [data-name='ogonedadi-submit-button'] {
     max-width: 100% !important;
 }
+/* bitte um Überschrift der OnePage Spendenprodukte */
+.ppt_opc #wsd-checkout-box > div > div > h1 {
+    display: none;
+}
