@@ -324,3 +324,36 @@ label.control-label.mandatory.text-danger:after {
 .ppt_opc #wsd-checkout-box > div > div > h1 {
     display: none;
 }
+
+/* WEBSHOP GRIP CATEGORY BIO KALENDER */
+/*
+body[data-rootcatid="2"] .oe_product.oe_grid.oe-height-2 {
+    height: 200px;
+}
+
+body[data-rootcatid="2"] #products_grid.col-md-9 {
+    width: 100%
+}
+body[data-rootcatid="2"] .oe_product .oe_product_image img {
+    height: auto !important;
+    width: 117px !important;
+    bottom: inherit;
+    max-height: none;
+    max-width: none;
+    margin: initial !important;
+    left: 10px !important;
+    top: 10px !important;
+}*/
+/* WEBSHOP GRIP CATEGORY BIO KALENDER */
+
+/* Hide category navigation menu and regain full width */
+body[data-rootcatid="3"] #products_grid_before {
+    display: none
+}
+body[data-rootcatid="3"] #products_grid .oe_product {
+    width: 180px;
+    height: 180px;
+}
+body[data-rootcatid="3"] oe_product oe_grid oe-height-2 {
+    margin-right: 10px;
+}
