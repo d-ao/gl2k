@@ -353,8 +353,11 @@ body[data-rootcatid="3"] #products_grid_before {
 body[data-rootcatid="3"] #products_grid .oe_product {
     width: 180px;
     height: 180px;
-    margin-right: 5px;
+    margin-right: 4px;
 }
 body[data-rootcatid="3"] oe_product oe_grid oe-height-2 {
     margin-right: 10px;
+}
+body[data-rootcatid="3"] .oe_website_sale .products_pager .input-group {
+    display: none;
 }
