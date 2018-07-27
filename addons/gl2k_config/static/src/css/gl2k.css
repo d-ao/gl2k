@@ -319,6 +319,53 @@ footer h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 }
 
+/* Kategorie */
+body[data-rootcatid="4"] #products_grid_before {
+  }
+/* Kategorie */
+
+/* CUSTOM HEADER BEGIN */
+
+body[data-rootcatid="4"] .domain_template_after_header .navbar-brand>img {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    max-height: 100%;
+   height: 100%;
+   width: auto;
+   margin: 0 auto;
+
+
+   /* probably not needed anymore, but doesn't hurt */
+   -o-object-fit: contain;
+   object-fit: contain;
+}
+body[data-rootcatid="4"] .domain_template_after_header {
+    background-image: url(/website/image/product.template/27_f80f26d/parallax_image);
+    background-position: 0px 0px;
+    background-attachment: scroll;
+    overflow: hidden;
+}
+body[data-rootcatid="4"] .domain_template_after_header .navbar-default {
+    background-image: linear-gradient(to bottom, #fff 0, #fbfbfb 100%);
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+body[data-rootcatid="4"]  .parallax > div {
+    width: inherit;
+}
+
+body[data-rootcatid="4"] {
+    /*color: white;
+    mix-blend-mode: difference;*/
+}
+body[data-rootcatid="4"] .ppt_opc-checkout {
+    background-color: #fcfcfca1;
+}
+/* CUSTOM HEADER END */
+
+
 /* OTHER TESTS */
 /* joe begin tests
 .oe_website_sale.container {
