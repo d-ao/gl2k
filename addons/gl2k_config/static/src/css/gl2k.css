@@ -340,12 +340,12 @@ body[data-rootcatid="4"] .domain_template_after_header .navbar-brand>img {
    -o-object-fit: contain;
    object-fit: contain;
 }
-body[data-rootcatid="4"] .domain_template_after_header {
+/*body[data-rootcatid="4"] .domain_template_after_header {
     background-image: url(/website/image/product.template/27_f80f26d/parallax_image);
     background-position: 0px 0px;
     background-attachment: scroll;
     overflow: hidden;
-}
+}*/
 body[data-rootcatid="4"] .domain_template_after_header .navbar-default {
     background-image: linear-gradient(to bottom, #fff 0, #fbfbfb 100%);
     background-color: transparent !important;
