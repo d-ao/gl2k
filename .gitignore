@@ -29,6 +29,7 @@ target/
 /data_dir
 /log
 /update
+#/devel
 
 # Bash home
 /.bash*
