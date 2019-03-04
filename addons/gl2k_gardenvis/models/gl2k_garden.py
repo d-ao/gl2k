@@ -10,19 +10,20 @@ logger = logging.getLogger(__name__)
 class GL2KGarden(models.Model):
     _name = "gl2k.garden"
 
+    # Filed to watch for geo localization
+    _geo_location_fields = ('zip', 'country_id', 'city')
+
     # ------
     # FIELDS
     # ------
     def _default_country(self):
         austria = self.env['res.country'].search([('code', '=', 'AT')], limit=1)
-        if austria:
-            return austria.id
-        else:
-            return False
+        return austria or False
 
     state = fields.Selection(string="State", selection=[('new', 'New'),
                                                         ('approved', 'Approved'),
                                                         ('rejected', 'Rejected'),
+                                                        ('invalid', 'Invalid'),
                                                         ('disabled', 'Disabled')],
                              default="new")
 
@@ -39,7 +40,7 @@ class GL2KGarden(models.Model):
     zip = fields.Char(string="Zip", required=True)
     street = fields.Char(string="Street")
     city = fields.Char(string="City")
-    country_id = fields.Many2one(string="Country", comodel_name="res.country", readony=True,
+    country_id = fields.Many2one(string="Country", comodel_name="res.country", required=True,
                                  default=_default_country, domain="[('code', '=', 'AT')]")
 
     # garden fields
@@ -55,8 +56,8 @@ class GL2KGarden(models.Model):
     # Will be computed based on zip field by the help of the addon base_location
     cmp_partner_id = fields.Many2one(string="Computed Partner", comodel_name="res.partner", readonly=True)
     cmp_state_id = fields.Many2one(string="Computed State", comodel_name="res.country.state", readonly=True)
-    cmp_county_province = fields.Char(string="Province", readonly=True)
-    cmp_county_province_code = fields.Char(string="Province Code", readonly=True)
+    cmp_county_province = fields.Char(string="Computed Province", readonly=True)
+    cmp_county_province_code = fields.Char(string="Computed Province Code", readonly=True)
     cmp_city = fields.Char(string="Computed City", readonly=True)
 
 
@@ -73,7 +74,7 @@ class GL2KGarden(models.Model):
     # Update fields based on zip field
     # HINT: This will not be stored by the gui since all fields are read only therefore it is added to create and write
     #       Still this is is left here because it is very convenient to see the cmp field values directly
-    @api.onchange('zip', 'city')
+    @api.onchange(*_geo_location_fields)
     def onchange_zip(self):
         for r in self:
             cmp_fields_vals = self.get_cmp_fields_vals(zip=r.zip, country_id=r.country_id.id, city=r.city)
@@ -117,8 +118,14 @@ class GL2KGarden(models.Model):
     @api.model
     def create(self, vals):
 
-        # Update computed fields
-        if vals.get('zip', False) and vals.get('country_id'):
+        country_id = vals.get('country_id', False)
+        # Check for default country
+        if country_id and self._default_country() and country_id != self._default_country().id:
+            logger.error("Country must be Austria!")
+            vals['state'] = 'invalid'
+
+        # Append computed fields values
+        if vals.get('zip', False) and vals.get('country_id', False):
             vals.update(self.get_cmp_fields_vals(zip=vals.get('zip'),
                                                  country_id=vals.get('country_id'),
                                                  city=vals.get('city', '')))
@@ -127,11 +134,21 @@ class GL2KGarden(models.Model):
 
     @api.multi
     def write(self, vals):
+        # Update self first
+        # HINT: res is just a boolean
         res = super(GL2KGarden, self).write(vals)
 
-        # TODO: not the same results as onchange !!
-        if 'zip' in vals or 'country_id' in vals:
-            for r in res:
-                r.write(r.get_cmp_fields_vals(zip=r.zip, country_id=r.country_id.id, city=r.city))
+        # Update computed fields
+        if res and any(f in vals for f in self._geo_location_fields):
+            for r in self:
+                cmp_vals = {}
+                # Check for default country
+                if r.country_id and self._default_country() and r.country_id.id != self._default_country().id:
+                    logger.error("Country must be Austria (ID %s)" % r.id)
+                    cmp_vals['state'] = 'invalid'
+                # Get computed field values
+                cmp_vals.update(r.get_cmp_fields_vals(zip=r.zip, country_id=r.country_id.id, city=r.city))
+                # Update record
+                r.write(cmp_vals)
 
         return res

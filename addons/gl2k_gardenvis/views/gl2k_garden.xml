@@ -28,7 +28,6 @@
                             <field name="city"/>
                             <field name="country_id"/>
                             <field name="garden_size"/>
-                            <field name="garden_image_file" widget="image" filename="garden_image_name"/>
                             <field name="garden_image_name"/>
                         </group>
                         <group string="System Fields" name="computed_system_data">
@@ -42,6 +41,9 @@
                             <field name="email_validated_token"/>
                             <field name="email_validated_time"/>
                         </group>
+                    </group>
+                    <group name="garden_image">
+                        <field name="garden_image_file" widget="image" filename="garden_image_name" class="garden_image_backend"/>
                     </group>
                 </sheet>
             </form>
