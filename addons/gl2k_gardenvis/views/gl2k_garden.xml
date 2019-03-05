@@ -26,16 +26,19 @@
                             <field name="zip"/>
                             <field name="street"/>
                             <field name="city"/>
-                            <field name="country_id"/>
+                            <field name="country_id" options='{"no_open": True, "no_create": True}'/>
                             <field name="garden_size"/>
                             <field name="garden_image_name"/>
                         </group>
                         <group string="System Fields" name="computed_system_data">
                             <field name="id"/>
                             <field name="cmp_partner_id"/>
+                            <field name="cmp_better_zip_id"/>
                             <field name="cmp_state_id"/>
                             <field name="cmp_county_province"/>
                             <field name="cmp_county_province_code"/>
+                            <field name="cmp_community"/>
+                            <field name="cmp_community_code"/>
                             <field name="cmp_city"/>
                             <field name="email_validated"/>
                             <field name="email_validated_token"/>
@@ -44,6 +47,8 @@
                     </group>
                     <group name="garden_image">
                         <field name="garden_image_file" widget="image" filename="garden_image_name" class="garden_image_backend"/>
+                        <field name="cmp_image_file" widget="image" class="garden_image_backend"/>
+                        <field name="cmp_thumbnail_file" widget="image" class="oe_avatar"/>
                     </group>
                 </sheet>
             </form>
@@ -58,14 +63,14 @@
         <field name="arch" type="xml">
             <tree string="Global 2000 Gardens">
                 <field name="email"/>
-                <field name="newsletter"/>
-                <field name="title"/>
                 <field name="firstname"/>
                 <field name="lastname"/>
                 <field name="zip"/>
                 <field name="street"/>
                 <field name="city"/>
                 <field name="country_id"/>
+                <field name="cmp_state_id"/>
+                <field name="cmp_community"/>
                 <field name="garden_size"/>
                 <field name="garden_image_file" widget="image" height="80" display="thumbnail"/>
                 <field name="state"/>
@@ -80,22 +85,24 @@
         <field name="type">search</field>
         <field name="arch" type="xml">
             <search string="Global 2000 Gardens">
-                <field name="email"/>
-                <field name="newsletter"/>
-                <field name="title"/>
-                <field name="firstname"/>
                 <field name="lastname"/>
+                <field name="firstname"/>
+                <field name="cmp_partner_id"/>
+                <field name="email"/>
                 <field name="zip"/>
+                <field name="garden_size"/>
+                
+                <field name="id"/>
+                <field name="state"/>
+
                 <field name="street"/>
                 <field name="city"/>
                 <field name="country_id"/>
-                <field name="garden_size"/>
-                <field name="state"/>
-                <field name="cmp_partner_id"/>
                 <field name="cmp_state_id"/>
-                <field name="cmp_county_province"/>
-                <field name="cmp_county_province_code"/>
-                <field name="cmp_city"/>
+                <field name="cmp_community"/>
+                
+                <field name="newsletter"/>
+                <field name="title"/>
             </search>
         </field>
     </record>
