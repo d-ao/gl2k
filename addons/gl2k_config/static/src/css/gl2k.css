@@ -52,6 +52,10 @@ color: #ffffff !important;
 /* DROPDOWN MENÜ END */
 
 /* SHOP GRID BEGIN */
+/* BUGFIX for Error Message in o8r271 */
+#website_sale_donate > div > div.row.ppt_opc-top > div > div:nth-child(2) > div {
+    display: none;
+}
 /* Hide category navigation menu and regain full width */
 /* ---------------Bio-Kalender-------------- */
 body[data-rootcatid="3"] #products_grid_before {
@@ -68,6 +72,7 @@ body[data-rootcatid="3"] oe_product oe_grid oe-height-2 {
 body[data-rootcatid="3"] .oe_website_sale .products_pager .input-group {
     display: none;
 }
+
 /* ---------------AKW-Mochovce-------------- */
 body[data-rootcatid="5"] #products_grid_before {
     display: none
