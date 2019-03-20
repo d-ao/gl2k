@@ -13,14 +13,14 @@
         <field name="arch" type="xml">
             <form string="Global 2000 Gardens">
                 <header>
-                    <field name="state" widget="statusbar"/>
+                    <field name="state" widget="statusbar" clickable="True"/>
                 </header>
                 <sheet>
                     <group string="Web Input" name="gl2k_garden_data">
                         <group name="form_input">
                             <field name="email"/>
                             <field name="newsletter"/>
-                            <field name="title"/>
+                            <field name="salutation"/>
                             <field name="firstname"/>
                             <field name="lastname"/>
                             <field name="zip"/>
@@ -40,6 +40,8 @@
                             <field name="cmp_community"/>
                             <field name="cmp_community_code"/>
                             <field name="cmp_city"/>
+                            <field name="cmp_latitude"/>
+                            <field name="cmp_longitude"/>
                             <field name="email_validated"/>
                             <field name="email_validated_token"/>
                             <field name="email_validated_time"/>
@@ -102,7 +104,7 @@
                 <field name="cmp_community"/>
                 
                 <field name="newsletter"/>
-                <field name="title"/>
+                <field name="salutation"/>
             </search>
         </field>
     </record>
