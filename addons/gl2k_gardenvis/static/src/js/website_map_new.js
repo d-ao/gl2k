@@ -322,10 +322,10 @@ $(document).ready(function () {
                         var marker = L.marker([stateCenter[i][1], stateCenter[i][2]], {
                             icon: L.divIcon({
     //                            html: '<i id="' + state_data[0][j].cmp_state_id + '" class="fa fa-picture-o iconState" onclick="showGallery()"></i>',
-                                html: '<img id="' + state_data[0][j].cmp_state_id + " bundesland" + '" class="gardenMapIcon" src="/website_map/static/src/img/camera.png" onclick="showGallery(this)">',
+                                html: '<img id="' + state_data[0][j].cmp_state_id + " bundesland" + '" class="gardenMapIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGallery(this)">',
                             })
     //                        icon: L.icon({
-    //                            iconUrl: '/website_map/static/src/img/camera.png',
+    //                            iconUrl: '/gl2k_gardenvis/static/src/img/camera.png',
     //                            iconSize: [40, 40],
     //                        })
                         });
@@ -354,7 +354,7 @@ $(document).ready(function () {
                 var marker = L.marker(communityCenter, {
                     icon: L.divIcon({
     //                    html: '<i id="' + community_data[0][i].cmp_community_code + '" class="fa fa-picture-o iconState" onclick="showGallery()"></i>',
-                        html: '<p class="gardenMapCommunityM2">' + community_data[0][i].garden_size + '</p><img id="' + community_data[0][i].cmp_community_code + " gemeinde" + '" class="gardenMapIcon" src="/website_map/static/src/img/camera.png" onclick="showGallery(this)">',
+                        html: '<p class="gardenMapCommunityM2">' + community_data[0][i].garden_size + '</p><img id="' + community_data[0][i].cmp_community_code + " gemeinde" + '" class="gardenMapIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGallery(this)">',
                     })
                 });
                 communityMarker.push(marker);
@@ -407,9 +407,9 @@ function showGallery(e) {
     var gallery = $('#gardenMapGallery');
 
     gallery.wrapInner('<div id="gardenMapModal" class="gardenModal">' +
-                      '<img class="closeBtnGardenMap" src="/website_map/static/src/img/close.png" onclick="closeGallery()"/>' +
-                      '<img class="moveBtnGardenMapPrev" src="/website_map/static/src/img/arrow-left.png" onclick="moveImg(-1)"/>' +
-                      '<img class="moveBtnGardenMapNext" src="/website_map/static/src/img/arrow-right.png" onclick="moveImg(1)"/>' +
+                      '<img class="closeBtnGardenMap" src="/gl2k_gardenvis/static/src/img/close.png" onclick="closeGallery()"/>' +
+                      '<img class="moveBtnGardenMapPrev" src="/gl2k_gardenvis/static/src/img/arrow-left.png" onclick="moveImg(-1)"/>' +
+                      '<img class="moveBtnGardenMapNext" src="/gl2k_gardenvis/static/src/img/arrow-right.png" onclick="moveImg(1)"/>' +
                       '<div class="gardenMapModalContent">' +
                       '<div class="gardenMapFrontImageContainer">' +
                       '<img id="gardenMapFrontImage" src="/website/image/gl2k.garden/' + galleryData.record_ids[0] + '/cmp_image_file">' +
