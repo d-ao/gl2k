@@ -328,9 +328,9 @@ class GL2KGarden(models.Model):
             vals['state'] = 'invalid'
 
         # Append computed fields values
-        if vals.get('zip', False) and vals.get('country_id', False):
+        if vals.get('zip', False):
             vals.update(self.get_cmp_fields_vals(zip=vals.get('zip'),
-                                                 country_id=vals.get('country_id'),
+                                                 country_id=vals.get('country_id', self._default_country().id),
                                                  city=vals.get('city', '')))
 
         # Create the record
