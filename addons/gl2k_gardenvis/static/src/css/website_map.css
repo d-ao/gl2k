@@ -81,12 +81,34 @@
     .gardenMapColumn {
         height: 20% !important;
     }
-    .gardenMapFrontImageContainer {
-          text-align: center;
+    div.gardenMapFrontImageContainer {
+        text-align: center;
+    }
+    div.gardenMapFrontImageContainer:before {    /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+}
+    img.moveBtnGardenMapPrev {
+        top: 45% !important;
+        height: 10vh
+    }
+    img.moveBtnGardenMapNext {
+        top: 45% !important;
+        height: 10vh
     }
     #gardenMapFrontImage {
+        display: inline-block;
+        vertical-align: middle;
         min-width: initial !important;
         margin-left: auto !important;
+        height: auto !important;
+        max-width: 100%;
+        left: 0;
+        top: 25%;
+        bottom: 25%;
+
     }
     img.gardenMapThumbnail {
         height: 80% !important;
@@ -271,6 +293,21 @@ img.hover-shadow {
     .gardenMapFrontImageContainer {
           text-align: center;
     }
+    div.gardenMapFrontImageContainer:before {    /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+}
+    img.moveBtnGardenMapPrev {
+        top: 45% !important;
+        height: 10vh
+    }
+    img.moveBtnGardenMapNext {
+        top: 45% !important;
+        height: 10vh
+    }
+
     #gardenMapFrontImage {
         min-width: initial !important;
         margin-left: auto !important;
