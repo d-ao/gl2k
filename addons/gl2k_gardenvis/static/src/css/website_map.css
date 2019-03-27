@@ -92,11 +92,11 @@
 }
     img.moveBtnGardenMapPrev {
         top: 45% !important;
-        height: 10vh
+        height: 10vh !important;
     }
     img.moveBtnGardenMapNext {
         top: 45% !important;
-        height: 10vh
+        height: 10vh !important;
     }
     #gardenMapFrontImage {
         display: inline-block;
@@ -301,11 +301,11 @@ img.hover-shadow {
 }
     img.moveBtnGardenMapPrev {
         top: 45% !important;
-        height: 10vh
+        height: 10vh;
     }
     img.moveBtnGardenMapNext {
         top: 45% !important;
-        height: 10vh
+        height: 10vh;
     }
 
     #gardenMapFrontImage {
