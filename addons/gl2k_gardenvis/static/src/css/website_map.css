@@ -69,8 +69,32 @@
 
 @media only screen and (max-width: 768px) {
 	#gardenMapInfoBox {
-	    display: none;
+	    /*display: none;*/
 	}
+    #gardenMap {
+        height: 400px !important;
+    }
+    .gardenMapModalContent {
+        height: 80% !important;
+        width: auto !important;
+    }
+    .gardenMapColumn {
+        height: 20% !important;
+    }
+    .gardenMapFrontImageContainer {
+          text-align: center;
+    }
+    #gardenMapFrontImage {
+        min-width: initial !important;
+        margin-left: auto !important;
+    }
+    img.gardenMapThumbnail {
+        height: 80% !important;
+    }
+    #gardenMapGallery {
+        padding: 10px !important;
+        /*height: 380px !important;*/
+    }
 }
 
 /*@media only screen and (min-width: 768px) and (max-width: 1200px) {*/
@@ -208,3 +232,56 @@ img.hover-shadow {
 .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+/* EXAMPLE resize Image */
+/*.gardenMapFrontImageContainer {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 34.37% 0 0 0;
+}
+
+.gardenMapFrontImageContainer img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}*/
+
+/* OVERWRITE ALL EXISTING STUFF FOR GENERAL for USE of gallery */
+	#gardenMapInfoBox {
+	    /*display: none;*/
+	}
+    #gardenMap {
+        height: 600px !important;
+    }
+    .gardenMapModalContent {
+        height: 80% !important;
+        width: auto !important;
+    }
+    .gardenMapColumn {
+        height: 20% !important;
+    }
+    .gardenMapFrontImageContainer {
+          text-align: center;
+    }
+    #gardenMapFrontImage {
+        min-width: initial !important;
+        margin-left: auto !important;
+    }
+    img.gardenMapThumbnail {
+        height: 80% !important;
+
+       /* height: 80% !important;*/
+    }
+    #gardenMapGallery {
+        padding: 10px !important;
+        background-color: #808080c7 !important;
+        /*height: 380px !important;*/
+    }
