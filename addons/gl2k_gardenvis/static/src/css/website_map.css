@@ -92,12 +92,13 @@
 }
     img.moveBtnGardenMapPrev {
         top: 45% !important;
-        height: 10vh !important;
+        height: 10% !important;
     }
     img.moveBtnGardenMapNext {
         top: 45% !important;
-        height: 10vh !important;
+        height: 10% !important;
     }
+
     #gardenMapFrontImage {
         display: inline-block;
         vertical-align: middle;
@@ -303,14 +304,22 @@ img.hover-shadow {
         top: 45% !important;
         height: 10vh;
     }
+    img.moveBtnGardenMapPrev:hover {
+         background-color: rgba(120, 187, 64, 0.55) !important;
+    }
     img.moveBtnGardenMapNext {
         top: 45% !important;
         height: 10vh;
     }
+    img.moveBtnGardenMapNext:hover {
+         background-color: rgba(120, 187, 64, 0.55) !important;
+    }
+
 
     #gardenMapFrontImage {
         min-width: initial !important;
         margin-left: auto !important;
+        max-width: 100% !important;
     }
     img.gardenMapThumbnail {
         height: 80% !important;
