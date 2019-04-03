@@ -392,7 +392,10 @@ $(document).ready(function () {
 function showGallery(e) {
 
     // Disable Map Controls
-    $('.leaflet-control-layers').hide();
+    gardenMap.dragging.disable();
+    gardenMap.touchZoom.disable();
+    gardenMap.doubleClickZoom.disable();
+    gardenMap.scrollWheelZoom.disable();
 
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
     var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
@@ -432,7 +435,11 @@ function showGallery(e) {
 
 function closeGallery() {
     // Enable map Control
-    $('.leaflet-control-layers').show();
+    gardenMap.dragging.enable();
+    gardenMap.touchZoom.enable();
+    gardenMap.doubleClickZoom.enable();
+    gardenMap.scrollWheelZoom.enable();
+
     $('#gardenMapModal').remove();
     document.getElementById('gardenMapGallery').style.display = "none";
     document.getElementById('gardenMap').style.display = "block";
@@ -471,9 +478,9 @@ function selectImg(id) {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-//window.onclick = function(event) {
-//    var gardenGallery = document.getElementById('gardenMapGallery');
-//    if (event.target == gardenGallery) {
-//        closeGallery();
-//    }
-//}
+window.onclick = function(event) {
+    var gardenGallery = $('#gardenMapGallery');
+    if (event.target == gardenGallery) {
+        closeGallery();
+    }
+}
