@@ -14,12 +14,10 @@ $(document).ready(function () {
     // $('#gardenMap').after('<div id="gardenMapGallery"/>');
 
     // BY MIKE
-    if ($('#gardenMapInfoBox') && $('#gardenMapGallery')) {
 
-    } else {
-        $('#gardenMap').append('<div id="gardenMapInfoBox"/>');
-        $('#gardenMap').append('<div id="gardenMapGallery"/>');
-    }
+    $('#gardenMap').append('<div id="gardenMapInfoBox"/>');
+    $('#gardenMap').append('<div id="gardenMapGallery"/>');
+
 
     var jsonDomain = 'https://demo.datadialog.net';
 
@@ -89,22 +87,22 @@ $(document).ready(function () {
         addGeoJsonState();
         addGeoJsonCommunity();
 //        addGeoJsonBorder();
-//        addMarkerState();
-//        showInfoBox();
+        addMarkerState();
+        showInfoBox();
 
         gardenMap.on('zoomend', function () {
             var zoomLevel = gardenMap.getZoom();
             if (zoomLevel < 10) {
                 gardenMap.removeLayer(geoAustriaCommunities);
                 removeMarkerCommunity();
-//                addMarkerState();
+                addMarkerState();
                 gardenMap.addLayer(geoAustriaState);
             } else if ((zoomLevel >= 10) && (zoomLevel < 11)) {
                 gardenMap.removeLayer(geoAustriaState);
                 removeMarkerState();
                 gardenMap.addLayer(geoAustriaCommunities);
             } else if (zoomLevel >= 11) {
-//                addMarkerCommunity();
+                addMarkerCommunity();
             }
         });
     }
@@ -261,14 +259,14 @@ $(document).ready(function () {
 
     function communityFilter(feature) {
         if (feature.properties.rtype === 'gemeinde') {
-//            setArea(feature);
+            setArea(feature);
             return true;
         }
     }
 
     function stateFilter(feature) {
         if (feature.properties.rtype === 'bundesland') {
-//            setArea(feature);
+            setArea(feature);
             return true;
         }
     }
@@ -395,6 +393,7 @@ function showGallery(e) {
 
     // Disable Map Controls
     $('.leaflet-control-layers').hide();
+
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
     var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
 
@@ -509,36 +508,3 @@ window.onclick = function(event) {
         closeGallery();
     }
 }
-
-(function () {
-    'use strict';
-
-    openerp.website.EditorBar = openerp.website.EditorBar.extend({
-        edit: function () {
-            /**
-             * website/static/src(js/website.editor.js@339
-             *
-             * This is called when the Edit button in the editor toolbar is clicked
-             *
-             * Allows to disable and enable ckeditor editing by classes for snipped dom elements.
-             * Since classes will survive "saving" this will be reapplied on every edit start whereas
-             * the "contenteditable" attribute would be removed on save!
-             */
-            console.log($( "body .ckediting_disabled" ).attr( "contenteditable", "false" ));
-            console.log($( "body .ckediting_enabled" ).attr( "contenteditable", "true" ));
-//
-//            // Show E-Mail settings in edit mode by default
-//            $( "#email_template_settings" ).collapse('show');
-//            $( "#email_template_settings" ).addClass('in');
-//
-            return this._super.apply(this, arguments);
-            console.log('EDIT init');
-//            if (gardenMap && gardenMap.remove) {
-//                gardenMap.off();
-//                gardenMap.remove();
-//            }
-        }
-    });
-
-})();
-

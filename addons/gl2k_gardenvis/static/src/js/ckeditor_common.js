@@ -3,13 +3,10 @@
 
     openerp.website.EditorBar.include({
 
-        start: function () {
-            // console.log('START');
-            return this._super();
-        },
-
         edit: function () {
             // console.log('EDIT');
+            $('#gardenMapInfoBox').remove();
+            $('#gardenMapGallery').remove();
             return this._super.apply(this, arguments);
         },
 
