@@ -2,6 +2,8 @@
 
 var state_data_glo = [];
 var community_data_glo = [];
+var gardenMap;
+
 
 $(document).ready(function () {
 'use strict';
@@ -16,11 +18,11 @@ $(document).ready(function () {
     $('#gardenMap').append('<div id="gardenMapInfoBox"/>');
     $('#gardenMap').append('<div id="gardenMapGallery"/>');
 
+
     var jsonDomain = 'https://demo.datadialog.net';
 
     /* CONFIG END */
 
-    var gardenMap;
     var state_data = null, community_data = null;
     var galleryData;
 
@@ -388,6 +390,13 @@ $(document).ready(function () {
 //-----------------------------------------------------------------------------------
 // GardenMap Gallery
 function showGallery(e) {
+
+    // Disable Map Controls
+    gardenMap.dragging.disable();
+    gardenMap.touchZoom.disable();
+    gardenMap.doubleClickZoom.disable();
+    gardenMap.scrollWheelZoom.disable();
+
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
     var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
 
@@ -418,13 +427,20 @@ function showGallery(e) {
                       '</div>');
 
     insertThumbnail(galleryData);
-    console.log(document.getElementById('gardenMapFrontImage'));
+//    console.log(document.getElementById('gardenMapFrontImage'));
 
     //document.getElementById('gardenMap').style.display = "none";
     document.getElementById('gardenMapGallery').style.display = "block";
 }
 
 function closeGallery() {
+    // Enable map Control
+    gardenMap.dragging.enable();
+    gardenMap.touchZoom.enable();
+    gardenMap.doubleClickZoom.enable();
+    gardenMap.scrollWheelZoom.enable();
+
+    $('#gardenMapModal').remove();
     document.getElementById('gardenMapGallery').style.display = "none";
     document.getElementById('gardenMap').style.display = "block";
 }
@@ -439,38 +455,6 @@ function insertThumbnail(galleryData) {
     }
 }
 
-//function querryImage(id, thumb) {
-//        var jsonDomain = 'https://demo.datadialog.net';
-//
-//        try {
-//
-//            var jsonParams = {"params": {
-//                                  "thumbnail_record_ids": thumb,
-//                                  "image_record_id": id
-//                              }};
-//
-//            $.ajax({
-//                url: jsonDomain + "/gl2k/garden/image",
-//                type: 'POST',
-//                contentType: 'application/json; charset=utf-8',
-//                dataType: 'json',
-//                data: JSON.stringify(jsonParams),
-//                error: function (data) {
-//                    console.log('ERROR');
-//                    console.log(data);
-//
-//                    return;
-//                },
-//                success: function (data) {
-//                    console.log('SUCCESS');
-//                    console.log(data);
-//                }
-//            });
-//        } catch (error) {
-//            console.log('Error', error);
-//            return;
-//        }
-//}
 
 var slideIndex = 1;
 
@@ -489,6 +473,14 @@ function moveImg(n) {
 function selectImg(id) {
     var frontImage = document.getElementById('gardenMapFrontImage');
     frontImage.src = '/website/image/gl2k.garden/' + id + '/cmp_image_file';
-    frontImage.parentElement.style.display = 'block';
+//    frontImage.parentElement.style.display = 'block';
     console.log(frontImage);
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    var gardenGallery = $('#gardenMapGallery');
+    if (event.target == gardenGallery) {
+        closeGallery();
+    }
 }
