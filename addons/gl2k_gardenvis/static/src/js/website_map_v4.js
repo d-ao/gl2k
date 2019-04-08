@@ -191,19 +191,21 @@ $(document).ready(function () {
             var zoomLevel = gardenMap.getZoom();
 
             // Display states
-            if (zoomLevel < 10) {
+            if (zoomLevel < 9) {
 
                 // Hide the communities
                 gardenMap.removeLayer(communityMarkerLayerGroup);
                 gardenMap.removeLayer(communityLayer);
 
                 // Add the stateMarkers
+                gardenMap.addLayer(stateLayer);
                 gardenMap.addLayer(stateMarkerLayerGroup);
 
             // Display communities
-            } else if (zoomLevel >= 10) {
+            } else if (zoomLevel >= 9) {
 
                 // Remove the stateMarkers
+                gardenMap.removeLayer(stateLayer);
                 gardenMap.removeLayer(stateMarkerLayerGroup);
 
                 // Display the communities
@@ -229,7 +231,7 @@ $(document).ready(function () {
         }
 
         return {
-            weight: 2,
+            weight: 1,
             opacity: 1,
             color: "#008543",
             dashArray: "",
@@ -240,8 +242,8 @@ $(document).ready(function () {
 
     function stateOnEachFeature(feature, layer) {
         layer.on({
-            mouseover: highlightFeature,
-            mouseout: resetHighlightState,
+            // mouseover: highlightFeature,
+            // mouseout: resetHighlightState,
             click: zoomToFeature,
         });
     }
@@ -258,9 +260,9 @@ $(document).ready(function () {
 
         return {
             weight: 1,
-            opacity: 0.4,
+            opacity: 0.6,
             color: '#006d2c',
-            dashArray: "6",
+            dashArray: "4",
             fillOpacity: opacity,
             fillColor: '#006d2c',
         };
@@ -280,8 +282,9 @@ $(document).ready(function () {
     function highlightFeature(e) {
         var layer = e.target;
         layer.setStyle({
-            weight: 4,
+            weight: 2,
             color: "#007a3b",
+            opacity: 1,
             dashArray: "",
         });
         if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
