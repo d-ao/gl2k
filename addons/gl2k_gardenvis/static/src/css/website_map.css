@@ -70,6 +70,9 @@
 }
 
 
+
+
+
 /* ---------------------------------------------------- */
 /* STUFF FOR MODAL BOX - NOT FULLY NAMESPACED RIGHT NOW */
 /* ---------------------------------------------------- */
@@ -214,15 +217,9 @@ img.hover-shadow {
   right: 0;
 }*/
 
+/* ----------------------------------------------------------- */
 /* OVERWRITE ALL EXISTING STUFF FOR GENERAL for USE of gallery */
-#gardenMapInfoBox {
-    /*display: none;*/
-}
-
-#gardenMap {
-    height: 600px !important;
-}
-
+/* ----------------------------------------------------------- */
 .gardenMapModalContent {
     height: 80% !important;
     width: auto !important;
