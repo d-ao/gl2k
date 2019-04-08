@@ -1,6 +1,14 @@
+/* ---------- */
+/* GARDEN MAP */
+/* ---------- */
 #gardenMap {
      height: 600px;
      position: relative;
+}
+@media (max-width: 768px) {
+    #gardenMap {
+         height: 400px;
+    }
 }
 
 .leaflet-map-pane svg {
@@ -8,24 +16,9 @@
     height: unset;
 }
 
-/* /website/static/src/css/website.css defined in bundle 'website.assets_frontend' */
-/* TODO remove this media stuff !!! */
-/*@media screen and (max-width: 768px) {*/
-  /*body #gardenMap img {*/
-    /*-webkit-transform: inherit !important;*/
-    /*-moz-transform: inherit !important;*/
-    /*-ms-transform: inherit !important;*/
-    /*-o-transform: inherit !important;*/
-    /*transform: inherit !important;*/
-  /*}*/
-/*}*/
-
-
 .leaflet-div-icon {
     border: none;
     background-color: transparent;
-
-
 }
 
 /* hack for control container */
@@ -33,7 +26,6 @@
     left: unset;
     right: 10px;
 }
-
 
 .gardenMapIcon {
     width: 40px;
@@ -44,9 +36,11 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-
 }
 
+/* -------- */
+/* INFO BOX */
+/* -------- */
 #gardenMapInfoBox {
     background: white;
     z-index: 500;
@@ -58,6 +52,7 @@
     top: 22px;
     left: 22px;
     position: absolute;
+    font-size: 12px;
 }
 #gardenMapInfoBox p{
     margin: 0 0 0.25em 0;
@@ -66,71 +61,13 @@
     font-weight: bold;
     font-size: 16px;
 }
-
-@media only screen and (max-width: 768px) {
-	#gardenMapInfoBox {
-	    /*display: none;*/
-	}
-    #gardenMap {
-        height: 400px !important;
-    }
-    .gardenMapModalContent {
-        height: 80% !important;
-        width: auto !important;
-    }
-    .gardenMapColumn {
-        height: 20% !important;
-    }
-    div.gardenMapFrontImageContainer {
-        text-align: center;
-    }
-    div.gardenMapFrontImageContainer:before {    /* create a full-height inline block pseudo=element */
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle;  /* vertical alignment of the inline element */
-    height: 100%;
-}
-    img.moveBtnGardenMapPrev {
-        top: 45% !important;
-        height: 10% !important;
-    }
-    img.moveBtnGardenMapNext {
-        top: 45% !important;
-        height: 10% !important;
-    }
-
-    #gardenMapFrontImage {
-        display: inline-block;
-        vertical-align: middle;
-        min-width: initial !important;
-        margin-left: auto !important;
-        height: auto !important;
-        max-width: 100%;
-        left: 0;
-        top: 25%;
-        bottom: 25%;
-
-    }
-    img.gardenMapThumbnail {
-        height: 80% !important;
-    }
-    #gardenMapGallery {
-        padding: 10px !important;
-        /*height: 380px !important;*/
+@media (max-width: 414px) {
+    #gardenMapInfoBox,
+    #gardenMapInfoBox p,
+    #gardenMapInfoBox .totalgardensize {
+        font-size: 11px;
     }
 }
-
-/*@media only screen and (min-width: 768px) and (max-width: 1200px) {*/
-	/*#gardenMapInfoBox {*/
-        /*left: 20%;*/
-	/*}*/
-/*}*/
-
-/*@media only screen and (min-width: 1200px) {*/
-	/*#gardenMapInfoBox {*/
-        /*margin-left: 30%;*/
-	/*}*/
-/*}*/
 
 
 /* ---------------------------------------------------- */
@@ -278,12 +215,75 @@ img.hover-shadow {
 }*/
 
 /* OVERWRITE ALL EXISTING STUFF FOR GENERAL for USE of gallery */
-	#gardenMapInfoBox {
-	    /*display: none;*/
-	}
-    #gardenMap {
-        height: 600px !important;
-    }
+#gardenMapInfoBox {
+    /*display: none;*/
+}
+
+#gardenMap {
+    height: 600px !important;
+}
+
+.gardenMapModalContent {
+    height: 80% !important;
+    width: auto !important;
+}
+
+.gardenMapColumn {
+    height: 20% !important;
+}
+
+.gardenMapFrontImageContainer {
+    text-align: center;
+}
+
+div.gardenMapFrontImageContainer:before { /* create a full-height inline block pseudo=element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+img.moveBtnGardenMapPrev {
+    top: 45% !important;
+    height: 10vh;
+}
+
+img.moveBtnGardenMapPrev:hover {
+    background-color: rgba(120, 187, 64, 0.55) !important;
+}
+
+img.moveBtnGardenMapNext {
+    top: 45% !important;
+    height: 10vh;
+}
+
+img.moveBtnGardenMapNext:hover {
+    background-color: rgba(120, 187, 64, 0.55) !important;
+}
+
+
+#gardenMapFrontImage {
+    min-width: initial !important;
+    margin-left: auto !important;
+    max-width: 100% !important;
+}
+
+img.gardenMapThumbnail {
+    height: 80% !important;
+
+    /* height: 80% !important;*/
+}
+
+#gardenMapGallery {
+    padding: 10px !important;
+    background-color: #808080c7 !important;
+    /*height: 380px !important;*/
+}
+
+
+/* <= 768px for image gallery */
+/* -------------------------- */
+@media only screen and (max-width: 768px) {
     .gardenMapModalContent {
         height: 80% !important;
         width: auto !important;
@@ -291,8 +291,8 @@ img.hover-shadow {
     .gardenMapColumn {
         height: 20% !important;
     }
-    .gardenMapFrontImageContainer {
-          text-align: center;
+    div.gardenMapFrontImageContainer {
+        text-align: center;
     }
     div.gardenMapFrontImageContainer:before {    /* create a full-height inline block pseudo=element */
     content: ' ';
@@ -302,32 +302,30 @@ img.hover-shadow {
 }
     img.moveBtnGardenMapPrev {
         top: 45% !important;
-        height: 10vh;
-    }
-    img.moveBtnGardenMapPrev:hover {
-         background-color: rgba(120, 187, 64, 0.55) !important;
+        height: 10% !important;
     }
     img.moveBtnGardenMapNext {
         top: 45% !important;
-        height: 10vh;
+        height: 10% !important;
     }
-    img.moveBtnGardenMapNext:hover {
-         background-color: rgba(120, 187, 64, 0.55) !important;
-    }
-
 
     #gardenMapFrontImage {
+        display: inline-block;
+        vertical-align: middle;
         min-width: initial !important;
         margin-left: auto !important;
-        max-width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        left: 0;
+        top: 25%;
+        bottom: 25%;
+
     }
     img.gardenMapThumbnail {
         height: 80% !important;
-
-       /* height: 80% !important;*/
     }
     #gardenMapGallery {
         padding: 10px !important;
-        background-color: #808080c7 !important;
         /*height: 380px !important;*/
     }
+}
