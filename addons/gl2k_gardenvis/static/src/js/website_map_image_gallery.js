@@ -2,6 +2,9 @@
 // GardenMap Gallery
 // -----------------
 
+// Variable to disable click Events while Gallery is active
+var gardenMapGalleryActive = false;
+
 // Set fotorama default values
 var fotoramaDefaults = {
     auto: false,                //if true automatically loads fotorama
@@ -34,6 +37,9 @@ function _showGardenMapGallery(e) {
     gardenMap.touchZoom.disable();
     gardenMap.doubleClickZoom.disable();
     gardenMap.scrollWheelZoom.disable();
+    gardenMap.boxZoom.disable();
+    $(".leaflet-control-zoom").css("visibility", "hidden");
+    gardenMapGalleryActive = true;
 
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
     var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
@@ -80,6 +86,9 @@ function closeGardenMapGallery() {
     gardenMap.touchZoom.enable();
     gardenMap.doubleClickZoom.enable();
     gardenMap.scrollWheelZoom.enable();
+    gardenMap.boxZoom.enable();
+    $(".leaflet-control-zoom").css("visibility", "block");
+    gardenMapGalleryActive = false;
 
     $('#gardenMapModal').remove();
     document.getElementById('gardenMapGallery').style.display = "none";

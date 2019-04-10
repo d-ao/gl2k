@@ -280,6 +280,9 @@ $(document).ready(function () {
     // ------------------------------
 
     function highlightFeature(e) {
+        if (gardenMapGalleryActive === true) {
+            return;
+        }
         var layer = e.target;
         layer.setStyle({
             weight: 2,
@@ -293,12 +296,21 @@ $(document).ready(function () {
     }
 
     function resetHighlightState(e) {
+        if (gardenMapGalleryActive === true) {
+            return;
+        }
         stateLayer.resetStyle(e.target);
     }
     function resetHighlightCommunity(e) {
+        if (gardenMapGalleryActive === true) {
+            return;
+        }
         communityLayer.resetStyle(e.target);
     }
     function zoomToFeature(e) {
+        if (gardenMapGalleryActive === true) {
+            return;
+        }
         gardenMap.fitBounds(e.target.getBounds());
     }
 
