@@ -23,7 +23,7 @@
 #gardenMapLocationId {
     color: #83c03b;
     font-size: 40px;
-    width: 350px;
+    width: 530px;
     text-align: center;
     background: rgb(255, 255, 255, 0.75);
     border-radius: 10px;
@@ -67,5 +67,6 @@
     }
     #gardenMapLocationId {
         text-align: left;
+        font-size: 15px;
     }
 }
