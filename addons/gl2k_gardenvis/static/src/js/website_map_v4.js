@@ -332,7 +332,7 @@ $(document).ready(function () {
                     // create a new marker
                     var marker = L.marker(stateCenters[stateName], {
                         icon: L.divIcon({
-                            html: '<img id="' + state_data_map[stateName].cmp_state_id + " bundesland" + '" class="gardenMapIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
+                            html: '<img id="' + state_data_map[stateName].cmp_state_id + " bundesland" + '" class="gardenMapMarkerIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
                         }),
                     });
                     // add it to the list
@@ -366,7 +366,7 @@ $(document).ready(function () {
                 var communityCenter = [parseFloat(community.latitude), parseFloat(community.longitude)];
                 var marker = L.marker(communityCenter, {
                     icon: L.divIcon({
-                        html: '<p class="gardenMapCommunityM2">' + community.garden_size + '</p><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
+                        html: '<p class="gardenMapCommunityM2">' + community.garden_size + ' m²</p><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
                     })
                 });
                 // add it to the list
@@ -393,105 +393,3 @@ $(document).ready(function () {
     }
 
 });
-
-
-
-// -----------------
-// GardenMap Gallery
-// -----------------
-function showGardenMapGallery(e) {
-    try {
-        _showGardenMapGallery(e)
-    } catch (e) {
-        console.log('Exception on showGardenMapGallery! ', e);
-        closeGardenMapGallery()
-    }
-}
-
-function _showGardenMapGallery(e) {
-
-    // Disable Map Controls
-    gardenMap.dragging.disable();
-    gardenMap.touchZoom.disable();
-    gardenMap.doubleClickZoom.disable();
-    gardenMap.scrollWheelZoom.disable();
-
-    var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
-    var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
-
-    if (callerIDName === 'bundesland') {
-        for (var i = 0; i < state_data_glo.length; i++) {
-            if (callerID === state_data_glo[i].cmp_state_id) {
-                gardenMapGalleryData = state_data_glo[i];
-            }
-        }
-    } else if (callerIDName === 'gemeinde') {
-        for (var i = 0; i < community_data_glo.length; i++) {
-            if (String(callerID) === community_data_glo[i].cmp_community_code) {
-                gardenMapGalleryData = community_data_glo[i];
-            }
-        }
-    }
-
-    var gallery = $('#gardenMapGallery');
-
-    gallery.wrapInner('<div id="gardenMapModal" class="gardenModal">' +
-        '<img class="closeBtnGardenMap" src="/gl2k_gardenvis/static/src/img/close.png" onclick="closeGardenMapGallery()"/>' +
-        '<img class="moveBtnGardenMapPrev" src="/gl2k_gardenvis/static/src/img/arrow-left.png" onclick=" moveGardenMapImg(-1)"/>' +
-        '<img class="moveBtnGardenMapNext" src="/gl2k_gardenvis/static/src/img/arrow-right.png" onclick=" moveGardenMapImg(1)"/>' +
-        '<div class="gardenMapModalContent">' +
-        '<div class="gardenMapFrontImageContainer">' +
-        '<img id="gardenMapFrontImage" src="/website/image/gl2k.garden/' + gardenMapGalleryData.thumbnail_record_ids[0] + '/cmp_image_file">' +
-        '</div>' +
-        '</div>');
-
-    insertGardenMapThumbnail(gardenMapGalleryData);
-//    console.log(document.getElementById('gardenMapFrontImage'));
-
-    //document.getElementById('gardenMap').style.display = "none";
-    document.getElementById('gardenMapGallery').style.display = "block";
-}
-
-function closeGardenMapGallery() {
-    // Enable map Control
-    gardenMap.dragging.enable();
-    gardenMap.touchZoom.enable();
-    gardenMap.doubleClickZoom.enable();
-    gardenMap.scrollWheelZoom.enable();
-
-    $('#gardenMapModal').remove();
-    document.getElementById('gardenMapGallery').style.display = "none";
-    document.getElementById('gardenMap').style.display = "block";
-}
-
-function insertGardenMapThumbnail(gardenMapGalleryData) {
-    var galleryModal = $('#gardenMapModal');
-
-    for (var i = 0; i < gardenMapGalleryData.thumbnail_record_ids.length; i++) {
-        galleryModal.append('<div class="gardenMapColumn">' +
-            '<img class="gardenMapThumbnail" src="/website/image/gl2k.garden/' + gardenMapGalleryData.thumbnail_record_ids[i] + '/cmp_thumbnail_file " onclick="selectGardenMapImg(' + gardenMapGalleryData.thumbnail_record_ids[i] + ')"/>' +
-            '</div>');
-    }
-}
-
-
-var slideIndexGardenMapImg = 1;
-
-function  moveGardenMapImg(n) {
-    (slideIndexGardenMapImg += n);
-    if ((slideIndexGardenMapImg < gardenMapGalleryData.thumbnail_record_ids.length) && (slideIndexGardenMapImg > 0)) {
-
-    } else if (slideIndexGardenMapImg < 0) {
-        slideIndexGardenMapImg = gardenMapGalleryData.thumbnail_record_ids.length - 1;
-    } else {
-        slideIndexGardenMapImg = 0
-    }
-    selectGardenMapImg(gardenMapGalleryData.thumbnail_record_ids[slideIndexGardenMapImg]);
-}
-
-function selectGardenMapImg(id) {
-    var frontImage = document.getElementById('gardenMapFrontImage');
-    frontImage.src = '/website/image/gl2k.garden/' + id + '/cmp_image_file';
-    // frontImage.parentElement.style.display = 'block';
-    console.log(frontImage);
-}
