@@ -27,17 +27,28 @@
     right: 10px;
 }
 
-.gardenMapIcon {
+/* -------- */
+/*  Marker  */
+/* -------- */
+.gardenMapCommunityM2 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 70px;
+    margin: auto;
+    /*position: relative;
+    top: -20px;*/
+}
+.gardenMapMarkerIcon {
     width: 40px;
     height: 40px;
 }
-
-.gardenMapCommunityM2 {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
+.gardenMapCommunityMakerImg {
+    width: 40px;
+    height: 40px;
+    /*position: relative;
+    top: -20px;*/
 }
-
 /* -------- */
 /* INFO BOX */
 /* -------- */
@@ -66,263 +77,5 @@
     #gardenMapInfoBox p,
     #gardenMapInfoBox .totalgardensize {
         font-size: 11px;
-    }
-}
-
-
-
-
-
-/* ---------------------------------------------------- */
-/* STUFF FOR MODAL BOX - NOT FULLY NAMESPACED RIGHT NOW */
-/* ---------------------------------------------------- */
-/* The Modal (background) */
-#gardenMapGallery {
-    display: none;
-
-    position: relative;
-    z-index: 3000;
-    height: 100%;
-    width: 90%;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-    background-color: grey;
-}
-
-#gardenMapModal {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-/* Modal Content */
-.gardenMapModalContent {
-    position: relative;
-    background-color: transparent;
-    margin: auto;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.gardenMapFrontImageContainer {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* The Close Button */
-.closeBtnGardenMap {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 60px;
-    padding: 10px;
-    z-index: 3900;
-    border-radius: 30px;
-    background-color: lightslategray;
-}
-
-.closeBtnGardenMap:hover,
-.closeBtnGardenMap:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/*FrontImage*/
-#gardenMapFrontImage {
-    height: 100%;
-    min-width: 100%;
-}
-
-/* Next & previous buttons */
-.moveBtnGardenMapPrev,
-.moveBtnGardenMapNext {
-    cursor: pointer;
-    position: absolute;
-    z-index: 3005;
-    top: 50%;
-    width: auto;
-    padding: 6px;
-    margin-top: -50px;
-    /*color: white;*/
-    color: lightslategray;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    /*border-radius: 0 3px 3px 0;*/
-    user-select: none;
-    -webkit-user-select: none;
-    /*height: 60px;*/
-    /*border-radius: 30px;*/
-    /*background-color: lightslategray;*/
-    /*height: 120px;*/
-}
-
-/* Position the "next button" to the right */
-.moveBtnGardenMapNext {
-    right: 0;
-    /*border-radius: 3px 0 0 3px;*/
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.moveBtnGardenMapPrev:hover,
-.moveBtnGardenMapNext:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.gardenMapColumn {
-    padding: 8px;
-    float: left;
-}
-
-img.gardenMapThumbnail {
-    opacity: 0.6;
-}
-
-.active,
-.gardenMapThumbnail:hover {
-    opacity: 1;
-}
-
-img.hover-shadow {
-    transition: 0.3s;
-}
-
-.hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-/* EXAMPLE resize Image */
-/*.gardenMapFrontImageContainer {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  padding: 34.37% 0 0 0;
-}
-
-.gardenMapFrontImageContainer img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}*/
-
-/* ----------------------------------------------------------- */
-/* OVERWRITE ALL EXISTING STUFF FOR GENERAL for USE of gallery */
-/* ----------------------------------------------------------- */
-.gardenMapModalContent {
-    height: 80% !important;
-    width: auto !important;
-}
-
-.gardenMapColumn {
-    height: 20% !important;
-}
-
-.gardenMapFrontImageContainer {
-    text-align: center;
-}
-
-div.gardenMapFrontImageContainer:before { /* create a full-height inline block pseudo=element */
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle; /* vertical alignment of the inline element */
-    height: 100%;
-}
-
-img.moveBtnGardenMapPrev {
-    top: 45% !important;
-    height: 10vh;
-}
-
-img.moveBtnGardenMapPrev:hover {
-    background-color: rgba(120, 187, 64, 0.55) !important;
-}
-
-img.moveBtnGardenMapNext {
-    top: 45% !important;
-    height: 10vh;
-}
-
-img.moveBtnGardenMapNext:hover {
-    background-color: rgba(120, 187, 64, 0.55) !important;
-}
-
-
-#gardenMapFrontImage {
-    min-width: initial !important;
-    margin-left: auto !important;
-    max-width: 100% !important;
-}
-
-img.gardenMapThumbnail {
-    height: 80% !important;
-
-    /* height: 80% !important;*/
-}
-
-#gardenMapGallery {
-    padding: 10px !important;
-    background-color: #808080c7 !important;
-    /*height: 380px !important;*/
-}
-
-
-/* <= 768px for image gallery */
-/* -------------------------- */
-@media only screen and (max-width: 768px) {
-    .gardenMapModalContent {
-        height: 80% !important;
-        width: auto !important;
-    }
-    .gardenMapColumn {
-        height: 20% !important;
-    }
-    div.gardenMapFrontImageContainer {
-        text-align: center;
-    }
-    div.gardenMapFrontImageContainer:before {    /* create a full-height inline block pseudo=element */
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle;  /* vertical alignment of the inline element */
-    height: 100%;
-}
-    img.moveBtnGardenMapPrev {
-        top: 45% !important;
-        height: 10% !important;
-    }
-    img.moveBtnGardenMapNext {
-        top: 45% !important;
-        height: 10% !important;
-    }
-
-    #gardenMapFrontImage {
-        display: inline-block;
-        vertical-align: middle;
-        min-width: initial !important;
-        margin-left: auto !important;
-        height: auto !important;
-        max-width: 100%;
-        left: 0;
-        top: 25%;
-        bottom: 25%;
-
-    }
-    img.gardenMapThumbnail {
-        height: 80% !important;
-    }
-    #gardenMapGallery {
-        padding: 10px !important;
-        /*height: 380px !important;*/
     }
 }
