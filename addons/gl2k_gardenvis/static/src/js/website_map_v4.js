@@ -124,6 +124,7 @@ $(document).ready(function () {
         var cornerTop = L.latLng(49.009, 9.245),
             cornerBottom = L.latLng(46.294, 17.155),
             boundary = L.latLngBounds(cornerTop, cornerBottom);
+
         gardenMap = L.map('gardenMap', {
             center: [47.564, 13.364],
             zoom: 7,
@@ -158,7 +159,7 @@ $(document).ready(function () {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 12,
             minZoom: 7,
-            //bounds: tilemapboundary,
+            // bounds: tilemapboundary,
         }).addTo(gardenMap);
 
         // States GeoJson Layer
@@ -224,19 +225,38 @@ $(document).ready(function () {
     // ------
     function stateStyle(feature) {
         // get opacity from garden data
+        var gsp;
         var opacity = 0;
+        var fill='#9ee436';
         var featureStateName = filterName(feature.properties.name);
         if (featureStateName in state_data_map) {
-            opacity = state_data_map[featureStateName].garden_size_peg
+            gsp = state_data_map[featureStateName].garden_size_peg;
+
+            if (gsp > 0.01 && gsp <= 0.15) {
+                opacity = 0.3;
+                fill = '#9ee436';
+            } else if (gsp > 0.15 && gsp <= 0.3 ) {
+                opacity = 0.3;
+                fill = '#76b837';
+            } else if (gsp > 0.3 && gsp <= 0.45 ) {
+                opacity = 0.45;
+                fill = '#689e18';
+            } else if (gsp > 0.45 && gsp <= 0.6 ) {
+                opacity = 0.45;
+                fill = '#227708';
+            } else if (gsp > 0.6 && gsp <= 1 ) {
+                opacity = 0.45;
+                fill = '#055300';
+            }
         }
 
         return {
             weight: 1,
             opacity: 1,
-            color: "#008543",
+            color: "#3c3c3b",
             dashArray: "",
             fillOpacity: opacity,
-            fillColor: '#006d2c',
+            fillColor: fill,
         };
     }
 
@@ -251,20 +271,37 @@ $(document).ready(function () {
     // communities
     // -----------
     function communityStyle(feature) {
-        // get opacity from garden data
+        var gsp;
         var opacity = 0;
+        var fill='#9ee436';
         var featureCommunityName = filterName(feature.properties.name);
         if (featureCommunityName in community_data_map) {
-            opacity = community_data_map[featureCommunityName].garden_size_peg
+            gsp = community_data_map[featureCommunityName].garden_size_peg;
+            if (gsp > 0.01 && gsp <= 0.15) {
+                opacity = 0.3;
+                fill = '#9ee436';
+            } else if (gsp > 0.15 && gsp <= 0.3 ) {
+                opacity = 0.3;
+                fill = '#76b837';
+            } else if (gsp > 0.3 && gsp <= 0.45 ) {
+                opacity = 0.45;
+                fill = '#689e18';
+            } else if (gsp > 0.45 && gsp <= 0.6 ) {
+                opacity = 0.45;
+                fill = '#227708';
+            } else if (gsp > 0.6 && gsp <= 1 ) {
+                opacity = 0.45;
+                fill = '#055300';
+            }
         }
 
         return {
             weight: 1,
-            opacity: 0.6,
-            color: '#006d2c',
+            opacity: 0.8,
+            color: '#3c3c3b',
             dashArray: "4",
             fillOpacity: opacity,
-            fillColor: '#006d2c',
+            fillColor: fill,
         };
     }
 
@@ -280,13 +317,13 @@ $(document).ready(function () {
     // ------------------------------
 
     function highlightFeature(e) {
-        if (gardenMapGalleryActive === true) {
-            return;
-        }
+        // if (gardenMapGalleryActive === true) {
+        //     return;
+        // }
         var layer = e.target;
         layer.setStyle({
             weight: 2,
-            color: "#007a3b",
+            color: "#37493a",
             opacity: 1,
             dashArray: "",
         });
@@ -296,21 +333,21 @@ $(document).ready(function () {
     }
 
     function resetHighlightState(e) {
-        if (gardenMapGalleryActive === true) {
-            return;
-        }
+        // if (gardenMapGalleryActive === true) {
+        //     return;
+        // }
         stateLayer.resetStyle(e.target);
     }
     function resetHighlightCommunity(e) {
-        if (gardenMapGalleryActive === true) {
-            return;
-        }
+        // if (gardenMapGalleryActive === true) {
+        //     return;
+        // }
         communityLayer.resetStyle(e.target);
     }
     function zoomToFeature(e) {
-        if (gardenMapGalleryActive === true) {
-            return;
-        }
+        // if (gardenMapGalleryActive === true) {
+        //     return;
+        // }
         gardenMap.fitBounds(e.target.getBounds());
     }
 
@@ -344,7 +381,7 @@ $(document).ready(function () {
                     // create a new marker
                     var marker = L.marker(stateCenters[stateName], {
                         icon: L.divIcon({
-                            html: '<img id="' + state_data_map[stateName].cmp_state_id + " bundesland" + '" class="gardenMapMarkerIcon" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
+                            html: '<img id="' + state_data_map[stateName].cmp_state_id + " bundesland" + '" class="gardenMapMarkerIcon" src="/gl2k_gardenvis/static/src/img/CameraIcon.png" onclick="showGardenMapGallery(this)">',
                         }),
                     });
                     // add it to the list
@@ -378,7 +415,7 @@ $(document).ready(function () {
                 var communityCenter = [parseFloat(community.latitude), parseFloat(community.longitude)];
                 var marker = L.marker(communityCenter, {
                     icon: L.divIcon({
-                        html: '<p class="gardenMapCommunityM2">' + community.garden_size + ' m²</p><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/camera.png" onclick="showGardenMapGallery(this)">',
+                        html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/CameraIcon.png" onclick="showGardenMapGallery(this)"><p class="gardenMapCommunityMakerText">' + community.garden_size + ' m²</p></div></div>',
                     })
                 });
                 // add it to the list
@@ -400,8 +437,7 @@ $(document).ready(function () {
         for (var i = 0; i < state_data[0].length; i++) {
             maxGardenSize = maxGardenSize + state_data[0][i].garden_size;
         }
-        $("#gardenMapInfoBox").wrapInner("<p class='totalgardensize'>" + maxGardenSize + " m²</p>" +
-            "<p>Nationalpark in<br/>Österreichs Gärten");
+        $("#gardenMapInfoBox").wrapInner("<div class='totalgardensize'><img class='gardenMapInfoBoxBg' src='/gl2k_gardenvis/static/src/img/Zaehler-3.png'/><p class='gardenMapInfoBoxText'>" + maxGardenSize + " m²</p></div>");
     }
 
 });

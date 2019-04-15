@@ -38,7 +38,7 @@ function _showGardenMapGallery(e) {
     gardenMap.doubleClickZoom.disable();
     gardenMap.scrollWheelZoom.disable();
     gardenMap.boxZoom.disable();
-    $(".leaflet-control-zoom").css("visibility", "hidden");
+    // $(".leaflet-control-zoom").css("visibility", "hidden");
     gardenMapGalleryActive = true;
 
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
@@ -87,12 +87,12 @@ function closeGardenMapGallery() {
     gardenMap.doubleClickZoom.enable();
     gardenMap.scrollWheelZoom.enable();
     gardenMap.boxZoom.enable();
-    $(".leaflet-control-zoom").css("visibility", "block");
+    // $(".leaflet-control-zoom").css("visibility", "block");
     gardenMapGalleryActive = false;
 
     $('#gardenMapModal').remove();
     document.getElementById('gardenMapGallery').style.display = "none";
-    document.getElementById('gardenMap').style.display = "block";
+    // document.getElementById('gardenMap').style.display = "block";
 }
 
 // Create Image/Thumbnail Data for fotorama

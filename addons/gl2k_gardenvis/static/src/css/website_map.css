@@ -4,11 +4,7 @@
 #gardenMap {
      height: 600px;
      position: relative;
-}
-@media (max-width: 768px) {
-    #gardenMap {
-         height: 400px;
-    }
+
 }
 
 .leaflet-map-pane svg {
@@ -27,55 +23,92 @@
     right: 10px;
 }
 
+
 /* -------- */
 /*  Marker  */
 /* -------- */
-.gardenMapCommunityM2 {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    width: 70px;
-    margin: auto;
-    /*position: relative;
-    top: -20px;*/
-}
 .gardenMapMarkerIcon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+.gardenMapCommunityMaker {
+    width: auto;
+    text-align: center;
+    font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.gardenMapCommunityMaker .gardenMapCommunityMakerOuter {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
 }
 .gardenMapCommunityMakerImg {
-    width: 40px;
-    height: 40px;
-    /*position: relative;
-    top: -20px;*/
+    width: 60px;
 }
+
+.gardenMapCommunityMakerText {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto;
+    color: #3c3c3b;
+    width: max-content;
+    min-width: 30px;
+}
+
+
+
+
 /* -------- */
 /* INFO BOX */
 /* -------- */
 #gardenMapInfoBox {
-    background: white;
-    z-index: 500;
-    padding: 15px 30px;
-    border-bottom-right-radius: 45px;
-    border-top-left-radius: 45px;
-    border: 2px solid rgba(201,214,186, .25);
-    width: 175px;
-    top: 22px;
-    left: 22px;
     position: absolute;
-    font-size: 12px;
-}
-#gardenMapInfoBox p{
-    margin: 0 0 0.25em 0;
+    top: 28px;
+    left: 28px;
+    z-index: 500;
+    background: transparent;
+    border: none;
+    width: 175px;
+    font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
 }
 #gardenMapInfoBox .totalgardensize {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+#gardenMapInfoBox .totalgardensize img.gardenMapInfoBoxBg {
+    width: 100%;
+}
+#gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
+    position: absolute;
+    top: 11px;
+    z-index: 505;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
     font-weight: bold;
-    font-size: 16px;
+    color: #76b837;
 }
-@media (max-width: 414px) {
-    #gardenMapInfoBox,
-    #gardenMapInfoBox p,
-    #gardenMapInfoBox .totalgardensize {
-        font-size: 11px;
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media (max-width: 768px) {
+    #gardenMap {
+         height: 400px;
     }
+    #gardenMapInfoBox {
+        width: 145px;
+        top: 18px;
+        left: 18px;
+    }
+    #gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
+        top: 10px;
+        width: 100%;
+        font-size: 22px;
+    }
+
 }
+
