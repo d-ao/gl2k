@@ -2,14 +2,31 @@
 /* GARDEN MAP */
 /* ---------- */
 #gardenMap {
-     height: 600px;
-     position: relative;
-
+    height: 600px;
+    background: white;
+    /*position: relative;*/
 }
 
+/* remove svg styles from web_graph addon for leaflet.js */
 .leaflet-map-pane svg {
+    -webkit-touch-callout: unset;
+    -webkit-user-select: unset;
+    -khtml-user-select: unset;
+    -moz-user-select: unset;
+    -ms-user-select: unset;
+    user-select: unset;
+    /* Trying to get SVG to act like a greedy block in all browsers */
+    display: unset;
     width: unset;
     height: unset;
+}
+
+.leaflet-map-pane svg text {
+    font: unset;
+}
+
+.leaflet-map-pane svg .title {
+    font: unset;
 }
 
 .leaflet-div-icon {
@@ -34,30 +51,33 @@
 
 
 .gardenMapCommunityMaker {
-    width: auto;
+    width: max-content;
     text-align: center;
     font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
+    position: absolute;
+    min-width: 130px;
 }
 
 .gardenMapCommunityMaker .gardenMapCommunityMakerOuter {
-    width: 100%;
+    width: max-content;
     margin: 0 auto;
     position: absolute;
+    text-align: center;
+    left: -60px;
 }
+
 .gardenMapCommunityMakerImg {
     width: 60px;
 }
 
 .gardenMapCommunityMakerText {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0 auto;
     color: #3c3c3b;
     width: max-content;
-    min-width: 30px;
+    min-width: 130px;
 }
-
-
 
 
 /* -------- */
@@ -67,24 +87,27 @@
     position: absolute;
     top: 28px;
     left: 28px;
-    z-index: 500;
+    z-index: 540;
     background: transparent;
     border: none;
     width: 175px;
     font-family: "Nunito Sans", "Open Sans", "Roboto", Helvetica, Arial, sans-serif;
 }
+
 #gardenMapInfoBox .totalgardensize {
     position: relative;
     margin: 0 auto;
     width: 100%;
 }
+
 #gardenMapInfoBox .totalgardensize img.gardenMapInfoBoxBg {
     width: 100%;
 }
+
 #gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
     position: absolute;
     top: 11px;
-    z-index: 505;
+    z-index: 545;
     width: 100%;
     text-align: center;
     font-size: 26px;
@@ -97,13 +120,15 @@
 /* ------------- */
 @media (max-width: 768px) {
     #gardenMap {
-         height: 400px;
+        height: 400px;
     }
+
     #gardenMapInfoBox {
         width: 145px;
         top: 18px;
         left: 18px;
     }
+
     #gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
         top: 10px;
         width: 100%;

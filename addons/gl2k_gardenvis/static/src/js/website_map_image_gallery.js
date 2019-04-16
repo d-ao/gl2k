@@ -16,7 +16,7 @@ var fotoramaDefaults = {
     arrows: true,
     click: true,
     swipe: true,
-}
+};
 
 // Try to creat the Gallery
 // --------------------------------
@@ -100,7 +100,7 @@ function closeGardenMapGallery() {
 function insertGardenMapThumbnail(gardenMapGalleryData) {
     var galleryData = [];
     gardenMapGalleryData.forEach(function(entry) {
-        var singleObj = {}
+        var singleObj = {};
         singleObj['img'] = '/website/image/gl2k.garden/' + entry + '/cmp_image_file';
         singleObj['thumb'] = '/website/image/gl2k.garden/' + entry + '/cmp_thumbnail_file';
         galleryData.push(singleObj);
