@@ -4,15 +4,16 @@
     openerp.website.EditorBar.include({
 
         edit: function () {
-            // console.log('EDIT');
-            $('#gardenMapInfoBox').remove();
-            $('#gardenMapGallery').remove();
+            console.log('Empty #gardenMap on edit!');
+            $('#gardenMap').empty();
             return this._super.apply(this, arguments);
         },
 
         save: function () {
-            // console.log('SAVE');
-            this._super();
+            console.log('Empty #gardenMap on save!');
+            $('#gardenMap').empty();
+            // this._super();
+            return this._super.apply(this, arguments);
         },
     });
 

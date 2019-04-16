@@ -16,7 +16,7 @@ var fotoramaDefaults = {
     arrows: true,
     click: true,
     swipe: true,
-}
+};
 
 // Try to creat the Gallery
 // --------------------------------
@@ -38,7 +38,7 @@ function _showGardenMapGallery(e) {
     gardenMap.doubleClickZoom.disable();
     gardenMap.scrollWheelZoom.disable();
     gardenMap.boxZoom.disable();
-    $(".leaflet-control-zoom").css("visibility", "hidden");
+    // $(".leaflet-control-zoom").css("visibility", "hidden");
     gardenMapGalleryActive = true;
 
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
@@ -87,12 +87,12 @@ function closeGardenMapGallery() {
     gardenMap.doubleClickZoom.enable();
     gardenMap.scrollWheelZoom.enable();
     gardenMap.boxZoom.enable();
-    $(".leaflet-control-zoom").css("visibility", "block");
+    // $(".leaflet-control-zoom").css("visibility", "block");
     gardenMapGalleryActive = false;
 
     $('#gardenMapModal').remove();
     document.getElementById('gardenMapGallery').style.display = "none";
-    document.getElementById('gardenMap').style.display = "block";
+    // document.getElementById('gardenMap').style.display = "block";
 }
 
 // Create Image/Thumbnail Data for fotorama
@@ -100,7 +100,7 @@ function closeGardenMapGallery() {
 function insertGardenMapThumbnail(gardenMapGalleryData) {
     var galleryData = [];
     gardenMapGalleryData.forEach(function(entry) {
-        var singleObj = {}
+        var singleObj = {};
         singleObj['img'] = '/website/image/gl2k.garden/' + entry + '/cmp_image_file';
         singleObj['thumb'] = '/website/image/gl2k.garden/' + entry + '/cmp_thumbnail_file';
         galleryData.push(singleObj);
