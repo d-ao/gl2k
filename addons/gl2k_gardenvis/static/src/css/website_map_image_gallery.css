@@ -69,4 +69,20 @@
         text-align: left;
         font-size: 15px;
     }
+    .closeBtnGardenMap {
+        width: 30px;
+        padding: 5px;
+    }
 }
+
+/* -------------------- */
+/* NEXT AND PREV ARROWS */
+/* -------------------- */
+.fotorama__arr,
+.fotorama__fullscreen-icon,
+.fotorama__video-close,
+.fotorama__video-play {
+    background-color: #83c03b;
+    border-radius: 30px;
+}
+

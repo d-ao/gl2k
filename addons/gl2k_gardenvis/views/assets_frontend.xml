@@ -13,6 +13,8 @@
                 
                 <!-- Google Web Font -->
                 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet"/>
+                <link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet"/>
+                
                 
                 <script type="text/javascript" src="/gl2k_gardenvis/static/src/lib/leaflet/leaflet-src.js"/>
                 <script type="text/javascript" src="/gl2k_gardenvis/static/src/js/austria_data/bundeslaender_und_gemeinden2.js"/>
