@@ -25,7 +25,7 @@
     font-size: 40px;
     width: 530px;
     text-align: center;
-    background: rgb(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     margin: auto;
 }

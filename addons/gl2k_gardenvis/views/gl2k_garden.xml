@@ -13,7 +13,7 @@
         <field name="arch" type="xml">
             <form string="Global 2000 Gardens">
                 <header>
-                    <field name="state" widget="statusbar" clickable="True"/>
+                    <field name="state" widget="statusbar" clickable="True" statusbar_visible="new,disabled"/>
                 </header>
                 <sheet>
                     <group string="Web Input" name="gl2k_garden_data">

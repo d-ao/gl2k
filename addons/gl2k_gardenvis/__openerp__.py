@@ -51,5 +51,6 @@ FS-Online collect and visualize gardens in austria
         'views/assets_frontend.xml',
         'views/assets_editor.xml',
         'views/templates.xml',
+        'views/fsonline_menu.xml',
     ],
 }
