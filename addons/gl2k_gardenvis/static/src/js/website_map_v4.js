@@ -17,6 +17,8 @@ var state_data_map = null;
 var community_data = null;
 var community_data_glo = [];
 var community_data_map = null;
+var community_data_centers = [];
+var community_data_map_centers = null;
 
 var gardenMapGalleryData;
 
@@ -55,7 +57,7 @@ $(document).ready(function () {
                     community_data = data.result.community_data;
                     community_data_glo = data.result.community_data[0];
                     community_data_map = dataToMap(community_data_glo, 'cmp_community', null);
-                    // console.log('community_data_map', community_data_map);
+                    // console.log('community_data_map', community_data_map);)
 
 
                     // INITIALIZE THE MAP AFTER WE RECEIVED AND PREPARED THE DATA
@@ -273,6 +275,9 @@ $(document).ready(function () {
             // pane: 'communityPane',
         });
 
+        // Order the Community Centers
+        community_data_map_centers = dataToMap(community_data_centers, 'community', null);
+
         // communityMarkerLayerGroup Layer Group
         createCommunityMarkerLayerGroup();
 
@@ -424,6 +429,16 @@ $(document).ready(function () {
             mouseout: resetHighlightCommunity,
             click: zoomToFeature,
         });
+
+        // Get the List with the Center of the Communities
+        for (var cName in community_data_map) {
+            if (filterName(feature.properties.name) === filterName(community_data_map[cName].cmp_community)) {
+                var singleObj = {};
+                singleObj['community'] = filterName(feature.properties.name);
+                singleObj['center'] = layer.getBounds().getCenter();
+                community_data_centers.push(singleObj);
+            }
+        }
     }
 
     // onEachFeature called functions
@@ -525,18 +540,24 @@ $(document).ready(function () {
         var communityMarkers = [];
         for (var cName in community_data_map) {
             var community = community_data_map[cName];
+            var communityCenter = community_data_map_centers[cName].center;
 
             if (community.thumbnail_record_ids) {
                 // create a new marker
-                var communityCenter = [parseFloat(community.latitude), parseFloat(community.longitude)];
                 var marker = L.marker(communityCenter, {
                     icon: L.divIcon({
                         html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/CameraIcon.png" onclick="showGardenMapGallery(this)"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
                     })
                 });
-                // add it to the list
-                communityMarkers.push(marker)
+            } else {
+                var marker = L.marker(communityCenter, {
+                    icon: L.divIcon({
+                        html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
+                    })
+                });
             }
+            // add it to the list
+            communityMarkers.push(marker);
         }
 
         // Add the markers to the communityMarkerLayerGroup
