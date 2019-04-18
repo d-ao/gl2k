@@ -78,11 +78,10 @@
 /* -------------------- */
 /* NEXT AND PREV ARROWS */
 /* -------------------- */
-.fotorama__arr,
-.fotorama__fullscreen-icon,
-.fotorama__video-close,
-.fotorama__video-play {
+body .fotorama__arr,
+body .fotorama__fullscreen-icon,
+body .fotorama__video-close,
+body .fotorama__video-play {
     background-color: #83c03b;
     border-radius: 30px;
 }
-
