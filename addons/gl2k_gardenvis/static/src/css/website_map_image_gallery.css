@@ -6,11 +6,11 @@
     position: relative;
     z-index: 3000;
     height: 100%;
-    width: 90%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.88);
 }
 #gardenMapModal {
     position: relative;
@@ -25,7 +25,8 @@
     font-size: 40px;
     width: 530px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.75);
+    /*background: rgba(255, 255, 255, 0.75);*/
+    background: none;
     border-radius: 10px;
     margin: auto;
 }
