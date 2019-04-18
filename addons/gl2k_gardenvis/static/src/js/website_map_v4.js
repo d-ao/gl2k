@@ -350,7 +350,7 @@ $(document).ready(function () {
         if (featureStateName in state_data_map) {
             gsp = state_data_map[featureStateName].garden_size_peg;
 
-            if (gsp > 0.01 && gsp <= 0.15) {
+            if (gsp > 0 && gsp <= 0.15) {
                 opacity = 0.3;
                 fill = '#9ee436';
             } else if (gsp > 0.15 && gsp <= 0.3 ) {
@@ -395,7 +395,7 @@ $(document).ready(function () {
         var featureCommunityName = filterName(feature.properties.name);
         if (featureCommunityName in community_data_map) {
             gsp = community_data_map[featureCommunityName].garden_size_peg;
-            if (gsp > 0.01 && gsp <= 0.15) {
+            if (gsp > 0 && gsp <= 0.15) {
                 opacity = 0.3;
                 fill = '#9ee436';
             } else if (gsp > 0.15 && gsp <= 0.3 ) {
