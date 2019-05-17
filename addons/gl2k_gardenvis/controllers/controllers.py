@@ -1,5 +1,7 @@
 # -*- coding: utf-'8' "-*-"
 from openerp import http, fields
+from openerp.http import request
+from openerp.addons.fso_forms.controllers.controller import FsoForms
 
 import json
 
@@ -57,3 +59,18 @@ class GL2KGardenVis(http.Controller):
     @http.route('/gl2k/garden/danke', website=True, auth='public')
     def gl2k_garden_danke(self, **kwargs):
         return http.request.render('gl2k_gardenvis.danke')
+
+
+class FsoFormsGL2KGardenVis(FsoForms):
+
+    def validate_fields(self, form, field_data):
+        field_errors = super(FsoFormsGL2KGardenVis, self).validate_fields(form, field_data)
+
+        # TODO: Check if a record exits already (must also work with the back button of the form)
+        #if form and form.model_id and form.model_id.name == 'gl2k.garden':
+        #   email = field_data.get('email', False)
+        #   if email:
+        #       if request.env['gl2k.garden'].sudo().search([('email', '=', email)], limit=1):
+        #           field_errors[email] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen"
+
+        return field_errors
