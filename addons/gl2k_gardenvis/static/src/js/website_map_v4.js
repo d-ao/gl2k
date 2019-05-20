@@ -538,26 +538,55 @@ $(document).ready(function () {
 
         // Generate a list of community markers
         var communityMarkers = [];
-        for (var cName in community_data_map) {
-            var community = community_data_map[cName];
-            var communityCenter = community_data_map_centers[cName].center;
 
-            if (community.thumbnail_record_ids) {
-                // create a new marker
-                var marker = L.marker(communityCenter, {
-                    icon: L.divIcon({
-                        html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/CameraIcon.png" onclick="showGardenMapGallery(this)"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
-                    })
-                });
-            } else {
-                var marker = L.marker(communityCenter, {
-                    icon: L.divIcon({
-                        html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
-                    })
-                });
+        for (var cName in community_data_map) {
+            // Compute the Center
+            try {
+                var community = community_data_map[cName];
+                var communityCenter = community_data_map_centers[cName].center;
             }
-            // add it to the list
-            communityMarkers.push(marker);
+            catch (e) {
+                // Log error to console
+                try {
+                    console.log('Community Center Error for: ' + cName);
+                }
+                catch (e) {
+                    console.log('Community Center Error');
+                }
+                // Continue with next record
+                continue;
+            }
+
+            // Generate the marker
+            try {
+                if (community.thumbnail_record_ids) {
+                    // create a new marker
+                    var marker = L.marker(communityCenter, {
+                        icon: L.divIcon({
+                            html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><img id="' + community.cmp_community_code + " gemeinde" + '" class="gardenMapCommunityMakerImg" src="/gl2k_gardenvis/static/src/img/CameraIcon.png" onclick="showGardenMapGallery(this)"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
+                        })
+                    });
+                } else {
+                    var marker = L.marker(communityCenter, {
+                        icon: L.divIcon({
+                            html: '<div class="gardenMapCommunityMaker"><div class="gardenMapCommunityMakerOuter"><p class="gardenMapCommunityMakerText">' + addSeparatorsNF(community.garden_size) + ' m²</p></div></div>',
+                        })
+                    });
+                }
+                // add it to the list
+                communityMarkers.push(marker);
+            }
+            catch (e) {
+                // Log error to console
+                try {
+                    console.log('Community Marker Error: ' + cName);
+                }
+                catch (e) {
+                    console.log('Community Marker Error');
+                }
+                // Continue with next record
+                continue;
+            }
         }
 
         // Add the markers to the communityMarkerLayerGroup

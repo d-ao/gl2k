@@ -66,11 +66,19 @@ class FsoFormsGL2KGardenVis(FsoForms):
     def validate_fields(self, form, field_data):
         field_errors = super(FsoFormsGL2KGardenVis, self).validate_fields(form, field_data)
 
-        # TODO: Check if a record exits already (must also work with the back button of the form)
-        #if form and form.model_id and form.model_id.name == 'gl2k.garden':
-        #   email = field_data.get('email', False)
-        #   if email:
-        #       if request.env['gl2k.garden'].sudo().search([('email', '=', email)], limit=1):
-        #           field_errors[email] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen"
+        # Check if a record exits already (must also work with the back button of the form)
+        # ATTENTION: Only check this if form_session_data is already cleared else we do come from the "Change Data"
+        #            Button on the Thank you Page!
+        # HINT: "form_sdata['clear_session_data'] is False" means we come from the thank you page with edit data button
+        #       clicked
+        form_sdata = self.get_fso_form_session_data(form.id, check_clear_session_data=False)
+        if not form_sdata or not (form_sdata['clear_session_data'] is False):
+            if form and form.model_id and form.model_id.name == 'gl2k.garden':
+                email = field_data.get('email', False)
+                if email:
+                    if request.env['gl2k.garden'].sudo().search([('email', '=', email)], limit=1):
+                        field_errors['email'] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen!"
 
+        if field_errors:
+            _logger.warning("field_errors found: %s" % str(field_errors))
         return field_errors
