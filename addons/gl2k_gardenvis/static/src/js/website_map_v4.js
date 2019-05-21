@@ -84,6 +84,27 @@ $(document).ready(function () {
             return acc;
         }, {});
     }
+
+    // function replaceUmlaute(str) {
+    //     var umlautMap = {
+    //         '\u00dc': 'UE',
+    //         '\u00c4': 'AE',
+    //         '\u00d6': 'OE',
+    //         '\u00fc': 'ue',
+    //         '\u00e4': 'ae',
+    //         '\u00f6': 'oe',
+    //         '\u00df': 'ss',
+    //     };
+    //     return str
+    //         .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, (a) => {
+    //             var big = umlautMap[a.slice(0, 1)];
+    //             return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1);
+    //         })
+    //         .replace(new RegExp('[' + Object.keys(umlautMap).join('|') + ']', "g"),
+    //             (a) => umlautMap[a]
+    //         );
+    // }
+    // Replaced for IE11 compatibility
     function replaceUmlaute(str) {
         var umlautMap = {
             '\u00dc': 'UE',
@@ -94,15 +115,16 @@ $(document).ready(function () {
             '\u00f6': 'oe',
             '\u00df': 'ss',
         };
+        str = str.replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, function (a) {
+            var big = umlautMap[a.slice(0, 1)];
+            return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1);
+        });
+        str = str.replace(new RegExp('[' + Object.keys(umlautMap).join('|') + ']', "g"), function(a) {
+            return umlautMap[a]
+        });
         return str
-            .replace(/[\u00dc|\u00c4|\u00d6][a-z]/g, (a) => {
-                var big = umlautMap[a.slice(0, 1)];
-                return big.charAt(0) + big.charAt(1).toLowerCase() + a.slice(1);
-            })
-            .replace(new RegExp('[' + Object.keys(umlautMap).join('|') + ']', "g"),
-                (a) => umlautMap[a]
-            );
     }
+
     function filterName(str) {
         var filtered = replaceUmlaute(str);
         return filtered.replace(/\./g, '').replace(/\-/g, '').replace(/\ /g, '').toLowerCase();
