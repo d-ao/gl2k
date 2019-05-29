@@ -158,7 +158,7 @@ class GL2KGarden(models.Model):
     # Form input fields
     # -----------------
     email = fields.Char(string="E-Mail", required=True)
-    # ATTENTION: This is NOT! transfered to the res.partner > Done by FRST workflow in the future!
+    # ATTENTION: This is NOT! transfered to the res.partner in FS-Online but done by FRST workflow!
     newsletter = fields.Boolean(string="Newsletter", help="Subscribe for the Newsletter")
 
     salutation = fields.Char(string="Salutation")
@@ -168,6 +168,7 @@ class GL2KGarden(models.Model):
     # res.partner address
     zip = fields.Char(string="Zip", required=True, index=True)
     street = fields.Char(string="Street")
+    street_number_web = fields.Char(string="Street Number Web")
     city = fields.Char(string="City")
     country_id = fields.Many2one(string="Country", comodel_name="res.country", required=True,
                                  default=_default_country, domain="[('code', '=', 'AT')]")
@@ -281,8 +282,15 @@ class GL2KGarden(models.Model):
         cr.execute("REFRESH MATERIALIZED VIEW garden_rep_state; REFRESH MATERIALIZED VIEW garden_rep_community;")
 
     @api.multi
-    def create_update_partner(self):
+    def create_partner(self):
         for r in self:
+
+            # Only create a partner but never update an existing linked partner because of possible person merges!
+            # HINT: Updates may be allowed in the future if the website user is logged! (optional feature)
+            if r.partner_id:
+                logger.warning('Update not allowed! Partner with ID %s exists already!' % r.partner_id.id)
+                continue
+
             # Partner values
             # ATTENTION: newsletter will not be transfered!
             partner_vals = {
@@ -292,6 +300,7 @@ class GL2KGarden(models.Model):
                 'lastname': r.lastname,
                 'zip': r.zip,
                 'street': r.street,
+                'street_number_web': r.street_number_web,
                 'city': r.city,
                 'country_id': r.country_id.id if r.country_id else False,
             }
@@ -338,7 +347,7 @@ class GL2KGarden(models.Model):
 
         # Create or update res.partner
         if 'partner_id' not in vals:
-            record.create_update_partner()
+            record.create_partner()
 
         # Create or update email_validate fields
         if 'email' in vals:
@@ -368,9 +377,9 @@ class GL2KGarden(models.Model):
                 # Update record
                 r.write(cmp_vals)
 
-        # Create or update res.partner
+        # # Create or update res.partner
         if 'partner_id' not in vals:
-            self.create_update_partner()
+            self.create_partner()
 
         # Create or update email_validate fields
         if 'email' in vals:
