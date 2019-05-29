@@ -111,7 +111,7 @@
     z-index: 545;
     width: 100%;
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     color: #76b837;
 }
@@ -133,7 +133,7 @@
     #gardenMapInfoBox .totalgardensize .gardenMapInfoBoxText {
         top: 10px;
         width: 100%;
-        font-size: 22px;
+        font-size: 18px;
     }
 
 }
