@@ -78,6 +78,7 @@
                 <field name="garden_size"/>
                 <field name="garden_image_file" widget="image" height="80" display="thumbnail"/>
                 <field name="state"/>
+                <field name="create_date"/>
             </tree>
         </field>
     </record>

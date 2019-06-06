@@ -288,7 +288,8 @@ class GL2KGarden(models.Model):
             # Only create a partner but never update an existing linked partner because of possible person merges!
             # HINT: Updates may be allowed in the future if the website user is logged! (optional feature)
             if r.partner_id:
-                logger.warning('Update not allowed! Partner with ID %s exists already!' % r.partner_id.id)
+                logger.warning('Update of linked Partner not allowed! Partner with ID %s exists already!'
+                               '' % r.partner_id.id)
                 continue
 
             # Partner values
@@ -342,16 +343,23 @@ class GL2KGarden(models.Model):
                                                  country_id=vals.get('country_id', self._default_country().id),
                                                  city=vals.get('city', '')))
 
+        # Check if this e-mail is not already used
+        if vals.get('email', False):
+            if self.search([('email', '=', vals['email'])], limit=1):
+                logger.error('Record for email %s exists already!' % vals['email'])
+                return False
+
         # Create the record
         record = super(GL2KGarden, self).create(vals)
 
-        # Create or update res.partner
+        # Create a res.partner
         if 'partner_id' not in vals:
             record.create_partner()
 
         # Create or update email_validate fields
-        if 'email' in vals:
-            record.create_update_email_validation()
+        # DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
+        #if 'email' in vals:
+        #    record.create_update_email_validation()
 
         # Update materialized views
         record.refresh_materialized_views()
@@ -377,13 +385,16 @@ class GL2KGarden(models.Model):
                 # Update record
                 r.write(cmp_vals)
 
-        # # Create or update res.partner
-        if 'partner_id' not in vals:
-            self.create_partner()
+        # Create or update res.partner
+        # ATTENTION: Deactivated since updates of linked partner is not allowed after create
+        #            This avoids overwriting partner data after partners has been merged (Security Feature)
+        #if 'partner_id' not in vals:
+        #    self.create_partner()
 
         # Create or update email_validate fields
-        if 'email' in vals:
-            self.create_update_email_validation()
+        # DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
+        #if 'email' in vals:
+        #    self.create_update_email_validation()
 
         # Update materialized views
         if any(f in vals for f in self._refresh_matviews_fields):

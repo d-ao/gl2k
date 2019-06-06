@@ -78,7 +78,6 @@ class FsoFormsGL2KGardenVis(FsoForms):
                 if email:
                     if request.env['gl2k.garden'].sudo().search([('email', '=', email)], limit=1):
                         field_errors['email'] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen!"
-
         if field_errors:
             _logger.warning("field_errors found: %s" % str(field_errors))
         return field_errors

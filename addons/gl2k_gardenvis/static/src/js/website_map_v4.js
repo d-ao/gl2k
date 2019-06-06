@@ -14,10 +14,15 @@ var state_data = null;
 var state_data_glo = [];
 var state_data_map = null;
 
+// Garden data from odoo
 var community_data = null;
 var community_data_glo = [];
+// Garden data from odoo as dict with "filtered cmp_community" field as dict key
 var community_data_map = null;
+
+// List with "filtered community names" and computed centers from the geojson map bundeslaender_und_gemeinden2.js
 var community_data_centers = [];
+// Dictionary from "community_data_centers list" where the filtered community name is the dict-key
 var community_data_map_centers = null;
 
 var gardenMapGalleryData;
@@ -57,8 +62,6 @@ $(document).ready(function () {
                     community_data = data.result.community_data;
                     community_data_glo = data.result.community_data[0];
                     community_data_map = dataToMap(community_data_glo, 'cmp_community', null);
-                    // console.log('community_data_map', community_data_map);)
-
 
                     // INITIALIZE THE MAP AFTER WE RECEIVED AND PREPARED THE DATA
                     initMap();
@@ -127,7 +130,8 @@ $(document).ready(function () {
 
     function filterName(str) {
         var filtered = replaceUmlaute(str);
-        return filtered.replace(/\./g, '').replace(/\-/g, '').replace(/\ /g, '').toLowerCase();
+        //return filtered.replace(/\./g, '').replace(/\-/g, '').replace(/\ /g, '').toLowerCase();
+        return filtered.toLowerCase().replace(/st\./g, 'sankt').replace(/\./g, '').replace(/-/g, '').replace(/ /g, '');
     }
     // http://www.mredkj.com/javascript/nfbasic.html
     function addCommas(nStr)
@@ -168,7 +172,9 @@ $(document).ready(function () {
 
     function initMap() {
 
-        // console.log('initMap');
+        // TODO Uncomment after test
+        //console.log('initMap');
+        //console.log('community_data_map', community_data_map);
 
         // Add HTML for the Info-Text-Box above the card
         $('#gardenMap').append('<div id="gardenMapInfoBox"/>');
@@ -290,6 +296,7 @@ $(document).ready(function () {
         gardenMap.addLayer(stateMarkerLayerGroup);
 
         // Communities GeoJson Layer
+        // ATTENTION: communityOnEachFeature will also create the "community_data_centers" list
         communityLayer = L.geoJson(austriaBG, {
             filter: function(feature, layer) {return feature.properties.rtype === 'gemeinde';},
             style: communityStyle,
@@ -297,8 +304,11 @@ $(document).ready(function () {
             // pane: 'communityPane',
         });
 
-        // Order the Community Centers
+        // Order the Community Centers (created in communityOnEachFeature from above)
         community_data_map_centers = dataToMap(community_data_centers, 'community', null);
+
+        // TODO Remove after test
+        //console.log('community_data_map_centers', community_data_map_centers);
 
         // communityMarkerLayerGroup Layer Group
         createCommunityMarkerLayerGroup();
@@ -452,15 +462,17 @@ $(document).ready(function () {
             click: zoomToFeature,
         });
 
-        // Get the List with the Center of the Communities
-        for (var cName in community_data_map) {
-            if (filterName(feature.properties.name) === filterName(community_data_map[cName].cmp_community)) {
+        // Use the OnEachFeature loop to create the "community_data_centers" dict
+        // ATTENTION: It is not very good style to do this here - should be moved outside later on!
+        var community_map_name_filtered = filterName(feature.properties.name);
+
+        if (community_map_name_filtered in community_data_map) {
                 var singleObj = {};
-                singleObj['community'] = filterName(feature.properties.name);
+                singleObj['community'] = community_map_name_filtered;
                 singleObj['center'] = layer.getBounds().getCenter();
                 community_data_centers.push(singleObj);
-            }
         }
+
     }
 
     // onEachFeature called functions
@@ -561,10 +573,15 @@ $(document).ready(function () {
         // Generate a list of community markers
         var communityMarkers = [];
 
+        // Check if every odoo garden record can be matched to a community on the map
         for (var cName in community_data_map) {
             // Compute the Center
             try {
+                // Get all odoo data of the community record
                 var community = community_data_map[cName];
+
+                // Check if we found the community center on the map for this filtered community name
+                // HINT: If not found in "communityOnEachFeature" it is most likely a name mismatch between the map-community-name and the community name in odoo!
                 var communityCenter = community_data_map_centers[cName].center;
             }
             catch (e) {
