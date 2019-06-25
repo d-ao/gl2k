@@ -1,5 +1,33 @@
 /* MENÜ BEGIN */
-
+/* NEU TEST */
+body {
+    color: #414141;
+    /*font-family: "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;*/
+    line-height: 1.5;
+    font-size: 18px;
+}
+input {
+    font-size: 1.22222222rem;
+    line-height: 1.22727273em;
+    /*font-family: "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;*/
+    font-weight: 300;
+    font-style: normal;
+    color: #232020;
+    background-color: #fff;
+    border: 0.11111111rem solid #b3b3b3;
+    padding: 1.01388889rem 1rem;
+}
+#wsd_checkout_form label {
+    /*font-family: "Nunito Sans",Helvetica,Arial,"Open Sans",sans-serif;*/
+    font-weight: 300;
+    font-style: normal;
+    display: block;
+    color: #232020;
+}
+#wsd-checkout-box {
+    width: 100%;
+}
+/* NEU TEST ENDE */
 #top_menu li {}
 
 #top_menu li.divider {
@@ -137,16 +165,18 @@ label.control-label.mandatory.text-danger:after {
     display: none;
 }
 
-@media (min-width: 824px) {
+@media (min-width: 810px) {
     #wsd_checkout_page_left_column {
         right: auto;
     }
 }
+/*
 @media (min-width: 824px) {
     .col-md-8 {
         width: auto;
     }
 }
+*/
 #wsd-checkout-box .panel {
     background-color: transparent;
 }
@@ -239,13 +269,13 @@ body a:visited {
 /* Buttons begin */
 .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
     background-image: none;
-    background-color: #00a4b3 ;
-    border: 1px solid #008894;
+    background-color: #75b835 ;
+    border: 1px solid #75b835;
     color: white !important;
 }
 
 .btn-link {
-    color: #00a4b3;
+    color: #75b835;
 }
 .carousel > div.carousel-inner > div > div > div > div.carousel-content.col-md-6.col-sm-12 h1,h2,h3,h4 {
     color: #76ac35;
