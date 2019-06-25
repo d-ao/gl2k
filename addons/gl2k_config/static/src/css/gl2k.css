@@ -21,11 +21,16 @@ input {
     /*font-family: "Nunito Sans",Helvetica,Arial,"Open Sans",sans-serif;*/
     font-weight: 300;
     font-style: normal;
-    display: block;
+    display: inline;
     color: #232020;
 }
 #wsd-checkout-box {
     width: 100%;
+}
+@media (min-width: 600px) {
+    .col-lg-offset-1 {
+        margin-left: 0px;
+    }
 }
 /* NEU TEST ENDE */
 #top_menu li {}
