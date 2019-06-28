@@ -175,6 +175,11 @@ label.control-label.mandatory.text-danger:after {
         right: auto;
     }
 }
+@media (min-width: 810px) {
+.container {
+    width: 810px;
+}
+}
 /*
 @media (min-width: 824px) {
     .col-md-8 {
