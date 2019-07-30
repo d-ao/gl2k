@@ -66,18 +66,31 @@ class FsoFormsGL2KGardenVis(FsoForms):
     def validate_fields(self, form, field_data):
         field_errors = super(FsoFormsGL2KGardenVis, self).validate_fields(form, field_data)
 
-        # Check if a record exits already (must also work with the back button of the form)
-        # ATTENTION: Only check this if form_session_data is already cleared else we do come from the "Change Data"
-        #            Button on the Thank you Page!
-        # HINT: "form_sdata['clear_session_data'] is False" means we come from the thank you page with edit data button
-        #       clicked
-        form_sdata = self.get_fso_form_session_data(form.id, check_clear_session_data=False)
-        if not form_sdata or not (form_sdata['clear_session_data'] is False):
-            if form and form.model_id and form.model_id.name == 'gl2k.garden':
-                email = field_data.get('email', False)
-                if email:
+        # Special validations only for 'gl2k.garden' forms
+        if form and form.model_id and form.model_id.name == 'gl2k.garden':
+
+            # Allow only one record per e-mail
+            email = field_data.get('email', False)
+            if email:
+                record_to_update = self.get_fso_form_record(form)
+                if not record_to_update:
                     if request.env['gl2k.garden'].sudo().search([('email', '=', email)], limit=1):
                         field_errors['email'] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen!"
-        if field_errors:
-            _logger.warning("field_errors found: %s" % str(field_errors))
+                else:
+                    if request.env['gl2k.garden'].sudo().search(
+                            [('email', '=', email), ('id', '!=', record_to_update.id)], limit=1):
+                        field_errors['email'] = "Sie haben mit Ihrer Email Adresse bereits teilgenommen!"
+
         return field_errors
+
+    def get_fso_form_records_by_user(self, form=None, user=None):
+        records = super(FsoFormsGL2KGardenVis, self).get_fso_form_records_by_user(form=form, user=user)
+
+        # Return only the approved record (if more than one record was found and there is exactly one approved record)
+        if form and form.model_id and form.model_id.name == 'gl2k.garden':
+            if records and len(records) > 1:
+                approved_records = records.filtered(lambda r: r.state == 'approved')
+                if len(approved_records) == 1:
+                    return approved_records
+
+        return records

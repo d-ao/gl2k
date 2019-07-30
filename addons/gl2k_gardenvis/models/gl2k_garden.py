@@ -5,6 +5,8 @@ from openerp.addons.fso_base.tools.image import resize_to_thumbnail
 from openerp.tools.image import image_resize_image
 from openerp.tools.translate import _
 
+from openerp.http import request
+
 import uuid
 
 import logging
@@ -282,13 +284,18 @@ class GL2KGarden(models.Model):
         cr.execute("REFRESH MATERIALIZED VIEW garden_rep_state; REFRESH MATERIALIZED VIEW garden_rep_community;")
 
     @api.multi
-    def create_partner(self):
+    def create_update_partner(self):
         for r in self:
 
-            # Only create a partner but never update an existing linked partner because of possible person merges!
-            # HINT: Updates may be allowed in the future if the website user is logged! (optional feature)
-            if r.partner_id:
-                logger.warning('Update of linked Partner not allowed! Partner with ID %s exists already!'
+            # Only update a partner if a user is logged in for the current web request!
+            # ATTENTION: This prevents partner data (especially after a partner merge from frst) to be changed by 
+            #            not logged in users (by the public website user)
+            # TODO: ATTENTION: I am not sure if the request we get here is always the current request of the
+            #                  web controller - I need to thest this especially for multi threaded operations!
+            logged_in = request and request.uid and request.website and request.uid != request.website.user_id.id
+            if r.partner_id and not logged_in:
+                logger.warning('Update of linked Partner is only allowed if the user is logged in! '
+                               'Partner with ID %s exists already and no user is logged in! Skipping Partner update!'
                                '' % r.partner_id.id)
                 continue
 
@@ -331,6 +338,7 @@ class GL2KGarden(models.Model):
     @api.model
     def create(self, vals):
 
+        # Make sure the country is Austria or ignore the garden record by setting its state to 'invalid'
         country_id = vals.get('country_id', False)
         # Check for default country
         if country_id and self._default_country() and country_id != self._default_country().id:
@@ -344,6 +352,8 @@ class GL2KGarden(models.Model):
                                                  city=vals.get('city', '')))
 
         # Check if this e-mail is not already used
+        # HINT: This will only be checked on record create and will ALSO be checked by the web controller method
+        #       FsoFormsGL2KGardenVis -> validate_fields()!
         if vals.get('email', False):
             if self.search([('email', '=', vals['email'])], limit=1):
                 logger.error('Record for email %s exists already!' % vals['email'])
@@ -354,12 +364,12 @@ class GL2KGarden(models.Model):
 
         # Create a res.partner
         if 'partner_id' not in vals:
-            record.create_partner()
+            record.create_update_partner()
 
         # Create or update email_validate fields
-        # DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
-        #if 'email' in vals:
-        #    record.create_update_email_validation()
+        # ATTENTION: DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
+        # if 'email' in vals:
+        #     record.create_update_email_validation()
 
         # Update materialized views
         record.refresh_materialized_views()
@@ -385,14 +395,14 @@ class GL2KGarden(models.Model):
                 # Update record
                 r.write(cmp_vals)
 
-        # Create or update res.partner
-        # ATTENTION: Deactivated since updates of linked partner is not allowed after create
-        #            This avoids overwriting partner data after partners has been merged (Security Feature)
-        #if 'partner_id' not in vals:
-        #    self.create_partner()
+        # Update the res.partner if logged in
+        # ATTENTION: Only allow updates to the partner if a user is logged in! This prevents partner data (especially
+        #            after a partner merge in frst) to be changed by the public website user!
+        if 'partner_id' not in vals:
+            self.create_update_partner()
 
         # Create or update email_validate fields
-        # DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
+        # ATTENTION: DISABLED BECAUSE WE DECIDED EMAILS ARE DONE BY FRST
         #if 'email' in vals:
         #    self.create_update_email_validation()
 
