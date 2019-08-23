@@ -3,10 +3,22 @@ from openerp import http, fields
 from openerp.http import request
 from openerp.addons.fso_forms.controllers.controller import FsoForms
 
-import json
+import functools
+import csv
+import werkzeug.wrappers
+import zipfile
+import tempfile
 
 import logging
 _logger = logging.getLogger(__name__)
+
+
+# Nested Attribute getter:
+# https://stackoverflow.com/questions/31174295/getattr-and-setattr-on-nested-objects
+def rgetattr(obj, attr, *args):
+    def _getattr(obj, attr):
+        return getattr(obj, attr, *args)
+    return functools.reduce(_getattr, [obj] + attr.split('.'))
 
 
 class GL2KGardenVis(http.Controller):
@@ -60,6 +72,79 @@ class GL2KGardenVis(http.Controller):
     def gl2k_garden_danke(self, **kwargs):
         return http.request.render('gl2k_gardenvis.danke')
 
+    @http.route('/gl2k/garden/export', website=True, auth='public')
+    def gl2k_garden_export(self, **kwargs):
+        """Return a zip file with a CSV-File for the garden entries and all thumbnail images of the garden """
+        garden_obj = http.request.env['gl2k.garden']
+        all_garden_records = garden_obj.search([])
+
+        # New werkzeug response object
+        response = werkzeug.wrappers.Response()
+        response.charset = 'utf-8'
+        response.content_type = "text/csv"
+        response.headers['Content-Disposition'] = 'attachment; filename="garden.csv"'
+        # response.mimetype = 'text/csv'
+
+        # Fields to export
+        fields = [('id', 'Garteneintrag ID'),
+                  ('partner_id.id', 'Partner ID'),
+                  ('country_id.name', 'Land'),
+                  ]
+        header_row = [v[1] for v in fields]
+
+        # Use the CSV writer to stream to the response object
+        writer = csv.writer(response.stream)
+        writer.writerow(header_row)
+
+        # Record data to csv
+        for g in all_garden_records:
+            garden_row = list()
+            for f in fields:
+                try:
+                    val = rgetattr(g, f[0])
+                    val = '' if not val else val
+                    if isinstance(val, unicode):
+                        val = val.encode('utf8')
+                except:
+                    val = ''
+                garden_row.append(val)
+            writer.writerow(garden_row)
+
+        # TODO: Check if we need to close the writer csv object?
+
+        return response
+
+
+    # TODO WIP!
+    @http.route('/gl2k/garden/zipexport', website=True, auth='public')
+    def gl2k_garden_zipexport(self, **kwargs):
+        # https://stackabuse.com/the-python-tempfile-module/
+        # https://www.datacamp.com/community/tutorials/zip-file#CZF
+        # https://docs.python.org/2/library/zipfile.html
+
+        # Creat a new temporary file
+        # TODO: Create a temp directory
+        # TODO: Save images to temp directory
+        # TODO: Save csv.file to temp directory
+        # TODO: Use zipfile to create an archive from the tempfile
+        temp_file = tempfile.NamedTemporaryFile(suffix=".zip")
+        with zipfile.ZipFile(temp_file, 'a') as archive:
+            # TODO: archive.write()
+            #       the image files and
+            #       the csv file to the zip archive
+            # TODO: set zip compression
+            pass
+
+        # Create an response object
+        response = werkzeug.wrappers.Response()
+        response.charset = 'utf-8'
+        response.content_type = "application/zip"
+        response.headers['Content-Disposition'] = 'attachment; filename="garden.zip"'
+
+        # TODO: Check how to insert the temp file to the werkzeug response object
+
+        return response
+
 
 class FsoFormsGL2KGardenVis(FsoForms):
 
@@ -94,3 +179,4 @@ class FsoFormsGL2KGardenVis(FsoForms):
                     return approved_records
 
         return records
+
