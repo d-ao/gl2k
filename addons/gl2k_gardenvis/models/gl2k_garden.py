@@ -249,20 +249,21 @@ class GL2KGarden(models.Model):
     @api.model
     def get_cmp_fields_vals(self, zip='', country_id='', city=''):
         better_zip = False
+        better_zip_obj = self.env['res.better.zip'].sudo()
         if zip and country_id and city:
-            better_zip = self.env['res.better.zip'].search([('name', '=', zip),
-                                                            ('country_id', '=', country_id),
-                                                            ('city', '=', city)
-                                                            ], limit=1)
+            better_zip = better_zip_obj.search([('name', '=', zip),
+                                                ('country_id', '=', country_id),
+                                                ('city', '=', city)
+                                                ], limit=1)
             if not better_zip:
-                better_zip = self.env['res.better.zip'].search([('name', '=', zip),
-                                                                ('country_id', '=', country_id),
-                                                                ('city', 'ilike', city)
-                                                                ], limit=1)
+                better_zip = better_zip_obj.search([('name', '=', zip),
+                                                    ('country_id', '=', country_id),
+                                                    ('city', 'ilike', city)
+                                                    ], limit=1)
         if not better_zip and zip and country_id:
-            better_zip = self.env['res.better.zip'].search([('name', '=', zip),
-                                                            ('country_id', '=', country_id),
-                                                            ], limit=1)
+            better_zip = better_zip_obj.search([('name', '=', zip),
+                                                ('country_id', '=', country_id),
+                                                ], limit=1)
 
         return {
             'cmp_better_zip_id': better_zip.id if better_zip else False,
