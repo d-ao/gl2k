@@ -18,6 +18,8 @@
                 <sheet>
                     <group string="Web Input" name="gl2k_garden_data">
                         <group name="form_input">
+                            <field name="type"/>
+                            <field name="organisation_name"/>
                             <field name="email"/>
                             <field name="newsletter"/>
                             <field name="salutation"/>
@@ -65,6 +67,8 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree string="Global 2000 Gardens">
+                <field name="type"/>
+                <field name="organisation_name"/>
                 <field name="email"/>
                 <field name="firstname"/>
                 <field name="lastname"/>
@@ -90,6 +94,8 @@
         <field name="type">search</field>
         <field name="arch" type="xml">
             <search string="Global 2000 Gardens">
+                <field name="type"/>
+                <field name="organisation_name"/>
                 <field name="lastname"/>
                 <field name="firstname"/>
                 <field name="partner_id"/>

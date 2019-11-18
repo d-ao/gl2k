@@ -12,7 +12,11 @@ class GL2KGardenSosync(models.Model):
     # -------
 
     # Form input fields
-    # ------------------
+    # -----------------
+    # New fields as requested by Gerald
+    type = fields.Selection(sosync="True")
+    organisation_name = fields.Char(sosync="True")
+    #
     state = fields.Selection(sosync="True")
     email = fields.Char(sosync="True")
     newsletter = fields.Boolean(sosync="True")

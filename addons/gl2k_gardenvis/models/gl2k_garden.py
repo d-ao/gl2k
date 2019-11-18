@@ -159,6 +159,13 @@ class GL2KGarden(models.Model):
 
     # Form input fields
     # -----------------
+    # NEW: Requested by Gerald
+    type = fields.Selection(string="Typ", selection=[('privat', 'Privat'),
+                                                     ('gemeinde', 'Gemeinde'),
+                                                     ('schule', 'Schule'),
+                                                     ('verein', 'Verein')])
+    organisation_name = fields.Char(string="Organisationsname")
+    #
     email = fields.Char(string="E-Mail", required=True)
     # ATTENTION: This is NOT! transfered to the res.partner in FS-Online but done by FRST workflow!
     newsletter = fields.Boolean(string="Newsletter", help="Subscribe for the Newsletter")
@@ -317,6 +324,9 @@ class GL2KGarden(models.Model):
             if r.partner_id:
                 r.partner_id.sudo().write(partner_vals)
             # Create partner
+            # ATTENTION: If we just created a garden record and a user is logged in we still create a new partner
+            #            This may be just what we want because the "Dublettenzusammenlegung" of FRST may link the new
+            #            partner with the existing one if the values match enough.
             else:
                 partner_obj_su = self.env['res.partner'].sudo()
                 partner = partner_obj_su.create(partner_vals)
