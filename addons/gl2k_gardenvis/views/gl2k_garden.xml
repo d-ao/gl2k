@@ -150,7 +150,7 @@
         <field name="arch" type="xml">
             <graph string="Garden Analysis" type="pivot" stacked="True">
                 <field name="cmp_state_id" type="row"/>
-                <field name="write_date" interval="month" type="col"/>
+                <field name="create_date" interval="month" type="col"/>
                 <field name="garden_size" type="measure"/>
             </graph>
         </field>
