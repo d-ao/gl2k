@@ -52,10 +52,15 @@
                     </group>
                     <group name="garden_image">
                         <field name="garden_image_file" widget="image" filename="garden_image_name" class="garden_image_backend"/>
+                        <field name="garden_image_write_date"/>
                         <field name="cmp_image_file" widget="image" class="garden_image_backend"/>
                         <field name="cmp_thumbnail_file" widget="image" class="oe_avatar"/>
                     </group>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -81,6 +86,7 @@
                 <field name="cmp_community"/>
                 <field name="garden_size"/>
                 <field name="garden_image_file" widget="image" height="80" display="thumbnail"/>
+                <field name="garden_image_write_date"/>
                 <field name="state"/>
                 <field name="create_date"/>
             </tree>
@@ -104,8 +110,8 @@
                 <field name="garden_size"/>
                 
                 <field name="id"/>
-                <field name="state"/>
 
+                <field name="state"/>
                 <field name="street"/>
                 <field name="street_number_web"/>
                 <field name="city"/>
@@ -115,6 +121,22 @@
                 
                 <field name="newsletter"/>
                 <field name="salutation"/>
+
+                <field name="create_date" invisible="1"/>
+                <field name="write_date" invisible="1"/>
+                <field name="garden_image_write_date"/>
+                <field name="state"/>
+                <group string="Group by">
+                    <filter string="Status" context="{'group_by':'state'}"/>
+                    <filter string="Type" context="{'group_by':'type'}"/>
+                    <filter string="Bundesl." context="{'group_by':'state'}"/>
+                    <filter string="Land" context="{'group_by':'country_id'}"/>
+                    <filter string="Berechnet-Bundesl." context="{'group_by':'cmp_state_id'}"/>
+                    <filter string="Berechnet-Land" context="{'group_by':'cmp_community'}"/>
+                    <filter string="Anlagedatum" context="{'group_by':'create_date'}"/>
+                    <filter string="Aenderungsdatum" context="{'group_by':'write_date'}"/>
+                    <filter string="Bild-Aenderungsdatum" context="{'group_by':'garden_image_write_date'}"/>
+                </group>
             </search>
         </field>
     </record>
