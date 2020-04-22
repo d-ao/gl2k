@@ -78,17 +78,19 @@
                 <field name="firstname"/>
                 <field name="lastname"/>
                 <field name="zip"/>
-                <field name="street"/>
-                <field name="street_number_web"/>
+                <field name="street" invisible="1"/>
+                <field name="street_number_web" invisible="1"/>
                 <field name="city"/>
-                <field name="country_id"/>
+                <field name="country_id" invisible="1"/>
                 <field name="cmp_state_id"/>
                 <field name="cmp_community"/>
                 <field name="garden_size"/>
                 <field name="garden_image_file" widget="image" height="80" display="thumbnail"/>
                 <field name="garden_image_write_date"/>
                 <field name="state"/>
-                <field name="create_date"/>
+                <field name="create_date"  invisible="1"/>
+                <field name="write_date"  invisible="1"/>
+                <field name="garden_image_write_date"  invisible="1"/>
             </tree>
         </field>
     </record>
@@ -140,6 +142,19 @@
             </search>
         </field>
     </record>
+
+    <!-- Graph View -->
+    <record id="gl2k_garden_graph" model="ir.ui.view">
+        <field name="name">gl2k_garden_graph</field>
+        <field name="model">gl2k.garden</field>
+        <field name="arch" type="xml">
+            <graph string="Garden Analysis" type="pivot" stacked="True">
+                <field name="cmp_state_id" type="row"/>
+                <field name="write_date" interval="month" type="col"/>
+                <field name="garden_size" type="measure"/>
+            </graph>
+        </field>
+    </record>
     
     <!-- ACTIONS -->
     <!-- Now we create actions for the new views -->
@@ -163,6 +178,12 @@
         <field name="sequence" eval="20"/>
         <field name="view_mode">form</field>
         <field name="view_id" ref="gl2k_garden_form"/>
+        <field name="act_window_id" ref="gl2k_garden_action"/>
+    </record>
+    <record id="gl2k_garden_graph_viewaction" model="ir.actions.act_window.view">
+        <field name="sequence" eval="30"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="gl2k_garden_graph"/>
         <field name="act_window_id" ref="gl2k_garden_action"/>
     </record>
     <!-- MENU -->
