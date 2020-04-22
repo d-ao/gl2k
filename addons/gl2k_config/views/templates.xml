@@ -28,6 +28,7 @@
             <link rel='stylesheet' href='/gl2k_config/static/src/css/bootstrap_gl2k/css/bootstrap.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/bootstrap_gl2k/css/bootstrap-theme.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k.css' t-ignore="true"/>
+            <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_mikes_testoverrides.css' t-ignore="true"/>
         </xpath>
     </template>
         
