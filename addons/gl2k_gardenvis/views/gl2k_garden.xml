@@ -48,11 +48,11 @@
                             <field name="email_validate_token"/>
                             <field name="email_validated_at"/>
                             <field name="garden_image_name"/>
+                            <field name="garden_image_write_date"/>
                         </group>
                     </group>
                     <group name="garden_image">
                         <field name="garden_image_file" widget="image" filename="garden_image_name" class="garden_image_backend"/>
-                        <field name="garden_image_write_date"/>
                         <field name="cmp_image_file" widget="image" class="garden_image_backend"/>
                         <field name="cmp_thumbnail_file" widget="image" class="oe_avatar"/>
                     </group>
@@ -129,13 +129,13 @@
                 <group string="Group by">
                     <filter string="Status" context="{'group_by':'state'}"/>
                     <filter string="Type" context="{'group_by':'type'}"/>
-                    <filter string="Bundesl." context="{'group_by':'state'}"/>
+                    <filter string="Stadt" context="{'group_by':'city'}"/>
                     <filter string="Land" context="{'group_by':'country_id'}"/>
-                    <filter string="Berechnet-Bundesl." context="{'group_by':'cmp_state_id'}"/>
-                    <filter string="Berechnet-Land" context="{'group_by':'cmp_community'}"/>
+                    <filter string="Berechnetes-Bundesl." context="{'group_by':'cmp_state_id'}"/>
+                    <filter string="Berechnete-Gem." context="{'group_by':'cmp_community'}"/>
                     <filter string="Anlagedatum" context="{'group_by':'create_date'}"/>
                     <filter string="Aenderungsdatum" context="{'group_by':'write_date'}"/>
-                    <filter string="Bild-Aenderungsdatum" context="{'group_by':'garden_image_write_date'}"/>
+                    <filter string="Bild-geandert-am" context="{'group_by':'garden_image_write_date'}"/>
                 </group>
             </search>
         </field>
