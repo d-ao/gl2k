@@ -356,10 +356,10 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center;">
-                                                                                                <img src="/fso_website_email_gl2k/static/src/icons/gl2k-twitter.png"/>
-                                                                                                <img src="/fso_website_email_gl2k/static/src/icons/gl2k-facebook.png"/>
-                                                                                                <img src="/fso_website_email_gl2k/static/src/icons/gl2k-youtube.png"/>
-                                                                                                <img src="/fso_website_email_gl2k/static/src/icons/gl2k-instagram.png"/>
+                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-twitter.png"/>
+                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-facebook.png"/>
+                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-youtube.png"/>
+                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-instagram.png"/>
                                                                                             </p>
                                                                                         </td>
                                                                                     </tr>

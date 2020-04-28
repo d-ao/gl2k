@@ -87,7 +87,7 @@
     font-weight: bold;
 }
 .snippet_block_bpbutton.bpbutton_style_red .bpbutton_table,
-.snippet_block_bpbutton.bpbutton_style_red .bpbutton_table a
+.snippet_block_bpbutton.bpbutton_style_red .bpbutton_table a,
 .snippet_block_bpbutton.bpbutton_style_red .bpbutton_table a:visited,
 .snippet_block_bpbutton.bpbutton_style_red .bpbutton_table a:hover {
     background-color: #d9435d;
@@ -97,8 +97,8 @@
     border: 1px solid #ad2a2a; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
-    font-weight: bold;
-    font-family: 'Rubik';
+    color: white;
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 
 /* green */
@@ -113,8 +113,7 @@
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
     color: white;
-    font-weight: bold;
-    font-family: 'Rubik';
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 /* blue */
 .snippet_block_bpbutton.bpbutton_style_grey .bpbutton_table,
@@ -128,8 +127,7 @@
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
     color: white;
-    font-weight: bold;
-    font-family: 'Rubik';
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 /* yellow */
 .snippet_block_bpbutton.bpbutton_style_yellow .bpbutton_table,
@@ -137,5 +135,5 @@
     background-color: #F19130;
     border-color: #F19130;
     color: #5a5a5a;
-    font-weight: bold;
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }

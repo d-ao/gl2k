@@ -121,7 +121,7 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik';
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_grey a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_grey a:visited,
@@ -133,8 +133,7 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: #ffffff;
-    font-weight: bold;
-    font-family: 'Rubik';
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_green a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_green a:visited,
@@ -146,7 +145,7 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik';
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
 /* .gl2k_di_button_width_full */
 #emailBody span.drop_in_button.gl2k_di_button_width_full {
