@@ -189,7 +189,7 @@ class GL2KGarden(models.Model):
     # garden fields
     garden_size = fields.Float(string="Garden Size m2", required=True, track_visibility='onchange')
     garden_image_name = fields.Char(string="Garden Image Name", track_visibility='onchange')
-    garden_image_write_date = fields.Datetime(string="Image Changed Date", readonly=True)
+    garden_image_write_date = fields.Datetime(string="Bild geandert am", readonly=True)
     garden_image_file = fields.Binary(string="Garden Image File")
 
     # Computed and system fields (non user land)

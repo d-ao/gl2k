@@ -106,6 +106,23 @@ body[data-rootcatid="3"] .oe_website_sale .products_pager .input-group {
     display: none;
 }
 
+/* Hide category navigation menu and regain full width */
+/* ---------------Bio-Kalender-------------- */
+body[data-rootcatid="8"] #products_grid_before {
+    display: none
+}
+body[data-rootcatid="8"] #products_grid .oe_product {
+    width: 180px;
+    height: 180px;
+    margin-right: 4px;
+}
+body[data-rootcatid="8"] oe_product oe_grid oe-height-2 {
+    margin-right: 10px;
+}
+body[data-rootcatid="8"] .oe_website_sale .products_pager .input-group {
+    display: none;
+}
+
 /* ---------------AKW-Mochovce-------------- */
 body[data-rootcatid="5"] #products_grid_before {
     display: none
