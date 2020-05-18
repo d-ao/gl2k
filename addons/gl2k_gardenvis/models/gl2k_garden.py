@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 class GL2KGarden(models.Model):
     _name = "gl2k.garden"
-    _inherit = 'mail.thread'
+    #_inherit = 'mail.thread'
 
     # Fields to watch for geo localization
     _geo_location_fields = ('zip', 'country_id', 'city')
