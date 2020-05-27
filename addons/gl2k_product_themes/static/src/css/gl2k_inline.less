@@ -3,7 +3,8 @@
 // ATTENTION: Take great care to style only elements on pages you really want to change based on a product theme!!!
 //            These pages are normally 'product', 'cart', 'checkout', 'payment', 'payment_static'
 //            !!! You should NOT add styles that apply to all pages/elements here !!!
-body[data-latest-product-theme=gl2k_inline] {
+// HINT: with :not([data-confirmation-controller-called=True]) we exclude this design on one page of the shop! Cool ;)
+body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-confirmation-controller-called=True]) {
 
   // RESET STYLES
   // ------------
@@ -17,7 +18,7 @@ body[data-latest-product-theme=gl2k_inline] {
   // GLOBAL STYLES
   // -------------
   #wrapwrap main #wrap {
-    // Background Image and Fonts
+    // BACKGROUND IMAGE AND FONTS
     .container {
       border: 0.11111111rem solid #b3b3b3;
       background: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg) repeat #fafafa;
@@ -25,6 +26,16 @@ body[data-latest-product-theme=gl2k_inline] {
 
       color: #3c3c3b;
       font-family: sans-serif, Nunito Sans;
+      font-weight: bold;
+    }
+  // FORM GROUPS LABELS AND INPUTS
+    input,
+    .radio label,
+    #wsd_checkout_form label {
+      color: #3c3c3b;
+      font-family: sans-serif, Nunito Sans;
+    }
+    input {
       font-weight: bold;
     }
   }
@@ -185,6 +196,19 @@ body[data-latest-product-theme=gl2k_inline] {
           border-radius: 0 5px 5px 0;
         }
       }
+    }
+
+    // Payment interval
+
+    .payment_interval_ids > hr {
+      margin: 0 6px;
+    }
+    .payment_interval_ids > small {
+      color: #3c3c3b;
+      font-family: sans-serif, Nunito Sans;
+      font-weight: bold;
+      margin: 1.5em 0 1em 0;
+      display: block;
     }
 
     //  Add to cart button
