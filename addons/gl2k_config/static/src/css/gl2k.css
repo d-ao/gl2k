@@ -39,10 +39,10 @@ input {
     display: none;
 }
 
-#top_menu li a {
-    background: transparent !important;
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+body #top_menu li a {
+    background: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 #top_menu li span:not(.caret) {
@@ -66,20 +66,21 @@ input {
 /* DROPDOWN MENÜ BEGIN */
 
 .dropdown-menu {
-    background-color: rgba(131, 192, 59, 0.78);
+    /*background-color: rgba(131, 192, 59, 0.78);*/
+    background-color: #83c03b;
 }
-header .dropdown-menu a {
-background-color: #dbdbdb !important;
+body header .dropdown-menu a {
+background-color: #dbdbdb;
 color: 000;
-text-transform: capitalize !important;
+text-transform: capitalize;
 }
-header .dropdown-menu a:hover {
-background-color: #9c9c9c !important;
-color: white !important;
+body header .dropdown-menu a:hover {
+background-color: #9c9c9c;
+color: white;
 }
-header .dropdown-menu a:active {
-background-color: #83c03b !important;
-color: #ffffff !important;
+body header .dropdown-menu a:active {
+background-color: #83c03b;
+color: #ffffff;
 }
 
 /* DROPDOWN MENÜ END */
@@ -156,8 +157,9 @@ body[data-rootcatid="6"] .oe_website_sale .products_pager .input-group {
 /* SHOP GRID END */
 
 /* SHOP PRODUCT PAGES BEGIN */
-#website_sale_donate h3, h4.payment_interval_ids {
-  color: black !important;
+#website_sale_donate h3,
+#website_sale_donate h4.payment_interval_ids {
+  color: black;
 }
 
 /* SPECIAL for MORE ONION WEBSITE INTEGRATION */
@@ -220,25 +222,28 @@ label.control-label.mandatory.text-danger:after {
 h3.amount_title {
     text-align: center !important;
 }
-.price_donate {
-    margin-top: 10px;
+
+span.price_donate_suggested_outer {
+    margin-bottom: 10px;
+    display: inline-block;
 }
-  /* Product Page */
-#website_sale_donate {
-    background-color: white !important;
+
+/* Product Page */
+body #website_sale_donate {
+    background-color: white;
 }
-.price_donate .form-control {
-    color: black !important;
+body .price_donate .form-control {
+    color: black;
 }
 
 .has-feedback .form-control {
     padding-right: initial;
 }
-#wsd_checkout_form .form-control-feedback {
-    top: 0px !important;
+body #wsd_checkout_form .form-control-feedback {
+    top: 0;
 }
-#wsd_checkout_form .billing-fields .form-control-feedback {
-    top: 25px !important;
+body #wsd_checkout_form .billing-fields .form-control-feedback {
+    top: 25px;
   }
 .has-error .control-label {
     color: #e72e30;
@@ -269,41 +274,88 @@ h3.amount_title {
     /*#wsd_checkout_form .col-xs-12 {
         width: 50%
     }*/
-    [data-name='frst-submit-button'] {
-        max-width: 100% !important;
+    body [data-name='frst-submit-button'] {
+        max-width: 100%;
     }
 }
 /* SHOP PRODUCT PAGES END */
 
 /* GENERAL BEGIN */
 
-body {
-    background-color: white !important;
+html body {
+    background-color: white;
 }
   /* LINKS */
-footer a:hover, a:focus {
+body footer a:hover, a:focus {
     color: white;
-    text-decoration: underline !important;
+    text-decoration: underline;
 }
-footer a:visited {
-    color: white !important;
+body footer a:visited {
+    color: white;
 }
 
-body a:visited {
+a:visited {
     color: #76ac35;
 }
 
 /* Buttons begin */
-.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:visited {
     background-image: none;
     background-color: #75b835 ;
     border: 1px solid #75b835;
-    color: white !important;
+    color: white;
 }
 
 .btn-link {
     color: #75b835;
 }
+body .btn-danger {
+  color: #ffffff;
+
+}
+body .btn-danger:focus,
+body .btn-danger.focus {
+  color: #ffffff;
+}
+body .btn-danger:hover {
+  color: #ffffff;
+}
+body .btn-danger:active,
+body .btn-danger.active,
+body .open > .dropdown-toggle.btn-danger {
+  color: #ffffff;
+}
+body .btn-danger:active:hover,
+body .btn-danger.active:hover,
+.open > .dropdown-toggle.btn-danger:hover,
+.btn-danger:active:focus,
+.btn-danger.active:focus,
+.open > .dropdown-toggle.btn-danger:focus,
+.btn-danger:active.focus,
+.btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger.focus {
+  color: #ffffff;
+}
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus {
+  color: #ffffff;
+}
+body .btn-danger .badge {
+  color: #ffffff;
+}
+
+
 .carousel > div.carousel-inner > div > div > div > div.carousel-content.col-md-6.col-sm-12 h1,h2,h3,h4 {
     color: #76ac35;
 }
