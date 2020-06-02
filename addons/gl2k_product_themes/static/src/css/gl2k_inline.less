@@ -19,6 +19,11 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
       top: 3px;
     }
 
+    // HIDE THE BACK AND LOGIN BUTTONS
+    .checkout_steps_buttons {
+      display: none;
+    }
+
     // BACKGROUND IMAGE AND FONTS
     .container.oe_website_sale {
       border: 0.11111111rem solid #b3b3b3;
@@ -83,6 +88,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
       font-family: sans-serif, Nunito Sans;
       font-weight: bold;
       margin-top: 0;
+      margin-bottom: 0;
 
       ul.checkout_steps_indicator.nav-tabs {
         //display: table;
@@ -168,6 +174,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
   // ------------
   #product_detail {
 
+    // Hide the amount heading
     .amount_title {
       display: none;
     }
@@ -223,6 +230,14 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
       margin: 1.5em 0 1em 0;
       display: block;
     }
+    // Show the payment intervals  inline
+    .payment_interval_lines_ids .form-group .radio {
+      display: inline;
+      padding-left: 24px;
+    }
+    .payment_interval_lines_ids .form-group input[type="radio"] {
+      margin-top: 10px;
+    }
 
     //  Add to cart button
     #add_to_cart.btn-xl {
@@ -262,11 +277,26 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
   // -------------
   // CHECKOUT PAGE
   // -------------
+    // Hide the Top- and Bottom-Snippet-Area
+    .wsd_checkout_pages_snippets_top,
+    .wsd_checkout_page_bottom {
+      display: none;
+    }
+
   .wsd_checkout_page_content {
     padding-bottom: 1em;
+
+    // Hide the heading
     .checkout_title {
       display: none;
     }
+
+    // Hide the right column (shopping cart)
+    #wsd_checkout_page_right_column {
+      display: none;
+    }
+
+    // Full width for the left column
     #wsd_checkout_page_left_column {
       width: 100%;
       padding: 12px 32px;
@@ -284,6 +314,14 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
   // ------------
   .wsd_payment_page_content {
     padding-bottom: 1em;
+
+    // Hide the shopping cart
+    .small_cart_header,
+    .small_cart {
+      display: none;
+    }
+
+    // Full width for the left column
     #wsd_payment_page_left_col {
       width: 100%;
       .payment_opc_acquirer_form {
@@ -293,9 +331,16 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
         }
       }
     }
+
+    // Hide the right column (Checkout Data)
     #wsd_payment_page_right_col {
       display: none;
     }
+  }
+
+  // Hide the snippet dropping bottom area
+  .wsd_payment_page_bottom {
+    display: none;
   }
 
   // PAYMENT MENU FOR REGULAR AND OPC PAGE

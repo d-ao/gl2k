@@ -310,6 +310,10 @@ a:visited {
     color: white;
 }
 
+body .btn-success {
+    color: #ffffff;
+}
+
 .btn-link {
     color: #75b835;
 }
