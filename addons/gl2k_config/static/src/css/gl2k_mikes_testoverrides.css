@@ -50,3 +50,8 @@ body .wsd_opc_delivery {
 body .payment_billing_address {
     margin-top: 24px;
 }
+
+.form-group[for=frst_bic],
+input#frst_bic {
+    display: None;
+}
