@@ -199,7 +199,7 @@ class GL2KGardenVis(http.Controller):
             csv_obj.writerow(garden_row)
 
             # EXPORT IMAGE V2 (hopefully this will save memory)
-            if image_name and image_name.rsplit('.')[-1] in ['png', 'jpg']:
+            if image_name:
                 zip_archive.writestr(image_name,
                                      base64.b64decode(r.cmp_image_file if r.cmp_image_file else r.garden_image_file))
 
