@@ -17,7 +17,7 @@
 ##############################################################################
 
 {
-    'name': 'gl2k_config',
+    'name': 'gl2k_product_themes',
     'summary': """FS-Online Gl2k Custom Product Webshop Themes""",
     'description': """
 FS-Online Gl2k Custom Product Webshop Themes
