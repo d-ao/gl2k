@@ -41,24 +41,19 @@ function _showGardenMapGallery(e) {
     // $(".leaflet-control-zoom").css("visibility", "hidden");
     gardenMapGalleryActive = true;
 
+    // console.log('e:', e);
     var callerID = parseInt(e.id.replace(/[a-z]/g, "").replace(/\ /g, ''));
+    // console.log('callerID:', callerID);
     var callerIDName = e.id.replace(/[0-9]/g, "").replace(/\ /g, '');
+    // console.log('callerIDName:', callerIDName);
     var locationName;
 
     if (callerIDName === 'bundesland') {
-        for (var i = 0; i < state_data_glo.length; i++) {
-            if (callerID === state_data_glo[i].cmp_state_id) {
-                gardenMapGalleryData = state_data_glo[i];
-                locationName = state_data_glo[i].cmp_state;
-            }
-        }
+        gardenMapGalleryData = odoo_state_data_by_id[callerID]
+        locationName = gardenMapGalleryData.cmp_state
     } else if (callerIDName === 'gemeinde') {
-        for (var i = 0; i < community_data_glo.length; i++) {
-            if (String(callerID) === community_data_glo[i].cmp_community_code) {
-                gardenMapGalleryData = community_data_glo[i];
-                locationName = community_data_glo[i].cmp_community;
-            }
-        }
+        gardenMapGalleryData = odoo_community_data_by_id[callerID];
+        locationName = gardenMapGalleryData.cmp_community;
     }
 
     var gallery = $('#gardenMapGallery');
