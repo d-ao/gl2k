@@ -23,7 +23,6 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
     .checkout_steps_buttons {
       display: none;
     }
-    
 
     // BACKGROUND IMAGE AND FONTS
     .container.oe_website_sale {
@@ -176,6 +175,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // ------------
   #product_detail {
 
+    // Hide the amount heading
     .amount_title {
       display: none;
     }
@@ -264,7 +264,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // ----------------
   // BACKGROUND IMAGE AND FONTS
   .ppt_opc #website_sale_donate > .container {
-    border: 0.11111111rem solid #b3b3b3;
+    border: none;
     background: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg) repeat #fafafa;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
@@ -317,6 +317,14 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // ------------
   .wsd_payment_page_content {
     padding-bottom: 1em;
+   
+    // Hide the shopping cart
+    .small_cart_header,
+    .small_cart {
+      display: none;
+    }
+
+    // Full width for the left column 
     #wsd_payment_page_left_col {
       width: 100%;
       .payment_opc_acquirer_form {
@@ -326,12 +334,17 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
         }
       }
     }
+    
+    // Hide the right column (Checkout Data)
     #wsd_payment_page_right_col {
       display: none;
     }
   }
-  
-
+   
+    // Hide the snippet dropping bottom area
+  .wsd_payment_page_bottom {
+    display: none;
+  }
 
   // PAYMENT MENU FOR REGULAR AND OPC PAGE
   #payment_method {
@@ -351,6 +364,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
           border-top: 1px solid rgba(196, 195, 195, 0.39);
           text-align: center;
           padding: 14px 26px;
+          color: rgb(0;61;132);
         }
         .tab-acquirer-image {
           img {
