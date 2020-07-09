@@ -182,32 +182,31 @@ label.control-label.mandatory.text-danger:after {
     color: red;
 }
 
+/* CHECKOUT PAGE */
+/* ------------- */
+
+
 #wsd_checkout_page_right_column {
     display: none;
 }
 #wsd_checkout_steps_header {
     display: none;
 }
-
 @media (min-width: 810px) {
     #wsd_checkout_page_left_column {
         right: auto;
     }
 }
-@media (min-width: 810px) {
-.container {
-    width: 810px;
-}
-}
-/*
-@media (min-width: 824px) {
-    .col-md-8 {
-        width: auto;
-    }
-}
-*/
+/*@media (min-width: 810px) {*/
+/*    .container {*/
+/*        width: 810px;*/
+/*    }*/
+/*}*/
+
 #wsd-checkout-box .panel {
     background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 #order_total h3 {
     color: black !important;
@@ -228,7 +227,8 @@ span.price_donate_suggested_outer {
     display: inline-block;
 }
 
-/* Product Page */
+/* PRODUCT PAGE */
+/* ------------ */
 body #website_sale_donate {
     background-color: white;
 }
@@ -255,8 +255,42 @@ body #wsd_checkout_form .billing-fields .form-control-feedback {
     text-align: center;
 }
 
+
+/* PAYMENT METHOD MENU */
+/* ------------------- */
 #payment_method .nav>li>a {
-  padding: 10px 10px;
+  margin: 0;
+  border-left: 1px solid rgba(196, 195, 195, 0.39);
+  border-right: 1px solid rgba(196, 195, 195, 0.39);
+  border-top: 1px solid rgba(196, 195, 195, 0.39);
+  text-align: center;
+  padding: 14px 26px;
+}
+#payment_method .nav>li>a .tab-acquirer-image,
+#payment_method .nav>li>a .tab-acquirer-name {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    vertical-align: center;
+}
+#payment_method .tab-content {
+    background-color: white;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+#payment_method .tab-content > .tab-pane > div {
+    padding: 0 1em;
+}
+#payment_method .tab-content > .tab-pane > div:first-of-type {
+    padding-top: 1em;
+}
+#payment_method .tab-content > .tab-pane > div:last-of-type {
+    padding-bottom: 1em;
+}
+#payment_method .acquirer_pre_msg {
+    font-size: 16px;
+    color: #757575;
 }
 
 /* ONE PAGE CHECKOUT BEGIN */

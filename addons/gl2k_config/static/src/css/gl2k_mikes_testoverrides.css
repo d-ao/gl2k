@@ -1,5 +1,21 @@
-
 .form-group[for=frst_bic],
 input#frst_bic {
     display: None;
+}
+
+
+/* Aenderungen vom 9. Juni 2020 */
+/* ---------------------------- */
+
+/* Rand und Schatten von Checkoutbox entfernen */
+#product_detail {
+    border: none;
+    box-shadow: none;
+}
+
+/* Checkout Page: Hide Back Button Text */
+@media screen and (max-width: 360px) {
+  body .wsd_button_back_to_page_text {
+    display: none;
+  }
 }
