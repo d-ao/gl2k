@@ -11,9 +11,13 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
   // --------------------
   #wrapwrap main #wrap {
 
+    // Add some extra space for the shadows
+    margin: 0 4px;
+
     // RESET STYLES
     #wsd-checkout-box .panel {
       border-color: transparent;
+      box-shadow: none;
     }
     a.btn span.glyphicon {
       top: 3px;
@@ -58,14 +62,19 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
     background: none;
     background-color: white;
   }
-  .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
+  .btn-primary,
+  .btn-primary:active,
+  .btn-primary:active:focus,
+  .btn-primary:focus,
+  .btn-primary:hover,
+  .btn-primary>a:visited {
     background: none;
     background-color: #d9435d;
     border-color: #ad2a2a;
+    color: white;
   }
   .btn:focus,
   .btn:active:focus,
-  .btn.active:focus,
   .btn.focus,
   .btn:active.focus,
   .btn.active.focus {
@@ -94,6 +103,11 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
         //display: table;
         // Regular Nav Tabs
         li {
+
+          // Make sure the li elements are always rendered in one line
+          display: table-cell;
+          width: 1%;
+
           //display: contents;
           a, a:hover, a:focus {
             //display: table-cell;
@@ -363,7 +377,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
         }
         .tab-acquirer-image {
           img {
-            height: 33px;
+            height: 12px;
             margin: auto;
           }
 
@@ -373,8 +387,8 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
     .tab-content {
       background-color: white;
       border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd;
-        border-bottom: 1px solid #dddddd;
+      border-right: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
       .tab-pane {
 
       }
@@ -387,4 +401,21 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
 
 
 // END
+}
+
+// SPECIAL MEDIA QUERIES
+@media (max-width: 400px) {
+  body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-confirmation-controller-called=True]) {
+    #wsd_checkout_steps_nav {
+      .checkout_steps_navigation {
+        ul.checkout_steps_indicator.nav-tabs {
+          li {
+            a, a:hover, a:focus {
+              font-size: 5vw;
+            }
+          }
+        }
+      }
+    }
+  }
 }
