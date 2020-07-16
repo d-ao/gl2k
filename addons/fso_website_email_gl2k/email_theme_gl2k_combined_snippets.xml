@@ -117,7 +117,7 @@
                                                                                                         class="imageContent ckediting_enabled"
                                                                                                         valign="top">
                                                                                                         <a href="https://www.global2000.at">
-                                                                                                            <img style="width:200px;" class="flexibleImage"
+                                                                                                            <img style="width:30%;" class="flexibleImage"
                                                                                                                  src="/fso_website_email_gl2k/static/src/img/GLOBAL2000-LOGO-RGB_kl.png"></img>
                                                                                                         </a>
                                                                                                     </td>
@@ -356,10 +356,18 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center;">
-                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-twitter.png"/>
+                                                                                                <a href="https://twitter.com/global2000" target="_blank">
+                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-twitter.png"/>
+                                                                                                </a>
+                                                                                                <a href="https://www.facebook.com/global2000" target="_blank">
                                                                                                 <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-facebook.png"/>
+                                                                                                </a>
+                                                                                                <a href="https://www.youtube.com/user/UmweltGlobal2000" target="_blank">
                                                                                                 <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-youtube.png"/>
-                                                                                                <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-instagram.png"/>
+                                                                                                </a>
+                                                                                                <a href="https://www.instagram.com/global2000.at" target="_blank">
+                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-instagram.png"/>
+                                                                                                </a>
                                                                                             </p>
                                                                                         </td>
                                                                                     </tr>

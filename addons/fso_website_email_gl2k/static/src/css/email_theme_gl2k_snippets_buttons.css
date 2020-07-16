@@ -135,11 +135,47 @@
     color: #ffffff;
     font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
 }
-#emailBody span.drop_in_button.gl2k_di_button_green a:hover,
-#emailBody span.drop_in_button.gl2k_di_button_green a:visited,
-#emailBody span.drop_in_button.gl2k_di_button_green a {
+#emailBody span.drop_in_button.gl2k_di_button_style_green a:hover,
+#emailBody span.drop_in_button.gl2k_di_button_style_green a:visited,
+#emailBody span.drop_in_button.gl2k_di_button_style_green a {
     background-color: #75b836;
-    border-color: #539132;
+    border-color: #75b836;
+    /*
+    border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
+    */
+    border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
+    color: white;
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+}
+#emailBody span.drop_in_button.gl2k_di_button_style_green_opac a:hover,
+#emailBody span.drop_in_button.gl2k_di_button_style_green_opac a:visited,
+#emailBody span.drop_in_button.gl2k_di_button_style_green_opac a {
+    background-color: #badb9a;
+    border-color: #badb9a;
+    /*
+    border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
+    */
+    border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
+    color: white;
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+}
+#emailBody span.drop_in_button.gl2k_di_button_style_blue a:hover,
+#emailBody span.drop_in_button.gl2k_di_button_style_blue a:visited,
+#emailBody span.drop_in_button.gl2k_di_button_style_blue a {
+    background-color: #003d84;
+    border-color: #003d84;
+    /*
+    border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
+    */
+    border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
+    color: white;
+    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+}
+#emailBody span.drop_in_button.gl2k_di_button_style_blue_opac a:hover,
+#emailBody span.drop_in_button.gl2k_di_button_style_blue_opac a:visited,
+#emailBody span.drop_in_button.gl2k_di_button_style_blue_opac a {
+    background-color: #7f9ec1;
+    border-color: #7f9ec1;
     /*
     border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     */

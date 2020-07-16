@@ -15,8 +15,10 @@
 .snippet_block_text_image_left .flexibleContainerRight .flexibleImage {
     width: 390px;
 }
-.snippet_block_text_image_left.gl2k_sb_fg_red .flexibleContainerRight,
 .snippet_block_text_image_left.gl2k_sb_fg_green .flexibleContainerRight,
+.snippet_block_text_image_left.gl2k_sb_fg_green_opac .flexibleContainerRight,
+.snippet_block_text_image_left.gl2k_sb_fg_blue .flexibleContainerRight,
+.snippet_block_text_image_left.gl2k_sb_fg_blue_opac .flexibleContainerRight,
 .snippet_block_text_image_left.gl2k_sb_fg_grey .flexibleContainerRight,
 .snippet_block_text_image_left.gl2k_sb_fg_background .flexibleContainerRight {
     width: 340px;
@@ -27,8 +29,10 @@
 .snippet_block_text_image_right .flexibleContainerLeft .flexibleImage {
     width: 390px;
 }
-.snippet_block_text_image_right.gl2k_sb_fg_red .flexibleContainerLeft,
 .snippet_block_text_image_right.gl2k_sb_fg_green .flexibleContainerLeft,
+.snippet_block_text_image_right.gl2k_sb_fg_green_opac .flexibleContainerLeft,
+.snippet_block_text_image_right.gl2k_sb_fg_blue .flexibleContainerLeft,
+.snippet_block_text_image_right.gl2k_sb_fg_blue_opac .flexibleContainerLeft,
 .snippet_block_text_image_right.gl2k_sb_fg_grey .flexibleContainerLeft,
 .snippet_block_text_image_right.gl2k_sb_fg_background .flexibleContainerLeft {
     width: 340px;
@@ -87,16 +91,33 @@
 .gl2k_sb_bg_green .flexibleContainerCell,
 .gl2k_sb_fg_green .flexibleContainerCell .nestedContainerCell,
 .gl2k_sb_fg_green .flexibleContainerCell .nestedContainerCell .textContent > p {
-    background-color: #5c902a;
+    background-color: #75b836;
+    color: white;
+}
+.gl2k_sb_fg_green .flexibleContainerCell .nestedContainerCell .textContent > h3,
+.gl2k_sb_fg_green .flexibleContainerCell .nestedContainerCell .textContent > h1 {
+    color: black;
+}
+
+.gl2k_sb_bg_green_opac .flexibleContainerCell,
+.gl2k_sb_fg_green_opac .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_green_opac .flexibleContainerCell .nestedContainerCell .textContent > p {
+    background-color: #badb9a;
     color: white;
 }
 .gl2k_sb_bg_red .flexibleContainerCell .nestedContainerCell .textContent > p {
     color: white;
 }
-.gl2k_sb_bg_red .flexibleContainerCell,
-.gl2k_sb_fg_red .flexibleContainerCell .nestedContainerCell,
-.gl2k_sb_fg_red .flexibleContainerCell .nestedContainerCell .textContent > p {
-    background-color: #d9435d;
+.gl2k_sb_bg_blue .flexibleContainerCell,
+.gl2k_sb_fg_blue .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_blue .flexibleContainerCell .nestedContainerCell .textContent > p {
+    background-color: #003d84;
+    color: white;
+}
+.gl2k_sb_bg_blue_opac .flexibleContainerCell,
+.gl2k_sb_fg_blue_opac .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_blue_opac .flexibleContainerCell .nestedContainerCell .textContent > p {
+    background-color: #7f9ec1;
     color: white;
 }
 .gl2k_sb_bg_grey .flexibleContainerCell .nestedContainerCell .textContent > p {
@@ -109,7 +130,9 @@
     color: white;
 }
 .gl2k_sb_fg_background .flexibleContainerCell .nestedContainerCell,
-.gl2k_sb_fg_red .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_green_opac .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_blue_opac .flexibleContainerCell .nestedContainerCell,
+.gl2k_sb_fg_blue .flexibleContainerCell .nestedContainerCell,
 .gl2k_sb_fg_grey .flexibleContainerCell .nestedContainerCell,
 .gl2k_sb_fg_green .flexibleContainerCell .nestedContainerCell {
     padding-left: 20px;

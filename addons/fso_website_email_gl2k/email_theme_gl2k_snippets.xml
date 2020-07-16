@@ -57,9 +57,11 @@
         <xpath expr="//div[@data-snippet-option-id='dadi_sb_fg_color']//ul" position="replace">
             <ul class="dropdown-menu">
                 <li data-value=''><a>None</a></li>
-                <li data-value='gl2k_sb_fg_red'><a>Rot</a></li>
                 <li data-value='gl2k_sb_fg_grey'><a>Grau</a></li>
                 <li data-value='gl2k_sb_fg_green'><a>Grün</a></li>
+                <li data-value='gl2k_sb_fg_green_opac'><a>Grün-Transparent</a></li>
+                <li data-value='gl2k_sb_fg_blue'><a>Blau</a></li>
+                <li data-value='gl2k_sb_fg_blue_opac'><a>Blau-Transparent</a></li>
                 <li data-value='gl2k_sb_fg_background'><a>Hintergrund</a></li>
             </ul>
         </xpath>
@@ -68,18 +70,23 @@
         <xpath expr="//div[@data-snippet-option-id='dadi_sb_bg_color']//ul" position="replace">
             <ul class="dropdown-menu">
                 <li data-value=''><a>None</a></li>
-                <li data-value='gl2k_sb_bg_red'><a>Rot</a></li>
                 <li data-value='gl2k_sb_bg_grey'><a>Grau</a></li>
                 <li data-value='gl2k_sb_bg_green'><a>Grün</a></li>
+                <li data-value='gl2k_sb_bg_green_opac'><a>Grün-Transparent</a></li>
+                <li data-value='gl2k_sb_bg_blue'><a>Blau</a></li>
+                <li data-value='gl2k_sb_bg_blue_opac'><a>Blau-Transparent</a></li>
                 <li data-value='gl2k_sb_bg_background'><a>Hintergrund</a></li>
             </ul>
         </xpath>
         
         <!-- .drop_in_button Extra Styles -->
         <xpath expr="//li[@data-value='dadi_di_button_default']" position="after">
-            <li data-value='gl2k_di_button_red'><a>Gl2K Style Rot</a></li>
-            <li data-value='gl2k_di_button_Graue'><a>Gl2L Style Grau</a></li>
-            <li data-value='gl2k_di_button_green'><a>Gl2K Style Grün</a></li>
+            <li data-value='gl2k_di_button_grey'><a>Gl2L Style Grau</a></li>
+            <li data-value='gl2k_di_button_style_green'><a>Grün</a></li>
+            <li data-value='gl2k_di_button_style_green_opac'><a>Grün-Transparent</a></li>
+            <li data-value='gl2k_di_button_style_blue'><a>Blau</a></li>
+            <li data-value='gl2k_di_button_style_blue_opac'><a>Blau-Transparent</a></li>
+
         </xpath>
         
         <xpath expr="//div[@data-snippet-option-id='drop_in_button_width']" position="after">
@@ -139,9 +146,12 @@
 
         <!-- NEW: .snippet_block_bpbutton Extra Styles -->
         <xpath expr="//div[@data-snippet-option-id='snippet_block_bpbutton_style']//ul" position="inside">
-            <li data-value='bpbutton_style_green'><a>Gl2K Style Gruen</a></li>
-            <li data-value='bpbutton_style_grey'><a>Gl2K Style Graue</a></li>
-            <li data-value='bpbutton_style_red'><a>Gl2K Style Rot</a></li>
+            <li data-value='gl2k_bpbutton_style_green'><a>Grün</a></li>
+            <li data-value='gl2k_bpbutton_style_green_opac'><a>Grün-Transparent</a></li>
+            <li data-value='gl2k_bpbutton_style_blue'><a>Blau</a></li>
+            <li data-value='gl2k_bpbutton_style_blue_opac'><a>Blau-Transparent</a></li>
+            <li data-value='bpbutton_style_grey'><a>Graue</a></li>
+            <li data-value='bpbutton_style_red'><a>Rot</a></li>
 
         </xpath>
         
