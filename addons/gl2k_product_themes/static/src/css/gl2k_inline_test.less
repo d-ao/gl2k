@@ -11,9 +11,13 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // --------------------
   #wrapwrap main #wrap {
 
+    // Add some extra space for the shadows
+    margin: 0 7px;
+
     // RESET STYLES
     #wsd-checkout-box .panel {
       border-color: transparent;
+      box-shadow: none;
     }
     a.btn span.glyphicon {
       top: 3px;
@@ -29,7 +33,6 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
       border: none;
       background: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg) repeat #fafafa;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      margin-left: 7px;
 
       color: #3c3c3b;
       font-family: sans-serif, Nunito Sans;
@@ -50,7 +53,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
 
   // BUTTONS
   .btn {
-    border-radius: 5px; 
+    border-radius: 5px;
     font-size: 24px;
     font-family: sans-serif, Rubik, Nunito Sans;
     //font-weight: bold;
@@ -59,14 +62,19 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
     background: none;
     background-color: white;
   }
-  .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
+  .btn-primary,
+  .btn-primary:active,
+  .btn-primary:active:focus,
+  .btn-primary:focus,
+  .btn-primary:hover,
+  .btn-primary>a:visited {
     background: none;
     background-color: #d9435d;
     border-color: #ad2a2a;
+    color: white;
   }
   .btn:focus,
   .btn:active:focus,
-  .btn.active:focus,
   .btn.focus,
   .btn:active.focus,
   .btn.active.focus {
@@ -95,6 +103,11 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
         //display: table;
         // Regular Nav Tabs
         li {
+
+          // Make sure the li elements are always rendered in one line
+          display: table-cell;
+          width: 1%;
+
           //display: contents;
           a, a:hover, a:focus {
             //display: table-cell;
@@ -231,8 +244,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
       margin: 1.5em 0 1em 0;
       display: block;
     }
-    
-        // Show the payment intervals  inline
+    // Show the payment intervals  inline
     .payment_interval_lines_ids .form-group .radio {
       display: inline;
       padding-left: 24px;
@@ -264,7 +276,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // ----------------
   // BACKGROUND IMAGE AND FONTS
   .ppt_opc #website_sale_donate > .container {
-    border: none;
+    border: 0.11111111rem solid #b3b3b3;
     background: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg) repeat #fafafa;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
@@ -279,14 +291,13 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // -------------
   // CHECKOUT PAGE
   // -------------
-  
-   // Hide the Top- and Bottom-Snippet-Area
+    // Hide the Top- and Bottom-Snippet-Area
     .wsd_checkout_pages_snippets_top,
     .wsd_checkout_page_bottom {
       display: none;
-    }  
-  
-   .wsd_checkout_page_content {
+    }
+
+  .wsd_checkout_page_content {
     padding-bottom: 1em;
 
     // Hide the heading
@@ -317,14 +328,14 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   // ------------
   .wsd_payment_page_content {
     padding-bottom: 1em;
-   
+
     // Hide the shopping cart
     .small_cart_header,
     .small_cart {
       display: none;
     }
 
-    // Full width for the left column 
+    // Full width for the left column
     #wsd_payment_page_left_col {
       width: 100%;
       .payment_opc_acquirer_form {
@@ -334,14 +345,14 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
         }
       }
     }
-    
+
     // Hide the right column (Checkout Data)
     #wsd_payment_page_right_col {
       display: none;
     }
   }
-   
-    // Hide the snippet dropping bottom area
+
+  // Hide the snippet dropping bottom area
   .wsd_payment_page_bottom {
     display: none;
   }
@@ -351,8 +362,8 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
     .payment_title {
       text-align: center;
       margin-bottom: 1em;
-      font-weight: bold;
       display: none;
+      //font-weight: bold;
     }
     ul.nav.nav-tabs {
       li {
@@ -364,11 +375,10 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
           border-top: 1px solid rgba(196, 195, 195, 0.39);
           text-align: center;
           padding: 14px 26px;
-          color: rgb(0,61,132);
         }
         .tab-acquirer-image {
           img {
-            height: 33px;
+            height: 12px;
             margin: auto;
           }
 
@@ -378,8 +388,8 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
     .tab-content {
       background-color: white;
       border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd;
-        border-bottom: 1px solid #dddddd;
+      border-right: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
       .tab-pane {
 
       }
@@ -392,4 +402,21 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
 
 
 // END
+}
+
+// SPECIAL MEDIA QUERIES
+@media (max-width: 400px) {
+  body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-confirmation-controller-called=True]) {
+    #wsd_checkout_steps_nav {
+      .checkout_steps_navigation {
+        ul.checkout_steps_indicator.nav-tabs {
+          li {
+            a, a:hover, a:focus {
+              font-size: 5vw;
+            }
+          }
+        }
+      }
+    }
+  }
 }
