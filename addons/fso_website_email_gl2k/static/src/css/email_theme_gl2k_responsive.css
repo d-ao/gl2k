@@ -11,6 +11,19 @@
     /*table.flexibleContainer {*/
     /*    width: 100% !important;*/
     /*}*/
+    #combinedheadersnippet .flexibleContainerRight img.flexibleImage {
+        width: 30% !important;
+        margin: auto !important;
+    }
+    .snippet_block_text_twocol img.flexibleImage,
+    .snippet_block_text_threecol img.flexibleImage {
+        margin-bottom: 10px;
+    }
+    #combinedheadersnippet table.flexibleContainerRight,
+    #combinedheadersnippet table.flexibleContainerLeft,
+    #combinedheadersnippet table.flexibleContainer33 {
+        margin-bottom: none !important;
+    }
     #combinedsnippetfooter #mediaicons table.flexibleContainerLeft img.flexibleImage {
         width: 32px !important;
     }

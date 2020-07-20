@@ -3,13 +3,14 @@
     drop_in_button
     ==============
 */
+
 #emailBody span.drop_in_button a,
 #emailBody span.drop_in_button a:visited {
     border-radius: 3px;
     background-color: #666666;
     /*border: 1px solid #666666;*/
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     /* outlook test   */
     /*padding: 0;*/
     /*border-top-width: 0.5em;*/
@@ -121,7 +122,7 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_grey a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_grey a:visited,
@@ -133,7 +134,8 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: #ffffff;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-weight: 500;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_style_green a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_style_green a:visited,
@@ -145,7 +147,8 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-weight: 500;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_style_green_opac a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_style_green_opac a:visited,
@@ -157,7 +160,8 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-weight: 500;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_style_blue a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_style_blue a:visited,
@@ -169,7 +173,8 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-weight: 500;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_style_blue_opac a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_style_blue_opac a:visited,
@@ -181,7 +186,8 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
-    font-family: 'Rubik',Helvetica,Arial,'Open Sans',sans-serif;
+    font-weight: 500;
+    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 /* .gl2k_di_button_width_full */
 #emailBody span.drop_in_button.gl2k_di_button_width_full {
