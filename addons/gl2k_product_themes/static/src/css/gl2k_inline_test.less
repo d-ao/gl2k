@@ -407,7 +407,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
 
 // SPECIAL MEDIA QUERIES
 @media (max-width: 400px) {
-  body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-confirmation-controller-called=True]) {
+  body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([data-confirmation-controller-called=True]) {
     #wsd_checkout_steps_nav {
       .checkout_steps_navigation {
         ul.checkout_steps_indicator.nav-tabs {
@@ -416,6 +416,13 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
               font-size: 5vw;
             }
           }
+        }
+      }
+    }
+    #payment_method {
+      ul.nav.nav-tabs {
+        li {
+          width: 100%;
         }
       }
     }
