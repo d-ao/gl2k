@@ -6,6 +6,7 @@
 // HINT: with :not([data-confirmation-controller-called=True]) we exclude this design on one page of the shop! Cool ;)
 body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([data-confirmation-controller-called=True]) {
 
+
   // --------------------
   // COMMON STYLE CHANGES
   // --------------------
@@ -13,6 +14,9 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
 
     // Add some extra space for the shadows
     margin: 0;
+
+    #website_sale_donate {
+      background-color: transparent;
 
     // RESET STYLES
     #wsd-checkout-box .panel {
@@ -60,7 +64,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
   }
   .btn-default {
     background: none;
-    background-color: rgba(117, 184, 54, 0.2);
+    background-color: white;
   }
   .btn-primary,
   .btn-primary:hover,
@@ -211,7 +215,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
       }
       .btn-default {
         background: none;
-        background-color: white;
+        background-color: rgba(117, 184, 54, 0.2);
       }
       .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
         background: none;
@@ -405,8 +409,7 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
       padding: 1em;
     }
   }
-
-
+ }
 
 // END
 }
