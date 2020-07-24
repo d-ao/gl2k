@@ -6,7 +6,7 @@
 // HINT: with :not([data-confirmation-controller-called=True]) we exclude this design on one page of the shop! Cool ;)
 body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([data-confirmation-controller-called=True]) {
 
-
+background-color: transparent; 
   // --------------------
   // COMMON STYLE CHANGES
   // --------------------
@@ -233,11 +233,12 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([da
           font-weight: bold;
           height: 50px;
           text-align: center;
-          color: #75b836;
+          color: #3d3d3c;
+          background-color: rgba(117,184,54,0.2);
         }
         .input-group-addon {
           background: none;
-          background-color: white;
+          background-color: rgba(117,184,54,0.2);
           border-radius: 0 5px 5px 0;
         }
       }
