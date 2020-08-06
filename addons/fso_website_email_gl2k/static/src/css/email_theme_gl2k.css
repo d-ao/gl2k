@@ -134,7 +134,7 @@ a,
 #emailBody ul li,
 #emailBody ol li {
     /*font-family: 'PT Sans', 'Trebuchet MS', sans-serif;*/
-    font-family: 'Nunito Sans' ,Arial,'Open Sans',sans-serif;
+    font-family: 'Nunito Sans' ,'Tahoma regular','Open Sans',sans-serif;
     font-size: 16px; /*customers whish 1rem but no not use it for compatibility reasons*/
     color: #3d3d3c;
 }
@@ -184,7 +184,7 @@ h1, h2, h3 {
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
     /*font-family: 'PT Sans', 'Trebuchet MS', sans-serif;*/
-    font-family: 'Rubik' ,Arial,'Open Sans',sans-serif;
+    font-family: 'Rubik' ,'Arial black','Open Sans',sans-serif;
     line-height: 140%;
     color: #414141;
 
@@ -202,21 +202,21 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-margin-end: inherit;
 }
 .h1, h1 {
-    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
     font-size: 32px; /*customers whish 2rem but no not use it for compatibility reasons*/
     font-weight: 900;
     color: #75b836;
     text-transform: uppercase;
 }
 .h2, h2 {
-    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
     font-size: 24px; /*customers whish 1.5rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #003d84;
     font-weight: bold;
 }
 .h3, h3 {
-    font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
     font-size: 21px; /*customers whish 1.3rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #75b836;

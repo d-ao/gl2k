@@ -143,6 +143,131 @@
                     </div>
                     </div>
                 </div>
+
+                <!-- HEADER SNIPPET BLOCK ALLG -->
+                <!-- =============== -->
+                <div>
+                    <!-- Icon and name -->
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img"
+                             src="/fso_website_email_gl2k/static/src/icons/gl2k_NPG_header_icon.png"/>
+                        <span class="oe_snippet_thumbnail_title">Header Snippet NPG</span>
+                    </div>
+                    <div id="combinedheadersnippetWebVersionNPG" class="oe_snippet_body ckediting_disabled gl2k_bin">
+                     <div class="snippet_block ckediting_enabled snippet_block_text_intro gl2k_sb_bg_background">
+                        <table class="centeringTable" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <table class="flexibleContainer" border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="flexibleContainerCell" align="center" valign="top">
+                                                        <table class="nestedContainer" border="0" cellpadding="0"
+                                                               cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="nestedContainerCell" align="center"
+                                                                        valign="top">
+                                                                        <table class="contentTable" border="0"
+                                                                               cellpadding="0" cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="textContent ckediting_enabled"
+                                                                                        contenteditable="true">
+                                                                                        <p class="gl2k_tiny"
+                                                                                           style="text-align: right;">
+                                                                                            <a href="%open_browser%" data-cke-saved-href="%open_browser%" target="_blank" style="text-align: right; color: gray; font-weight: 700; font-size: 12px;">Diese E-Mail im Browser öffnen</a>
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="combinedheadersnippetNPG" class="ckediting_enabled snippet_block_text_image_left gl2k_snippet_block_padding_none" style="padding-top: 10px;">
+                        <table cellpadding="0" cellspacing="0" class="centeringTable">
+                            <tbody>
+                                <tr>
+                                    <td align="center" valign="top">
+                                        <table border="0" cellpadding="0" cellspacing="0" class="flexibleContainer">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="center" class="flexibleContainerCell" valign="top">
+                                                        <table border="0" cellpadding="0" cellspacing="0"
+                                                               class="nestedContainer">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="center" class="nestedContainerCell"
+                                                                        valign="top">
+                                                                        <table border="0" cellpadding="0"
+                                                                               cellspacing="0" class="contentTable">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="textContent">
+                                                                                        <table align="left"
+                                                                                               border="0"
+                                                                                               cellpadding="0"
+                                                                                               cellspacing="0"
+                                                                                               class="flexibleContainerLeft">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="textContent ckediting_enabled"
+                                                                                                        valign="top">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+
+                                                                                        <table align="right"
+                                                                                               border="0"
+                                                                                               cellpadding="0"
+                                                                                               cellspacing="0"
+                                                                                               class="flexibleContainerRight">
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <td align="right"
+                                                                                                        class="imageContent ckediting_enabled"
+                                                                                                        valign="top">
+                                                                                                        <a href="https://www.global2000.at">
+                                                                                                            <img style="width:30%;" class="flexibleImage"
+                                                                                                                 src="/fso_website_email_gl2k/static/src/icons/NationalparkGartenWeiss_AgenturHeimatWien_c.png"></img>
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
                 <!-- FOOTER SNIPPET BLOCK -->
                 <!-- =============== -->
                 <div>
@@ -283,27 +408,33 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                <span>
-                                                                                                    Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria
-                                                                                                </span>
-                                                                                            </p>
-
-                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                Tel: +43/1/812 57 30, Fax: +43/1/812 57 28<br></br>
-
-                                                                                                E-Mail: office@global2000.at<br></br>
-                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Datenschutz |
-                                                                                                </a>
+                                                                                                    Fotocredit: Bild 1: GLOBAL 2000, Bild 2: GLOBAL 20000, Bild 3: GLOBAL 2000<br></br>
+                                                                                                    Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria<br></br>
+                                                                                                    Neustiftgasse 36, 1070 Wien | +43/1/812 57 30 | office@global2000.at<br></br>
                                                                                                 <a href="https://www.global2000.at/" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    www.global2000.at
+                                                                                                    www.global2000.at |
                                                                                                 </a>
-                                                                                                <br><br></br>
                                                                                                     <a style="text-align: center; color: grey; font-size: 12.8px; background-color: transparent;"
                                                                                                        href="https://www.global2000.at/abmeldung-newsletter-G2K" target="_blank">
                                                                                                         Newsletter abbestellen
                                                                                                     </a>
-                                                                                                </br>
+                                                                                            </p>
+                                                                                            <br></br>
+                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
+                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Offenlegung |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Blattlinie |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Vereinszweck |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Datenschutz |
+                                                                                                </a>
+                                                                                                <br></br>
+                                                                                                Geschäftsführung: Rene Fischer &amp; Agnes Zauner
                                                                                             </p>
                                                                                         </td>
                                                                                     </tr>
@@ -357,16 +488,16 @@
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center;">
                                                                                                 <a href="https://twitter.com/global2000" target="_blank" style="text-decoration: none;">
-                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-twitter.png"/>
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/Twitter-Button.png" style="width:32px; margin: 0 20px;"/>
                                                                                                 </a>
                                                                                                 <a href="https://www.facebook.com/global2000" target="_blank" style="text-decoration: none;">
-                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-facebook.png"/>
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/FB-Button.png" style="width:32px; margin: 0 20px;"/>
                                                                                                 </a>
                                                                                                 <a href="https://www.youtube.com/user/UmweltGlobal2000" target="_blank" style="text-decoration: none;">
-                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-youtube.png"/>
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/YouTube-Button.png" style="width:32px; margin: 0 20px;"/>
                                                                                                 </a>
                                                                                                 <a href="https://www.instagram.com/global2000.at" target="_blank" style="text-decoration: none;">
-                                                                                                    <img style="width: 48px;" src="/fso_website_email_gl2k/static/src/icons/gl2k-instagram.png"/>
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/IG-Button.png" style="width:32px; margin: 0 20px;" />
                                                                                                 </a>
                                                                                             </p>
                                                                                         </td>
@@ -412,28 +543,190 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                <span>
-                                                                                                    Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria
-                                                                                                </span>
-                                                                                            </p>
-
-                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                Tel: +43/1/812 57 30, Fax: +43/1/812 57 28<br></br>
-
-                                                                                                E-Mail: office@global2000.at<br></br>
-                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Datenschutz |
-                                                                                                </a>
+                                                                                                Fotocredit: Bild 1: GLOBAL 2000, Bild 2: GLOBAL 20000, Bild 3: GLOBAL 2000<br></br>
+                                                                                                Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria<br></br>
+                                                                                                Neustiftgasse 36, 1070 Wien | +43/1/812 57 30 | office@global2000.at<br></br>
                                                                                                 <a href="https://www.global2000.at/" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    www.global2000.at
+                                                                                                    www.global2000.at |
                                                                                                 </a>
-                                                                                                <br><br></br>
-                                                                                                    <a style="text-align: center; color: grey; font-size: 12.8px; background-color: transparent;"
-                                                                                                       href="https://www.global2000.at/abmeldung-newsletter-G2K" target="_blank">
-                                                                                                        Newsletter abbestellen
-                                                                                                    </a>
-                                                                                                </br>
+                                                                                                <a style="text-align: center; color: grey; font-size: 12.8px; background-color: transparent;"
+                                                                                                   href="https://www.global2000.at/abmeldung-newsletter-G2K" target="_blank">
+                                                                                                    Newsletter abbestellen
+                                                                                                </a>
                                                                                             </p>
+                                                                                            <br></br>
+                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
+                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Offenlegung |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Blattlinie |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Vereinszweck |
+                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
+                                                                                                    Datenschutz
+                                                                                                </a>
+                                                                                            </p>
+                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
+                                                                                                Geschäftsführung: Rene Fischer &amp; Agnes Zauner<br></br>
+                                                                                            </p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SPENDEN SNIPPET -->
+                <!-- =============== -->
+                <div>
+                    <!-- Icon and name -->
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img"
+                             src="/fso_website_email_gl2k/static/src/icons/spendensnippet_gl2kNL.png"/>
+                        <span class="oe_snippet_thumbnail_title">Spenden Snippet</span>
+                    </div>
+                    <div id="combinedsnippetspenden" class="oe_snippet_body ckediting_disabled gl2k_bin">
+                        <div id="combinedsnippetspendenbutton" class="ckediting_disabled snippet_block_bpbutton bpbutton_center bpbutton_normal bpbutton_style_red">
+                            <table cellpadding="0" cellspacing="0" class="centeringTable">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" class="flexibleContainer">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="flexibleContainerCell" valign="top">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                                   class="nestedContainer">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" class="nestedContainerCell"
+                                                                            valign="top">
+                                                                            <table border="0" cellpadding="0"
+                                                                                   cellspacing="0" class="contentTable">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="textContent">
+                                                                                            <table class="bpbutton_table">
+                                                                                                <tbody>
+                                                                                                    <tr>
+                                                                                                        <td>
+                                                                                                            <p class="ckediting_enabled">
+                                                                                                                <a class="bpbutton_link"
+                                                                                                                   href="https://www.global2000.at/spenden-jetzt-spenden"
+                                                                                                                   target="_blank">
+                                                                                                                    Jetzt
+                                                                                                                    Spenden
+                                                                                                                </a>
+                                                                                                            </p>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="combinedsnippetspendentext" class="ckediting_disabled snippet_block snippet_block_text_intro">
+                            <table cellpadding="0" cellspacing="0" class="centeringTable">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                   class="flexibleContainer">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="flexibleContainerCell"
+                                                            valign="top">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                                   class="nestedContainer">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center"
+                                                                            class="nestedContainerCell"
+                                                                            valign="top">
+                                                                            <table border="0" cellpadding="0"
+                                                                                   cellspacing="0"
+                                                                                   class="contentTable">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="textContent ckediting_enabled">
+                                                                                            <p style="text-align: center; color: rgb(51, 51, 51); font-family: 'Nunito Sans' ,'Tahoma regular','Open Sans',sans-serif; background-color: transparent; text-align: center;">
+                                                                                                Spendenkonto Erste Bank<br></br>
+                                                                                                GLOBAL 2000 Umweltschutzorganisation<br></br>
+                                                                                                IBAN: AT24 2011 1822 2084 4701<br></br>
+                                                                                                BIC: GIBAATWWXXX<br></br>
+                                                                                            </p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="combinedsnippetspendenicons" class="ckediting_disabled snippet_block snippet_block_banner dadi_sb_bg_full gl2k_snippet_block_padding_smallbox">
+                            <table cellpadding="0" cellspacing="0" class="centeringTable">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <table border="0" cellpadding="0" cellspacing="0" class="flexibleContainer">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" class="flexibleContainerCell" valign="top">
+                                                            <table border="0" cellpadding="0" cellspacing="0"
+                                                                   class="nestedContainer">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td align="center" class="nestedContainerCell"
+                                                                            valign="top">
+                                                                            <table border="0" cellpadding="0"
+                                                                                   cellspacing="0" class="contentTable">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td class="textContent ckediting_enabled">
+                                                                                            <a href="#">
+                                                                                                <img class="flexibleImage snippet_block_banner_image"
+                                                                                                     src="/fso_website_email_gl2k/static/src/icons/NL-Spendenguetesiegel_absetzbarkeit-Logo.png"/>
+                                                                                            </a>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>
