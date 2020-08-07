@@ -73,6 +73,11 @@
     width: 650px;
     max-width: 650px;
 }
+#combinedsnippetspendenicons .flexibleImage {
+    width: 325px;
+    max-width: 325px;
+    margin: auto;
+}
 .snippet_block_banner.dadi_sb_bg_narrow .flexibleImage {
     width: 570px;
     max-width: 570px;
