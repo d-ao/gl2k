@@ -7,6 +7,7 @@
 #emailBody span.drop_in_button a,
 #emailBody span.drop_in_button a:visited {
     border-radius: 3px;
+    -webkit-border-radius:3px;
     background-color: #666666;
     /*border: 1px solid #666666;*/
     color: white;
@@ -24,6 +25,7 @@
 #emailBody span.drop_in_button.dadi_di_button_medium a {
     font-size: 18px;
     border-radius: 3px;
+    -webkit-border-radius:3px;
     /* outlook test   */
     /*padding: 0;*/
     /*border-top-width: 0.6em;*/
@@ -36,6 +38,7 @@
 #emailBody span.drop_in_button.dadi_di_button_large a {
     font-size: 20px;
     border-radius: 4px;
+    -webkit-border-radius:4px;
 }
 #emailBody span.drop_in_button.dadi_di_button_large a {
     padding: 0.75em 3.5em;
@@ -51,6 +54,7 @@
 #emailBody span.drop_in_button.dadi_di_button_huge a {
     font-size: 22px;
     border-radius: 4px;
+    -webkit-border-radius:4px;
 }
 #emailBody span.drop_in_button.dadi_di_button_huge a {
     padding: 0.8em 4.5em;
@@ -67,6 +71,7 @@
 #emailBody span.drop_in_button.dadi_di_button_transparent a:visited,
 #emailBody span.drop_in_button.dadi_di_button_transparent a {
     border-radius: 0;
+    -webkit-border-radius:0px;
     background-color: transparent;
     border: 2px solid white;
     color: inherit;

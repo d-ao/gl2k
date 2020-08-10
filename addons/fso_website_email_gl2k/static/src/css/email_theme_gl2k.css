@@ -123,7 +123,11 @@ html body #wrapwrap {
 #emailBody {
     width: 650px;
 }
-
+/* special fix for Outlook linked Images shown blue Border */
+a img
+{
+    border: 0 none;
+}
 /* ---------- */
 /* Typography */
 /* ---------- */
@@ -202,21 +206,21 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-margin-end: inherit;
 }
 .h1, h1 {
-    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 32px; /*customers whish 2rem but no not use it for compatibility reasons*/
     font-weight: 900;
     color: #75b836;
     text-transform: uppercase;
 }
 .h2, h2 {
-    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 24px; /*customers whish 1.5rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #003d84;
     font-weight: bold;
 }
 .h3, h3 {
-    font-family: "Rubik", "Arial black", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 21px; /*customers whish 1.3rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #75b836;

@@ -40,7 +40,7 @@
     background-color: #3d3d3c;
     border-color: #3d3d3c;
     color: #ffffff;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 
 }
@@ -56,6 +56,7 @@
 /* medium*/
 .snippet_block_bpbutton.bpbutton_medium .bpbutton_table {
     border-radius: 4px;
+    -webkit-border-radius:4px;
 }
 .snippet_block_bpbutton.bpbutton_medium .bpbutton_table a {
     font-size: 18px;
@@ -64,6 +65,7 @@
 /* large */
 .snippet_block_bpbutton.bpbutton_large .bpbutton_table {
     border-radius: 5px;
+    -webkit-border-radius:5px;
 }
 .snippet_block_bpbutton.bpbutton_large .bpbutton_table a {
     font-size: 20px;
@@ -72,6 +74,7 @@
 /* huge */
 .snippet_block_bpbutton.bpbutton_huge .bpbutton_table {
     border-radius: 6px;
+    -webkit-border-radius:5px;
 }
 .snippet_block_bpbutton.bpbutton_huge .bpbutton_table a {
     font-size: 24px;
@@ -88,7 +91,7 @@
     border-color: #3d3d3c ;
     color: #ffffff;
     font-weight: bold;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 .snippet_block_bpbutton.bpbutton_style_red .bpbutton_table,
@@ -102,8 +105,9 @@
     border: 1px solid #ad2a2a; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 
@@ -118,8 +122,9 @@
     border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 /* green opac */
@@ -133,8 +138,9 @@
     border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 /* blue */
@@ -148,8 +154,9 @@
     border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 /* blue opac */
@@ -163,8 +170,9 @@
     border: 1px solid #539132; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 /* grey */
@@ -178,8 +186,9 @@
     border: 1px solid #292928; !*customers whish 0,06rem but no not use it for compatibility reasons*!
     border-bottom-width: 2.5px; !*customers whish 0,18rem but no not use it for compatibility reasons*!*/
     border-radius: 5px;
+    -webkit-border-radius:5px;
     color: white;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
 /* yellow */
@@ -188,6 +197,6 @@
     background-color: #F19130;
     border-color: #F19130;
     color: #5a5a5a;
-    font-family: "Rubik", "Arial", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
+    font-family: 'Rubik', 'Arial', 'Nunito Sans', Helvetica, 'Open Sans', sans-serif;
     font-weight: 500;
 }
