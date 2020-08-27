@@ -241,6 +241,16 @@ background-color: transparent;
           background-color: rgba(117,184,54,0.2);
           border-radius: 0 5px 5px 0;
         }
+
+        .input-group-addon:active {
+          background-color: rgb(117,184,54);
+          color: rgb(255, 255, 255);
+        }
+
+        #price_donate:active {
+          background-color: rgb(117,184,54);
+          color: rgb(255, 255, 255);
+        }
       }
     }
 
@@ -264,11 +274,20 @@ background-color: transparent;
       margin-top: 10px;
     }
 
-    .payment_interval_id .form-control {
+    .payment_interval_ids {
+      .form-control {
       border-radius: 5px;
-      max-width: 300px;
+      max-width: 410px;
       margin: auto;
+      height: 50px;
     }
+
+      .form-control:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+  
 
     
 
