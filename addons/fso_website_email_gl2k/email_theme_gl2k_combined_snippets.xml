@@ -317,7 +317,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_facebook.png"
-                                                                                                                     style="text-align:center; width:32px; height:32px; border:0 none;"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -338,7 +338,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_twitter.png"
-                                                                                                                     style="text-align:center; width:32px; height:32px; border:0 none;"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -359,7 +359,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_youtube.png"
-                                                                                                                     style="text-align:center; width:32px; height:32px; border:0 none;"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -409,30 +409,22 @@
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
                                                                                                     Fotocredit: Bild 1: GLOBAL 2000, Bild 2: GLOBAL 20000, Bild 3: GLOBAL 2000<br></br>
-                                                                                                    Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria<br></br>
+                                                                                                    Umweltschutzorganisation GLOBAL 2000 / Friends of the Earth Austria<br></br>
                                                                                                     Neustiftgasse 36, 1070 Wien | +43/1/812 57 30 | office@global2000.at<br></br>
                                                                                                 <a href="https://www.global2000.at/" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    www.global2000.at |
-                                                                                                </a>
-                                                                                                    <a style="text-align: center; color: grey; font-size: 12.8px; background-color: transparent;"
+                                                                                                    www.global2000.at
+                                                                                                </a> |
+                                                                                                    <a style="text-align: font-size: 12.8px; background-color: transparent;"
                                                                                                        href="https://www.global2000.at/abmeldung-newsletter-G2K" target="_blank">
                                                                                                         Newsletter abbestellen
                                                                                                     </a>
                                                                                             </p>
                                                                                             <br></br>
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Offenlegung |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Blattlinie |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Vereinszweck |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Datenschutz |
-                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Offenlegung</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Blattlinie</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Vereinszweck</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Datenschutz</a>
                                                                                                 <br></br>
                                                                                                 Geschäftsführung: Rene Fischer &amp; Agnes Zauner
                                                                                             </p>
@@ -487,17 +479,17 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center;">
-                                                                                                <a href="https://twitter.com/global2000" target="_blank" style="text-decoration: none;">
-                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/Twitter-Button.png" style="width:32px; margin: 0 20px; border:0 none;"/>
-                                                                                                </a>
-                                                                                                <a href="https://www.facebook.com/global2000" target="_blank" style="text-decoration: none;">
+                                                                                                <a href="https://www.facebook.com/global2000" target="_blank" style="display: inline-block; text-decoration: none;">
                                                                                                     <img src="/fso_website_email_gl2k/static/src/icons/FB-Button.png" style="width:32px; margin: 0 20px; border:0 none;"/>
                                                                                                 </a>
-                                                                                                <a href="https://www.youtube.com/user/UmweltGlobal2000" target="_blank" style="text-decoration: none;">
+                                                                                                <a href="https://www.instagram.com/global2000.at" target="_blank" style="display: inline-block; text-decoration: none;">
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/IG-Button.png" style="width:32px; margin: 0 20px; border:0 none;" />
+                                                                                                </a>
+                                                                                                <a href="https://www.youtube.com/user/UmweltGlobal2000" target="_blank" style="display: inline-block; text-decoration: none;">
                                                                                                     <img src="/fso_website_email_gl2k/static/src/icons/YouTube-Button.png" style="width:32px; margin: 0 20px; border:0 none;"/>
                                                                                                 </a>
-                                                                                                <a href="https://www.instagram.com/global2000.at" target="_blank" style="text-decoration: none;">
-                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/IG-Button.png" style="width:32px; margin: 0 20px; border:0 none;" />
+                                                                                                <a href="https://twitter.com/global2000" target="_blank" style="display: inline-block; text-decoration: none;">
+                                                                                                    <img src="/fso_website_email_gl2k/static/src/icons/Twitter-Button.png" style="width:32px; margin: 0 20px; border:0 none;"/>
                                                                                                 </a>
                                                                                             </p>
                                                                                         </td>
@@ -543,31 +535,23 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                Fotocredit: Bild 1: GLOBAL 2000, Bild 2: GLOBAL 20000, Bild 3: GLOBAL 2000<br></br>
+                                                                                                Fotocredit: Bild 1: GLOBAL 2000, Bild 2: GLOBAL 2000, Bild 3: GLOBAL 2000<br></br>
                                                                                                 Umweltschutzorganisation GLOBAL 2000/Friends of the Earth Austria<br></br>
                                                                                                 Neustiftgasse 36, 1070 Wien | +43/1/812 57 30 | office@global2000.at<br></br>
                                                                                                 <a href="https://www.global2000.at/" target="_blank" style="text-align: center; font-size: 12.8px;">
                                                                                                     www.global2000.at |
                                                                                                 </a>
-                                                                                                <a style="text-align: center; color: grey; font-size: 12.8px; background-color: transparent;"
+                                                                                                <a style="text-align: center; font-size: 12.8px; background-color: transparent;"
                                                                                                    href="https://www.global2000.at/abmeldung-newsletter-G2K" target="_blank">
                                                                                                     Newsletter abbestellen
                                                                                                 </a>
                                                                                             </p>
                                                                                             <br></br>
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
-                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Offenlegung |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Blattlinie |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Vereinszweck |
-                                                                                                </a>
-                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="text-align: center; font-size: 12.8px;">
-                                                                                                    Datenschutz
-                                                                                                </a>
+                                                                                                <a href="https://www.global2000.at/offenlegung" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Offenlegung</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/offenlegung#blattlinie" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Blattlinie</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/offenlegung#vereinszweck" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Vereinszweck</a>&amp;nbsp;|
+                                                                                                <a href="https://www.global2000.at/datenschutz" target="_blank" style="display: inline-block; text-align: center; font-size: 12.8px;">Datenschutz</a>
                                                                                             </p>
                                                                                             <p style="text-align: center; color: rgb(51, 51, 51); font-size: 12.8px; background-color: transparent; text-align: center;">
                                                                                                 Geschäftsführung: Rene Fischer &amp; Agnes Zauner<br></br>

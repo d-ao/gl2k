@@ -13,6 +13,14 @@
     padding-top: 0px;
     padding-bottom: 8px;
 }
+#footerendold p,
+#footerendold a {
+    font-size: 12.8px;
+}
+#footerend p,
+#footerend a {
+    font-size: 12.8px;
+}
 /* .snippet_block_text_image_left */
 .snippet_block_text_image_left .flexibleContainerRight,
 .snippet_block_text_image_left .flexibleContainerRight .flexibleImage {

@@ -37,6 +37,17 @@
         width: 32px !important;
         display: initial;
     }
+    #mediaiconsold > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > p > a > img {
+        margin: 0 2px !important;
+    }
+
+    #mediaiconsold > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > p > a,
+    #mediaiconsold > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > p > a:visited,
+    #mediaiconsold > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > p > a:active  {
+        text-decoration: none !important;
+    }
+
+
     #combinedsnippetfooter .snippet_block_text_four_colums > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table > tbody > tr > td > table {
         width: 100%;
     }
@@ -58,7 +69,7 @@
 
     .h3, h3{
         font-size: 20px;
-        font-weight: 300;
+        font-weight: 700;
     }
 
     .h4, h4{
