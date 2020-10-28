@@ -7,6 +7,11 @@
             <xpath expr="//link[last()]" position="after">
                 <link rel="stylesheet" href='/gl2k_product_themes/static/src/css/gl2k_inline.less'/>
                 <link rel="stylesheet" href='/gl2k_product_themes/static/src/css/gl2k_inline_test.less'/>
+
+                <link rel="stylesheet" href='/gl2k_product_themes/static/src/css/gl2k_theme_a.less'/>
+                <link rel="stylesheet" href='/gl2k_product_themes/static/src/css/gl2k_theme_b.less'/>
+                <link rel="stylesheet" href='/gl2k_product_themes/static/src/css/gl2k_theme_c.less'/>
+
             </xpath>
         </template>
 
