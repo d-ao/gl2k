@@ -386,7 +386,7 @@ background-color: transparent;
       border-top: none;
     
       .pull-right {
-        float: none;
+        float: none !important;
       }
 
       .text-right {
@@ -486,6 +486,29 @@ background-color: transparent;
       ul.nav.nav-tabs {
         li {
           width: 100%;
+        }
+      }
+    }
+    .wsd_payment_page_content {
+      padding-bottom: 1em;
+
+      // Style Cart Total (Spendensumme)
+      .h3 {
+        font-size: 2rem;
+      }
+        
+        #cart_total {
+        font-family: Nunito Sans;
+        color: rgb(61,61,60);
+        font-size: 1rem;
+        border-top: none;
+      
+        .pull-right {
+          float: none !important;
+        }
+  
+        .text-right {
+          text-align: left;
         }
       }
     }
