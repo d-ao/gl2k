@@ -374,12 +374,28 @@ background-color: transparent;
   .wsd_payment_page_content {
     padding-bottom: 1em;
 
-    // Hide the shopping cart
-    .small_cart_header,
-    .small_cart {
-
+    // Hide the shopping cart header
+    #cart_products {
+      display: none;
     }
 
+    // Style Cart Total (Spendensumme)
+    #cart_total {
+      font-family: Nunito Sans;
+      color: rgb(61,61,60);
+      font-size: 1rem;
+      border-top: none;
+    
+      .pull-right {
+        float: none;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+    }
+
+  
     // Full width for the left column
     #wsd_payment_page_left_col {
       width: 100%;
