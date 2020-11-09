@@ -380,17 +380,19 @@ background-color: transparent;
 
     // Style Cart Total (Spendensumme)
     #cart_total {
-      font-family: Nunito Sans;
-      color: rgb(61,61,60);
-      font-size: 1rem;
       border-top: none;
     
+      #order_total h3 {
+        font-family: Nunito Sans;
+        color: rgb(61,61,60);
+        font-size: 2rem;
+      }
       .pull-right {
         float: none !important;
       }
 
       .text-right {
-        text-align: right;
+        text-align: left;
       }
     }
 
@@ -470,6 +472,14 @@ background-color: transparent;
 
 // SPECIAL MEDIA QUERIES
 @media (max-width: 400px) {
+  .oe_cart table td:last-child, .oe_cart table td:nth-last-child(2), #modal_optional_products table td:last-child, #modal_optional_products table td:nth-last-child(2) {
+    width: 50% !important;
+    text-align: left;
+}
+  body h3 {
+    font-size: 2rem;
+  }
+  
   body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline_test]:not([data-confirmation-controller-called=True]) {
     #wsd_checkout_steps_nav {
       .checkout_steps_navigation {
