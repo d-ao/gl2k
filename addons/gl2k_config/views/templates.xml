@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+                <!-- Load custom JS for the website for Shop Disable Jump to ProductPage on Grid Icon Click -->
+        <template id="gl2k_assets_frontend" inherit_id="website_forum.assets_frontend" name="gl2k JS">
+            <xpath expr='//script[@src="/website_forum/static/src/js/website_forum.js"]' position="after">
+            <script type="text/javascript" src="/gl2k_config/static/src/js/shopFunctions.js"/>
+            </xpath>
+        </template>
+
+
+        <!-- INHERIT PRODUCT LISTING products_item: ADD "Product Sales Description" and "Add to Cart Button" -->
+        <!-- HINT: Do NOT enable original desc. and add to cart option -->
+        <template id="products_item_gl2k" inherit_id="website_sale.products_item" name="gl2k Product Description">
+            <xpath expr="//div[@itemprop='offers']" position="after">
+            <!-- WRTV Product Description -->
+                <div class="text-info oe_subdescription" contenteditable="false">
+                    <div itemprop="description" t-field="product.description_sale"></div>
+                </div>
+                <!-- gl2k Quick Add To Cart -->
+               <div class="quick_add_to_cart">
+                    <input name="product_id" t-att-value="product.product_variant_ids[0].id" type="hidden"/>
+                    <t t-if="len(product.product_variant_ids) == 1">
+                        <a class="btn btn-default btn-xs fa fa-shopping-cart a-submit">auswählen</a>
+                    </t>
+                    <t t-if="len(product.product_variant_ids) &gt; 1">
+                        <a class="btn btn-default btn-xs fa fa-shopping-cart" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))">in den Korb</a>
+                    </t>
+                </div>
+            </xpath>
+        </template>
+
     <!-- CUSTOM BOOTSTRAP THEME FOR Global2000 -->
     <!-- HINT: http://getbootstrap.com/customize -->
     <template id="gl2k_theme_option" inherit_id="website.themes" name="Gl2k Theme Option">
@@ -29,6 +59,7 @@
             <link rel='stylesheet' href='/gl2k_config/static/src/css/bootstrap_gl2k/css/bootstrap-theme.min.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_mikes_testoverrides.css' t-ignore="true"/>
+            <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_shop_categories_t-shirt.css' t-ignore="true"/>
         </xpath>
     </template>
         
