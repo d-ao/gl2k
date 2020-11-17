@@ -36,6 +36,7 @@ body[data-rootcatid="13"] #products_grid .oe_product section a {
     font-style: normal;
 
 }
+
 body[data-rootcatid="13"] #products_grid .product_price.text-primary {
     color: white;
 }
@@ -98,6 +99,7 @@ body[data-rootcatid="13"] #products_grid .oe_product section a,
 body[data-rootcatid="13"] #products_grid .oe_product section span {
     color: black;
     font-family: 'Rubik' ,'Arial black','Open Sans',sans-serif;
+    font-weight: 500;
 }
 body[data-rootcatid="13"] .quick_add_to_cart .btn.btn-default.btn-xs.fa.fa-shopping-cart.a-submit {
     font-size: 1.11111111rem;
