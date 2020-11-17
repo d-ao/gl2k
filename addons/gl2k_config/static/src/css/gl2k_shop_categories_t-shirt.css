@@ -105,7 +105,7 @@ body[data-rootcatid="13"] .quick_add_to_cart .btn.btn-default.btn-xs.fa.fa-shopp
     font-size: 1.11111111rem;
     line-height: 1.35em;
     padding: 0.82638889rem 1rem;
-    font-weight: 500;
+    font-weight: 700 !important;
     display: inline-block;
     white-space: normal;
     text-align: left;
@@ -114,6 +114,7 @@ body[data-rootcatid="13"] .quick_add_to_cart .btn.btn-default.btn-xs.fa.fa-shopp
     border-bottom-width: 0.18rem;
     border-radius: 5px;
     background-image: none !important;
+    text-shadow: none;
 }
 body[data-rootcatid="13"] .quick_add_to_cart a.btn.btn-default.btn-xs.fa.fa-shopping-cart.a-submit  {
     color: white !important;
