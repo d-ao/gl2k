@@ -204,6 +204,7 @@ body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text:after {
     content: 'Jetzt spenden und bestellen';
     color: white;
     visibility: visible;
+    text-align: center;
 }
 
 body[data-rootcatid="13"] .wsd_cfi_buttons {
