@@ -177,7 +177,7 @@ body [data-rootcatid="13"] .form-control {
 
 /*Hide Zuruech Button*/
 
-body [data-rootcatid="13"] a.wsd_button_back_to_page.btn.btn-default {
+body [data-rootcatid="13"] .wsd_button_back_to_page {
     display: none;
 }
 
