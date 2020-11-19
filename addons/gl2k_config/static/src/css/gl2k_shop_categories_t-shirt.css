@@ -198,6 +198,7 @@ body[data-rootcatid="13"] #wsd_checkout_form_submit_button .glyphicon {
 
 body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text {
     visibility: hidden;
+    display: none;
 }
 
 body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text:after {
@@ -205,6 +206,7 @@ body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text:after {
     color: white;
     visibility: visible;
     text-align: center;
+    display: block;
 }
 
 body[data-rootcatid="13"] .wsd_cfi_buttons {
