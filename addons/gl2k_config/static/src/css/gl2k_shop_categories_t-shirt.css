@@ -142,11 +142,11 @@ body[data-rootcatid="13"] .oe_product.oe_grid:hover {
     box-shadow: 0 0 4px rgba(0,0,0,0.5);
 }
 
-body [data-rootcatid="13"] .oe_website_sale h5 {
+body[data-rootcatid="13"] .oe_website_sale h5 {
     margin-top: 0.25em;
 }
 
-body [data-rootcatid="13"] .oe_grid h5 {
+body[data-rootcatid="13"] .oe_grid h5 {
     margin-bottom: 0px;
 }
 
