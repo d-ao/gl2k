@@ -137,5 +137,5 @@ body[data-rootcatid="13"] .oe_product .product_price {
 body[data-rootcatid="13"] .oe_product.oe_grid,
 body[data-rootcatid="13"] .oe_product.oe_grid:hover {
     border: none;
-    box-shadow: 0 0 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
 }
