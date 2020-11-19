@@ -154,43 +154,43 @@ body [data-rootcatid="13"] .oe_grid h5 {
 
 /* Warenkorb */
 
-body [data-rootcatid="13"] #product_grid_before {
+body[data-rootcatid="13"] #product_grid_before {
     margin-top: 20px;
 }
 
 /* Hide Meine Spende and Check out Button */
 
 
-body [data-rootcatid="13"] .small_cart_header {
+body[data-rootcatid="13"] .small_cart_header {
         display: none;
 }
 
-body [data-rootcatid="13"] .text-left.small_cart_buttons {
+body[data-rootcatid="13"] .text-left.small_cart_buttons {
     display: none;
 }
 
 /*Formularfelder abrunden*/
 
-body [data-rootcatid="13"] .form-control {
+body[data-rootcatid="13"] .form-control {
     border-radius: 4px;
 }
 
 /*Hide Zuruech Button*/
 
-body [data-rootcatid="13"] .wsd_button_back_to_page {
+body[data-rootcatid="13"] .wsd_button_back_to_page {
     display: none;
 }
 
 /*Style Spendenbutton unten*/
 
-body [data-rootcatid="13"] #wsd_checkout_form_submit_button {
+body[data-rootcatid="13"] #wsd_checkout_form_submit_button {
     border-radius: 4px;
     margin-top: 20px;
 }
 
 /* Padding im gesamten Container verringern*/
 
-body [data-rootcatid="13"] .container {
+body[data-rootcatid="13"] .container {
     padding-left: 7px;
     padding-right: 7px;
 }
