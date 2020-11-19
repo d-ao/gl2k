@@ -188,6 +188,29 @@ body[data-rootcatid="13"] #wsd_checkout_form_submit_button {
     margin-top: 20px;
 }
 
+body[data-rootcatid="13"] #wsd_checkout_form_submit_button {
+    float: none !important;
+}
+
+body[data-rootcatid="13"] #wsd_checkout_form_submit_button .glyphocon {
+    display: none;
+}
+
+body[data-rootcatid="13"] #wsd_checkout_form_submit_button span {
+    display: none;
+}
+
+body[data-rootcatid="13"] #wsd_checkout_form_submit_button span:after {
+    content: 'Jetzt spenden und bestellen';
+    color: white;
+}
+
+body[data-rootcatid="13"] .wsd_cfi_buttons {
+    text-align: center;
+}
+
+
+
 /* Padding im gesamten Container verringern*/
 
 body[data-rootcatid="13"] .container {
