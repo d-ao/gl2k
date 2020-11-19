@@ -143,3 +143,7 @@ body[data-rootcatid="13"] .oe_product.oe_grid:hover {
 body [data-rootcatid="13"] .oe_website_sale h5 {
     margin-top: 0.25em;
 }
+
+body [data-rootcatid="13"] .oe_grid h5 {
+    margin-bottom: 0px;
+}
