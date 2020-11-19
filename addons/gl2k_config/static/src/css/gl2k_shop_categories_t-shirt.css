@@ -154,18 +154,18 @@ body [data-rootcatid="13"] .oe_grid h5 {
 
 /* Warenkorb */
 
-body [data-rootcatid="13"] #product_grid_before {
+body [data-rootcatid="13"] div#product_grid_before {
     margin-top: 20px;
 }
 
 /* Hide Meine Spende and Check out Button */
 
 
-body [data-rootcatid="13"] .small_cart_header {
+body [data-rootcatid="13"] h3.small_cart_header {
         display: none;
 }
 
-body [data-rootcatid="13"] .text-left.small_cart_buttons {
+body [data-rootcatid="13"] div.text-left.small_cart_buttons {
     display: none;
 }
 
