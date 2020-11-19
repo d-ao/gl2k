@@ -197,12 +197,13 @@ body[data-rootcatid="13"] #wsd_checkout_form_submit_button .glyphocon {
 }
 
 body[data-rootcatid="13"] #wsd_checkout_form_submit_button span {
-    display: none;
+    visibility: hidden;
 }
 
 body[data-rootcatid="13"] #wsd_checkout_form_submit_button span:after {
     content: 'Jetzt spenden und bestellen';
     color: white;
+    visibility: visible;
 }
 
 body[data-rootcatid="13"] .wsd_cfi_buttons {
