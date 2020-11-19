@@ -104,9 +104,9 @@ body[data-rootcatid="13"] #products_grid .oe_product section span {
     font-weight: 500;
 }
 body[data-rootcatid="13"] .quick_add_to_cart .btn.btn-default.btn-xs.fa.fa-shopping-cart.a-submit {
-    font-size: 1.11111111rem;
+    font-size: 1.4rem;
     line-height: 1.35em;
-    padding: 0.82638889rem 1rem;
+    padding: 0.6rem 1rem;
     font-weight: 700 !important;
     display: inline-block;
     white-space: normal;
