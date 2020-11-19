@@ -20,6 +20,7 @@ body[data-rootcatid="13"] #products_grid .oe_product section {
     font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
     font-weight: 500;
     font-style: normal;
+    height: 110px;
 
 }
 body[data-rootcatid="13"] #products_grid .oe_product section h5 {
@@ -82,7 +83,7 @@ body[data-rootcatid="13"] .oe_product .oe_product_image {
      left: 0px;
      right: 0px;
      top: 0px;
-     bottom: 100px !important;
+     bottom: 105px !important;
 }
 @media (max-width: 400px) {
     body[data-rootcatid="13"] .oe_product .oe_product_image {
