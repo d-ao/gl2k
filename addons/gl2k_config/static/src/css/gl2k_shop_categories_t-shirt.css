@@ -148,3 +148,7 @@ body [data-rootcatid="13"] .oe_website_sale h5 {
 body [data-rootcatid="13"] .oe_grid h5 {
     margin-bottom: 0px;
 }
+
+body [data-rootcatid="13"] .oe_product.oe_grid .oe_subdescription {
+    margin-top: 4px;
+}
