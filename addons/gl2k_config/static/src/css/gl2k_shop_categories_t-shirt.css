@@ -150,13 +150,21 @@ body [data-rootcatid="13"] .oe_grid h5 {
     margin-bottom: 0px;
 }
 
+
+
 /* Warenkorb */
 
 /* Meine Spende verlinkte Ueberschrift verstecken */
 
+body [data-rootcatid="13"] #product_grid_before {
+    margin-top: 20px;
+}
+
 body [data-rootcatid="13"] .small_cart_header {
         display: none;
 }
+
+
 
 
 
