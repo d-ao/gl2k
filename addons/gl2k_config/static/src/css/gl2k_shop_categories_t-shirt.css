@@ -169,7 +169,24 @@ body [data-rootcatid="13"] .text-left.small_cart_buttons {
     display: none;
 }
 
+/*Formularfelder abrunden*/
 
+body [data-rootcatid="13"] .form-control {
+    border-radius: 4px;
+}
+
+/*Hide Zuruech Button*/
+
+body [data-rootcatid="13"] a.wsd_button_back_to_page.btn.btn-default {
+    display: none;
+}
+
+/*Style Spendenbutton unten*/
+
+body [data-rootcatid="13"] #wsd_checkout_form_submit_button {
+    border-radius: 4px;
+    margin-top: 20px;
+}
 
 /* Padding im gesamten Container verringern*/
 
