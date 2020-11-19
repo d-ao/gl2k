@@ -149,3 +149,18 @@ body [data-rootcatid="13"] .oe_website_sale h5 {
 body [data-rootcatid="13"] .oe_grid h5 {
     margin-bottom: 0px;
 }
+
+/* Warenkorb */
+
+/* Meine Spende verlinkte Ueberschrift verstecken */
+
+body [data-rootcatid="13"] .small_cart_header {
+        display: none;
+}
+
+
+
+
+
+
+
