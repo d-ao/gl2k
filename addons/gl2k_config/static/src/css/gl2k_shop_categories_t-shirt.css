@@ -20,7 +20,7 @@ body[data-rootcatid="13"] #products_grid .oe_product section {
     font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
     font-weight: 500;
     font-style: normal;
-    height: 110px;
+    height: 100px;
 
 }
 body[data-rootcatid="13"] #products_grid .oe_product section h5 {
@@ -83,7 +83,7 @@ body[data-rootcatid="13"] .oe_product .oe_product_image {
      left: 0px;
      right: 0px;
      top: 0px;
-     bottom: 105px !important;
+     bottom: 100px !important;
 }
 @media (max-width: 400px) {
     body[data-rootcatid="13"] .oe_product .oe_product_image {
@@ -137,5 +137,5 @@ body[data-rootcatid="13"] .oe_product .product_price {
 body[data-rootcatid="13"] .oe_product.oe_grid,
 body[data-rootcatid="13"] .oe_product.oe_grid:hover {
     border: none;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 6px;
 }
