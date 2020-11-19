@@ -149,6 +149,6 @@ body [data-rootcatid="13"] .oe_grid h5 {
     margin-bottom: 0px;
 }
 
-body [data-rootcatid="13"] .oe_product.oe_grid .oe_subdescription {
+body [data-rootcatid="13"] .oe_product_cart .quick_add_to_cart {
     margin-top: 4px;
 }
