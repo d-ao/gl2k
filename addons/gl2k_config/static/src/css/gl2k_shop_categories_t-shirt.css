@@ -40,6 +40,7 @@ body[data-rootcatid="13"] #products_grid .oe_product section a {
 
 body[data-rootcatid="13"] #products_grid .product_price.text-primary {
     color: white;
+    line-height: 1.1;
 }
 body[data-rootcatid="13"] #products_grid .oe_product .oe_product_image img {
     height: 100%;
