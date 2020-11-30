@@ -60,6 +60,7 @@
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_mikes_testoverrides.css' t-ignore="true"/>
             <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_shop_categories_t-shirt.css' t-ignore="true"/>
+            <link rel='stylesheet' href='/gl2k_config/static/src/css/gl2k_shop_categories_produkte.css' t-ignore="true"/>
         </xpath>
     </template>
         
