@@ -20,7 +20,8 @@ body[data-rootcatid="15"] #products_grid .oe_product section {
     font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
     font-weight: 500;
     font-style: normal;
-    height: 100px;
+    height: 160px;
+    justify-content: normal;
 
 }
 body[data-rootcatid="15"] #products_grid .oe_product section h5 {
@@ -63,7 +64,7 @@ body[data-rootcatid="15"] #wrap > div.container.oe_website_sale > div.row {
 }*/
 body[data-rootcatid="15"] #products_grid .oe_product {
     width: 340px;
-    height: 440px;
+    height: 500px;
     margin-right: 4px;
 }
 body[data-rootcatid="15"] oe_product oe_grid oe-height-2 {
@@ -76,20 +77,20 @@ body[data-rootcatid="15"] #products_grid .oe_product section {
     background-image: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg);
     display: flex;
     flex-direction: column;
-    height:100px;
+    height:160px;
     align-items: center;
-    justify-content: center;
+    justify-content: normal;
     padding: 2px 2px 2px 2px;
 }
 body[data-rootcatid="15"] .oe_product .oe_product_image {
      left: 0px;
      right: 0px;
      top: 0px;
-     bottom: 100px !important;
+     bottom: 160px !important;
 }
 @media (max-width: 400px) {
     body[data-rootcatid="15"] .oe_product .oe_product_image {
-        bottom: 137px !important;
+        bottom: 200px !important;
     }
 }
 body[data-rootcatid="15"] #products_grid .oe_product section > h5 { order: 1; } /* Headline */
@@ -222,5 +223,8 @@ body[data-rootcatid="15"] .container {
     padding-right: 7px;
 }
 
+/* Anzeigen des Beschreibungstextes*/
 
-
+body[data-rootcatid="15"] .oe_oroduct .oe_subdescription {
+    overflow: visible;
+}
