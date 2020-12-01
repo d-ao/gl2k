@@ -97,7 +97,16 @@ body[data-rootcatid="15"] .oe_product .oe_product_image {
 }
 @media (max-width: 400px) {
     body[data-rootcatid="15"] .oe_product .oe_product_image {
-        bottom: 200px !important;
+        bottom: 160px !important;
+    }
+
+    body[data-rootcatid="15"] #products_grid .oe_product {
+        width: 340px;
+        height: 500px;
+    }
+
+    body[data-rootcatid="15"] #products_grid .oe_product section {
+        height: 160px;
     }
 }
 body[data-rootcatid="15"] #products_grid .oe_product section > h5 { order: 1; } /* Headline */
