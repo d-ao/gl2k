@@ -93,9 +93,9 @@ body[data-rootcatid="15"] .oe_product .oe_product_image {
     }
 }
 body[data-rootcatid="15"] #products_grid .oe_product section > h5 { order: 1; } /* Headline */
-body[data-rootcatid="15"] #products_grid .oe_product section > div.product_price.text-primary { order: 2 }
-body[data-rootcatid="15"] #products_grid .oe_product section > div.text-info.oe_subdescription { order: 3; }
-body[data-rootcatid="15"] #products_grid .oe_product section :nth-child(4) { order: 3; }
+body[data-rootcatid="15"] #products_grid .oe_product section > div.product_price.text-primary { order: 3 }
+body[data-rootcatid="15"] #products_grid .oe_product section > div.text-info.oe_subdescription { order: 2; }
+body[data-rootcatid="15"] #products_grid .oe_product section :nth-child(4) { order: 2; }
 body[data-rootcatid="15"] #products_grid .oe_product section > div.quick_add_to_cart { order: 4; }
 
 body[data-rootcatid="15"] #products_grid .oe_product section a,
