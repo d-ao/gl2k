@@ -51,6 +51,13 @@ body[data-rootcatid="15"] #products_grid .oe_product .oe_product_image img {
     max-width: initial;
 }
 
+body[data-rootcatid="15"] #products_grid .oe_product section .text-info.oe_subdescription {
+    color: #3d3d3c;
+    text-align: center;
+    line-height: normal;
+    padding: 0 10px;
+}
+
 /* reverse Shop Grid and Cart, move cart under shop grid */
 body[data-rootcatid="15"] #wrap > div.container.oe_website_sale > div.row {
     display: flex;
@@ -150,6 +157,8 @@ body[data-rootcatid="15"] .oe_website_sale h5 {
 body[data-rootcatid="15"] .oe_grid h5 {
     margin-bottom: 0px;
 }
+
+
 
 
 
