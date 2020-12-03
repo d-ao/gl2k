@@ -182,7 +182,7 @@ body[data-rootcatid="15"]
 /* Hide Meine Spende and Check out Button */
 
 
-body[data-rootcatid="15"] .container .oe_website_sale h3.small_cart_header {
+body[data-rootcatid="15"] h3.small_cart_header {
         display: none;
 }
 
