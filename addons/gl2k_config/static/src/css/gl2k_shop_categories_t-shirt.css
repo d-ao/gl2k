@@ -198,16 +198,36 @@ body[data-rootcatid="13"] #wsd_checkout_form_submit_button .glyphicon {
     display: none;
 }
 
-body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text {
-    visibility: collapse;
+/* Variante 1, Wenn es mit Variante 2 bei etwaigen Endgeräten Probleme gibt diese Variante testen BEGIN */
+
+/*body[data-rootcatid="13"] span.wsd_checkout_form_submit_button_text {*/
+    /*text-indent: -9999px;*/
+    /*line-height: 0;*/
+/*}*/
+/*body[data-rootcatid="13"] span.wsd_checkout_form_submit_button_text:after {*/
+    /*content: 'Jetzt spenden und bestellen';*/
+    /*text-indent: 0;*/
+    /*margin-left: -39px;*/
+    /*color: white;*/
+    /*line-height: normal;*/
+    /*visibility: visible;*/
+/*}*/
+/* Variante 1, Wenn es mit Variante 2 bei etwaigen Endgeräten Probleme gibt diese Variante testen END */
+
+/* Variante 2 moderner, geht aber vielleicht bei weniger Browsern BEGIN */
+body[data-rootcatid="13"] span.wsd_checkout_form_submit_button_text {
+    visibility: hidden;
+    word-spacing: -999px;
+    letter-spacing: -999px;
 }
 
-body[data-rootcatid="13"] .wsd_checkout_form_submit_button_text:after {
-    content: 'Jetzt spenden und bestellen';
-    color: white;
+body[data-rootcatid="13"] span.wsd_checkout_form_submit_button_text:after {
+    content: "Jetzt spenden und bestellen";
     visibility: visible;
-    text-align: center;
+    word-spacing: normal;
+    letter-spacing: normal;
 }
+/* Variante 2 moderner, geht aber vielleicht bei weniger Browsern END */
 
 body[data-rootcatid="13"] .wsd_cfi_buttons {
     text-align: center;
