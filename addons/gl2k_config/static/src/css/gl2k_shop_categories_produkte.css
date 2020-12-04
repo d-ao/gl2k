@@ -177,13 +177,10 @@ body[data-rootcatid="15"] #products_grid_before {
     margin-top: 40px;
 }
 
-body[data-rootcatid="15"] 
-
 /* Hide Meine Spende and Check out Button */
 
-
-body[data-rootcatid="15"] h3.small_cart_header {
-        display: none;
+body[data-rootcatid="15"] #products_grid_before > h3.small_cart_header {
+    display: none;
 }
 
 body[data-rootcatid="15"] .text-left.small_cart_buttons {
