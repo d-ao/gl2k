@@ -387,14 +387,17 @@ background-color: transparent;
         color: rgb(61,61,60);
         font-size: 2rem;
       }
-      .pull-right {
-        float: left !important;
-      }
+    
 
       .text-right {
         text-align: left;
       }
     }
+
+    table#cart_total.pull-right {
+       float: none !important;
+     }
+    
 
   
     // Full width for the left column
@@ -512,8 +515,7 @@ background-color: transparent;
       // Style Cart Total (Spendensumme)
       
       .small_cart {
-        table {
-          .pull-right {
+        table#cart_total.pull-right {
             float: none !important;
 
              .h3 {
@@ -530,7 +532,7 @@ background-color: transparent;
               .text-right {
                 text-align: left;
               }
-          }
+          
         }
       }
     }
