@@ -343,10 +343,38 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
     padding-bottom: 1em;
 
     // Hide the shopping cart
-    .small_cart_header,
-    .small_cart {
+    #cart_products {
       display: none;
     }
+
+    .small_cart_header {
+      display: none;
+    }
+
+    // Style Cart Total (Spendensumme)
+    #cart_total {
+      border-top: none;
+    
+      #order_total h3 {
+        font-family: Nunito Sans;
+        color: rgb(61,61,60);
+        font-size: 2rem;
+      }
+    
+
+      .text-right {
+        text-align: left;
+      }
+    }
+
+    table#cart_total.pull-right {
+       float: none !important;
+
+       tr#order_total {
+        width: 300px !important;
+       }
+     }
+    
 
     // Full width for the left column
     #wsd_payment_page_left_col {
@@ -421,6 +449,21 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
 
 // SPECIAL MEDIA QUERIES
 @media (max-width: 400px) {
+  .oe_cart table td:last-child, .oe_cart table td:nth-last-child(2), #modal_optional_products table td:last-child, #modal_optional_products table td:nth-last-child(2) {
+    width: 50% !important;
+    text-align: left;
+    height: none;
+  }
+
+  body h3 {
+    font-size: 2rem;
+  }
+  
+
+  body[data-on-shop-page=True][data-latest-product-theme=gl2k_theme_a]:not([data-confirmation-controller-called=True]) #wrapwrap main #wrap #wsd_checkout_steps_nav .checkout_steps_navigation ul.checkout_steps_indicator.nav-tabs li a .csi_tab_after span,body[data-on-shop-page=True][data-latest-product-theme=gl2k_theme_a]:not([data-confirmation-controller-called=True]) #wrapwrap main #wrap #wsd_checkout_steps_nav .checkout_steps_navigation ul.checkout_steps_indicator.nav-tabs li a:focus .csi_tab_after span,body[data-on-shop-page=True][data-latest-product-theme=gl2k_theme_a]:not([data-confirmation-controller-called=True]) #wrapwrap main #wrap #wsd_checkout_steps_nav .checkout_steps_navigation ul.checkout_steps_indicator.nav-tabs li a:hover .csi_tab_after span {
+    margin-left: -80px;
+  }
+  
   body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-confirmation-controller-called=True]) {
     #wsd_checkout_steps_nav {
       .checkout_steps_navigation {
@@ -440,5 +483,35 @@ body[data-on-shop-page=True][data-latest-product-theme=gl2k_inline]:not([data-co
         }
       }
     }
+    .wsd_payment_page_content {
+      padding-bottom: 1em;
+
+      // Style Cart Total (Spendensumme)
+      
+      .small_cart {
+        table#cart_total.pull-right {
+            float: none !important;
+
+             .h3 {
+              font-size: 2rem;
+              }
+              
+              #cart_total {
+              font-family: Nunito Sans;
+              color: rgb(61,61,60);
+              font-size: 1rem;
+              border-top: none;
+              }
+        
+              .text-right {
+                text-align: left;
+              }
+          
+        }
+      }
+    }
   }
+      
+     
 }
+
