@@ -89,6 +89,55 @@ https://www.litmus.com/blog/the-ultimate-guide-to-web-fonts/
        url('/fso_website_email_gl2k/static/src/fonts/rubik-v9-latin-regular.ttf') format('truetype'), !* Safari, Android, iOS *!
        url('/fso_website_email_gl2k/static/src/fonts/rubik-v9-latin-regular.svg#Rubik') format('svg'); !* Legacy iOS *!
 }*/
+/* latin */
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2) format('woff2');
+  src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunito/v8/ySZTeT3IuzJj0GK6uGpbBg.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXyw023e.woff2) format('woff2');
+  src: local('Rubik Regular'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v3/4sMyW_teKWHB3K8Hm-Il6A.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WD07oB-.woff2) format('woff2');
+  src: local('Rubik Medium'), local('Rubik-Medium'), url(http://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjlma-2HW7ZB_.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iGmd8WD07oB-.woff2) format('woff2');
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iFma-2HW7ZB_.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Rubik Black'), local('Rubik-Black'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7FCimmd8WD07oB-.woff2) format('woff2');
+  src: local('Rubik Black'), local('Rubik-Black'), url(http://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7FCilma-2HW7ZB_.ttf) format('ttf');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 html, body, #bodyTable, #bodyCell {
     background-color: #f6f6f5;
@@ -181,12 +230,12 @@ a:hover {
 }
 
 /* Headlines */
-.h1, .h2, .h3,
-h1, h2, h3 {
+#emailBody .snippet_block > .h1, .h2, .h3,
+#emailBody .snippet_block > h1, h2, h3 {
     margin-top: 0;
 }
-.h1, .h2, .h3, .h4, .h5, .h6,
-h1, h2, h3, h4, h5, h6 {
+#emailBody .snippet_block > .h1, .h2, .h3, .h4, .h5, .h6,
+#emailBody .snippet_block > h1, h2, h3, h4, h5, h6 {
     /*font-family: 'PT Sans', 'Trebuchet MS', sans-serif;*/
     font-family: 'Rubik' ,'Arial black','Open Sans',sans-serif;
     line-height: 140%;
@@ -205,36 +254,36 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-margin-start: inherit;
     -webkit-margin-end: inherit;
 }
-.h1, h1 {
+#emailBody .snippet_block > .h1, h1 {
     font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 32px; /*customers whish 2rem but no not use it for compatibility reasons*/
     font-weight: 900;
     color: #75b836;
     text-transform: uppercase;
 }
-.h2, h2 {
+#emailBody .snippet_block > .h2, h2 {
     font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 24px; /*customers whish 1.5rem but no not use it for compatibility reasons*/
-    font-weight: 700;
-    color: #003d84;
-    font-weight: bold;
+    font-weight: 700 !important;
+    color: #003d84 !important;
+    font-weight: bold !important;
 }
-.h3, h3 {
+#emailBody .snippet_block > .h3, h3 {
     font-family: 'Rubik', 'Arial black', 'Nunito Sans', Helvetica, Arial, 'Open Sans', sans-serif;
     font-size: 21px; /*customers whish 1.3rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #75b836;
     font-weight: bold;
 }
-.h4, h4 {
+#emailBody .snippet_block > .h4, h4 {
     font-size: 18px;
     font-weight: 300;
 }
-.h5, h5 {
+#emailBody > .h5, h5 {
     font-size: 16px;
     font-weight: 300;
 }
-.h6, h6 {
+#emailBody > .h6, h6 {
     font-size: 14px;
     font-weight: 300;
 }

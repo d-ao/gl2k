@@ -117,8 +117,7 @@
                                                                                                         class="imageContent ckediting_enabled"
                                                                                                         valign="top">
                                                                                                         <a href="https://www.global2000.at">
-                                                                                                            <img style="width:30%; border:0; max-width:120px;" class="flexibleImage"
-                                                                                                                 src="/fso_website_email_gl2k/static/src/img/GLOBAL2000-LOGO-RGB_kl.png"></img>
+                                                                                                            <img class="flexibleImage" src="/fso_website_email_gl2k/static/src/img/GLOBAL2000-LOGO-RGB_kl.png" width="195" alt="Global2000 NPG Logo" style="display: block; border: 0px; outline: none; width: 100%; height: auto; max-width: 195px;"></img>
                                                                                                         </a>
                                                                                                     </td>
                                                                                                 </tr>
@@ -242,8 +241,7 @@
                                                                                                         class="imageContent ckediting_enabled"
                                                                                                         valign="top">
                                                                                                         <a href="https://www.global2000.at">
-                                                                                                            <img style="width:30%; border:0 none;" class="flexibleImage"
-                                                                                                                 src="/fso_website_email_gl2k/static/src/icons/NationalparkGartenWeiss_AgenturHeimatWien_c.png"></img>
+                                                                                                            <img class="flexibleImage" src="/fso_website_email_gl2k/static/src/icons/NationalparkGartenWeiss_AgenturHeimatWien_c.png" width="195" alt="Global2000 NPG Logo" style="display: block; border: 0px; outline: none; width: 195px; height: auto; max-width: 195px;"></img>
                                                                                                         </a>
                                                                                                     </td>
                                                                                                 </tr>

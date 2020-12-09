@@ -11,13 +11,36 @@
     /*table.flexibleContainer {*/
     /*    width: 100% !important;*/
     /*}*/
+    /* reset Mobile center view for gl2k on img left text right and vice versa */
+    .snippet_block_text_image_left table.flexibleContainerRight,
+    .snippet_block_text_image_right table.flexibleContainerLeft {
+        text-align: left;
+    }
+    /* reset Mobile center view for gl2k on two column img an text */
+    .snippet_block_text_twocol table.flexibleContainerRight .textContent,
+    .snippet_block_text_twocol table.flexibleContainerLeft .textContent {
+        text-align: left;
+    }
+    .snippet_block_text_threecol .flexibleContainer33 .textContent,
+    .snippet_block_text_threecol .flexibleContainer33 .textContent h1, h2, h3, h4 {
+        text-align: left;
+    }
+    .snippet_block_text_threecol .flexibleContainer33 .textContent img {
+        text-align: center;
+    }
+    table.flexibleContainerRight .textContent img,
+    table.flexibleContainerLeft .textContent img {
+        text-align: center;
+    }
     #combinedheadersnippet .flexibleContainerRight img.flexibleImage {
-        width: 30% !important;
+        width: 120px !important;
+        max-width: 120px;
         margin: auto !important;
         float: right !important;
     }
     #combinedheadersnippetNPG .flexibleContainerRight img.flexibleImage {
-        width: 30% !important;
+        width: 120px !important;
+        max-width: 120px;
         margin: auto !important;
         float: right !important;
     }
@@ -69,7 +92,7 @@
 
     .h3, h3{
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 700 !important;
     }
 
     .h4, h4{

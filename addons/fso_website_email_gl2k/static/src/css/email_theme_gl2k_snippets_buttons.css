@@ -75,47 +75,56 @@
     background-color: transparent;
     border: 2px solid white;
     color: inherit;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_black a:visited,
 #emailBody span.drop_in_button.dadi_di_button_black a {
     background-color: #000000;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_green a:visited,
 #emailBody span.drop_in_button.dadi_di_button_green a {
     background-color: #75b836;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_grey a:visited,
 #emailBody span.drop_in_button.dadi_di_button_grey a {
     background-color: #3d3d3c ;
     color: #ffffff;
+    font-weight: 500;
 }
 
 #emailBody span.drop_in_button.dadi_di_button_yellow a:visited,
 #emailBody span.drop_in_button.dadi_di_button_yellow a {
     background-color: #f7a600;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_red a:visited,
 #emailBody span.drop_in_button.dadi_di_button_red a {
     background-color: #d9435d;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_blue a:visited,
 #emailBody span.drop_in_button.dadi_di_button_blue a {
     background-color: #003d84;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_orange a:visited,
 #emailBody span.drop_in_button.dadi_di_button_orange a {
     background-color: #d9435d;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.dadi_di_button_pink a:visited,
 #emailBody span.drop_in_button.dadi_di_button_pink a {
     background-color: #b32986;
     color: white;
+    font-weight: 500;
 }
 #emailBody span.drop_in_button.gl2k_di_button_red a:hover,
 #emailBody span.drop_in_button.gl2k_di_button_red a:visited,
@@ -127,6 +136,7 @@
     */
     border-bottom-width: 2.8px; /*customers whish 0,18rem but no not use it for compatibility reasons*/
     color: white;
+    font-weight: 500;
     font-family: "Rubik", "Futura W01", "Nunito Sans", Helvetica, Arial, "Open Sans", sans-serif;
 }
 #emailBody span.drop_in_button.gl2k_di_button_grey a:hover,
