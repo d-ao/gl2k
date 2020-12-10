@@ -221,7 +221,11 @@ background-color: transparent;
         background: none;
         background-color: rgba(117, 184, 54, 0.2);
       }
-      .btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, btn-primary>a:visited {
+      .btn-primary,
+      .btn-primary:active,
+      .btn-primary:focus,
+      .btn-primary:hover,
+      btn-primary>a:visited {
         background: none;
         background-color: #75b836;
         border-color: #7da359;
@@ -229,6 +233,8 @@ background-color: transparent;
 
       // Arbitrary Price Input and Add-To-Cart Button
       .arbitrary_price_form_group {
+
+        // Arbitrary Price Input Field (<input>)
         .form-control {
           border-right: none;
           border-radius: 5px 0 0 5px;
@@ -239,29 +245,37 @@ background-color: transparent;
           text-align: center;
           color: #3d3d3c;
           background-color: rgba(117,184,54,0.2);
-
-          .btn-primary {
-            background-color: rgb(117,184,54);
-          }
         }
+        // Arbitrary Price Input Field when selected (cursor in input field)
+        .form-control#price_donate:active,
+        .form-control#price_donate:focus {
+          background-color: rgb(117,184,54);
+          color: rgb(255, 255, 255);
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+        // Arbitrary Price Input Field when "activated" (=amount does not match any of the donation buttons)
+        .form-control.btn-primary,
+        .form-control.btn-primary:active,
+        .form-control.btn-primary:focus,
+        .form-control.btn-primary:hover,
+        .form-control.btn-primary>a:visited {
+            background-color: rgb(117,184,54);
+        }
+
+        // EUR at the end (right side) of the Arbitrary Price Input Field
         .input-group-addon {
           background: none;
           background-color: rgba(117,184,54,0.2);
           border-radius: 0 5px 5px 0;
         }
-
+        // EUR at the end when selected (not really useful because no change possible)
         .input-group-addon:active, .input-group-addon:focus {
           background-color: rgb(117,184,54);
           color: rgb(255, 255, 255);
         }
 
-        #price_donate:active, #price_donate:focus {
-          background-color: rgb(117,184,54);
-          color: rgb(255, 255, 255);
-          -webkit-box-shadow: none;
-          box-shadow: none;
 
-        }
       }
     }
 
