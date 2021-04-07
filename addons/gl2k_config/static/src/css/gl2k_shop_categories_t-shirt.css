@@ -240,5 +240,230 @@ body[data-rootcatid="13"] .container {
     padding-right: 7px;
 }
 
+/* Aktionspaket KRSKO */
+body[data-rootcatid="16"] #products_grid .oe_product section {
+    background: #666666ab;
+    font-size: 20px;
+    font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: 100px;
 
+}
+body[data-rootcatid="16"] #products_grid .oe_product section h5 {
+    font-size: 20px;
+    font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+body[data-rootcatid="16"] #products_grid .oe_product section a {
+    color: white;
+    font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+body[data-rootcatid="16"] #products_grid .product_price.text-primary {
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+body[data-rootcatid="16"] #products_grid .oe_product .oe_product_image img {
+    height: 100%;
+    max-height: initial;
+    width: auto;
+    max-width: initial;
+}
+
+/* reverse Shop Grid and Cart, move cart under shop grid */
+body[data-rootcatid="16"] #wrap > div.container.oe_website_sale > div.row {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* Hide category navigation menu and regain full width */
+/* ---------------Bio-Kalender-------------- */
+/*body[data-rootcatid="16"] #products_grid_before {
+    display: none
+}*/
+body[data-rootcatid="16"] #products_grid .oe_product {
+    width: 340px;
+    height: 440px;
+    margin-right: 4px;
+}
+body[data-rootcatid="16"] oe_product oe_grid oe-height-2 {
+    margin-right: 10px;
+}
+body[data-rootcatid="16"] .oe_website_sale .products_pager .input-group {
+    display: none;
+}
+body[data-rootcatid="16"] #products_grid .oe_product section {
+    background-image: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg);
+    display: flex;
+    flex-direction: column;
+    height:100px;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 2px 2px 2px;
+}
+body[data-rootcatid="16"] .oe_product .oe_product_image {
+     left: 0px;
+     right: 0px;
+     top: 0px;
+     bottom: 100px !important;
+}
+@media (max-width: 400px) {
+    body[data-rootcatid="16"] .oe_product .oe_product_image {
+        bottom: 137px !important;
+    }
+}
+body[data-rootcatid="16"] #products_grid .oe_product section > h5 { order: 1; } /* Headline */
+body[data-rootcatid="16"] #products_grid .oe_product section > div.product_price.text-primary { order: 2 }
+body[data-rootcatid="16"] #products_grid .oe_product section > div.text-info.oe_subdescription { order: 3; }
+body[data-rootcatid="16"] #products_grid .oe_product section :nth-child(4) { order: 3; }
+body[data-rootcatid="16"] #products_grid .oe_product section > div.quick_add_to_cart { order: 4; }
+
+body[data-rootcatid="16"] #products_grid .oe_product section a,
+body[data-rootcatid="16"] #products_grid .oe_product section span {
+    color: black;
+    font-family: 'Rubik' ,'Arial black','Open Sans',sans-serif;
+    font-weight: 500;
+}
+body[data-rootcatid="16"] .quick_add_to_cart .btn.btn-default.btn-xs.fa.fa-shopping-cart.a-submit {
+    font-size: 1.4rem;
+    line-height: 1.35em;
+    padding: 0.6rem 1rem;
+    font-weight: 700 !important;
+    display: inline-block;
+    white-space: normal;
+    text-align: left;
+    background-color: #d9435d;
+    border: 0.06rem solid #ad2a2a;
+    border-bottom-width: 0.18rem;
+    border-radius: 5px;
+    background-image: none !important;
+    text-shadow: none;
+}
+body[data-rootcatid="16"] .quick_add_to_cart a.btn.btn-default.btn-xs.fa.fa-shopping-cart.a-submit  {
+    color: white !important;
+    font-family: "Rubik","Futura W01","Nunito Sans",Helvetica,Arial,"Open Sans",sans-serif !important;
+
+}
+body[data-rootcatid="16"] .fa-shopping-cart:before {
+    display: none;
+}
+body[data-rootcatid="16"] .fa-shopping-cart:after {
+    margin-left: 10px;
+    content: '>';
+}
+
+body[data-rootcatid="16"] .oe_product .product_price {
+     padding: 0 0;
+     position: initial;
+}
+body[data-rootcatid="16"] .oe_product.oe_grid,
+body[data-rootcatid="16"] .oe_product.oe_grid:hover {
+    border: none;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+body[data-rootcatid="16"] .oe_website_sale h5 {
+    margin-top: 0.25em;
+}
+
+body[data-rootcatid="16"] .oe_grid h5 {
+    margin-bottom: 0px;
+}
+
+
+
+/* Warenkorb */
+
+body[data-rootcatid="16"] #products_grid_before {
+    margin-top: 40px;
+}
+
+/* Hide Meine Spende and Check out Button */
+
+
+body[data-rootcatid="16"] #products_grid_before > h3.small_cart_header {
+    display: none;
+}
+
+body[data-rootcatid="16"] .text-left.small_cart_buttons {
+    display: none;
+}
+
+/*Formularfelder abrunden*/
+
+body[data-rootcatid="16"] .form-control {
+    border-radius: 4px;
+}
+
+/*Hide Zuruech Button*/
+
+body[data-rootcatid="16"] .wsd_button_back_to_page {
+    display: none;
+}
+
+/*Style Spendenbutton unten*/
+
+body[data-rootcatid="16"] #wsd_checkout_form_submit_button {
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+body[data-rootcatid="16"] #wsd_checkout_form_submit_button {
+    float: none !important;
+}
+
+body[data-rootcatid="16"] #wsd_checkout_form_submit_button .glyphicon {
+    display: none;
+}
+
+/* Variante 1, Wenn es mit Variante 2 bei etwaigen Endgeräten Probleme gibt diese Variante testen BEGIN */
+
+/*body[data-rootcatid="16"] span.wsd_checkout_form_submit_button_text {*/
+    /*text-indent: -9999px;*/
+    /*line-height: 0;*/
+/*}*/
+/*body[data-rootcatid="16"] span.wsd_checkout_form_submit_button_text:after {*/
+    /*content: 'Jetzt spenden und bestellen';*/
+    /*text-indent: 0;*/
+    /*margin-left: -39px;*/
+    /*color: white;*/
+    /*line-height: normal;*/
+    /*visibility: visible;*/
+/*}*/
+/* Variante 1, Wenn es mit Variante 2 bei etwaigen Endgeräten Probleme gibt diese Variante testen END */
+
+/* Variante 2 moderner, geht aber vielleicht bei weniger Browsern BEGIN */
+body[data-rootcatid="16"] span.wsd_checkout_form_submit_button_text {
+    visibility: hidden;
+    word-spacing: -999px;
+    letter-spacing: -999px;
+}
+
+body[data-rootcatid="16"] span.wsd_checkout_form_submit_button_text:after {
+    content: "Jetzt spenden und bestellen";
+    visibility: visible;
+    word-spacing: normal;
+    letter-spacing: normal;
+}
+/* Variante 2 moderner, geht aber vielleicht bei weniger Browsern END */
+
+body[data-rootcatid="16"] .wsd_cfi_buttons {
+    text-align: center;
+}
+
+
+
+/* Padding im gesamten Container verringern*/
+
+body[data-rootcatid="16"] .container {
+    padding-left: 7px;
+    padding-right: 7px;
+}
 
