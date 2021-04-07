@@ -1,9 +1,12 @@
 
 $(document).ready( function() {
-	$("body[data-rootcatid='13'] .oe_product").click( function( e ) {
+    $("body[data-rootcatid='13'] .oe_product").click( function( e ) {
         e.preventDefault();
     });
-	$("body[data-rootcatid='15'] .oe_product").click( function( e ) {
+    $("body[data-rootcatid='15'] .oe_product").click( function( e ) {
+        e.preventDefault();
+    });
+    $("body[data-rootcatid='16'] .oe_product").click( function( e ) {
         e.preventDefault();
     });
     //find clicked elemments
