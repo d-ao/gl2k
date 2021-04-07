@@ -458,7 +458,9 @@ body[data-rootcatid="16"] .wsd_cfi_buttons {
     text-align: center;
 }
 
-
+body[data-rootcatid="16"] .oe_oroduct .oe_subdescription {
+    overflow: visible;
+}
 
 /* Padding im gesamten Container verringern*/
 
