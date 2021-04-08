@@ -232,22 +232,16 @@ body[data-rootcatid="13"] .wsd_cfi_buttons {
 }
 
 
-
+/* Special Design for KRSKO Shop */
 /* Padding im gesamten Container verringern*/
-
-body[data-rootcatid="13"] .container {
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
-/* Aktionspaket KRSKO */
 body[data-rootcatid="16"] #products_grid .oe_product section {
     background: #666666ab;
     font-size: 20px;
     font-family: 'Rubik' ,'Nunito Sans','Open Sans',sans-serif;
     font-weight: 500;
     font-style: normal;
-    height: 100px;
+    height: 160px;
+    justify-content: normal;
 
 }
 body[data-rootcatid="16"] #products_grid .oe_product section h5 {
@@ -268,13 +262,20 @@ body[data-rootcatid="16"] #products_grid .oe_product section a {
 body[data-rootcatid="16"] #products_grid .product_price.text-primary {
     color: white;
     line-height: 1.1;
-    margin-bottom: 8px;
+    margin-bottom: 17px;
 }
 body[data-rootcatid="16"] #products_grid .oe_product .oe_product_image img {
     height: 100%;
     max-height: initial;
     width: auto;
     max-width: initial;
+}
+
+body[data-rootcatid="16"] #products_grid .oe_product section .text-info.oe_subdescription {
+    color: #3d3d3c;
+    text-align: center;
+    line-height: normal;
+    padding: 0 10px;
 }
 
 /* reverse Shop Grid and Cart, move cart under shop grid */
@@ -290,7 +291,7 @@ body[data-rootcatid="16"] #wrap > div.container.oe_website_sale > div.row {
 }*/
 body[data-rootcatid="16"] #products_grid .oe_product {
     width: 340px;
-    height: 440px;
+    height: 500px;
     margin-right: 4px;
 }
 body[data-rootcatid="16"] oe_product oe_grid oe-height-2 {
@@ -303,26 +304,35 @@ body[data-rootcatid="16"] #products_grid .oe_product section {
     background-image: url(https://www.global2000.at/profiles/global/themes/global_action_theme/css/images/Textures_beige.jpg);
     display: flex;
     flex-direction: column;
-    height:100px;
+    height:160px;
     align-items: center;
-    justify-content: center;
+    justify-content: normal;
     padding: 2px 2px 2px 2px;
 }
 body[data-rootcatid="16"] .oe_product .oe_product_image {
      left: 0px;
      right: 0px;
      top: 0px;
-     bottom: 100px !important;
+     bottom: 160px !important;
 }
 @media (max-width: 400px) {
     body[data-rootcatid="16"] .oe_product .oe_product_image {
-        bottom: 137px !important;
+        bottom: 160px !important;
+    }
+
+    body[data-rootcatid="16"] #products_grid .oe_product {
+        width: 340px;
+        height: 500px;
+    }
+
+    body[data-rootcatid="16"] #products_grid .oe_product section {
+        height: 160px;
     }
 }
 body[data-rootcatid="16"] #products_grid .oe_product section > h5 { order: 1; } /* Headline */
-body[data-rootcatid="16"] #products_grid .oe_product section > div.product_price.text-primary { order: 2 }
-body[data-rootcatid="16"] #products_grid .oe_product section > div.text-info.oe_subdescription { order: 3; }
-body[data-rootcatid="16"] #products_grid .oe_product section :nth-child(4) { order: 3; }
+body[data-rootcatid="16"] #products_grid .oe_product section > div.product_price.text-primary { order: 3 }
+body[data-rootcatid="16"] #products_grid .oe_product section > div.text-info.oe_subdescription { order: 2; }
+body[data-rootcatid="16"] #products_grid .oe_product section :nth-child(4) { order: 2; }
 body[data-rootcatid="16"] #products_grid .oe_product section > div.quick_add_to_cart { order: 4; }
 
 body[data-rootcatid="16"] #products_grid .oe_product section a,
@@ -379,6 +389,8 @@ body[data-rootcatid="16"] .oe_grid h5 {
 
 
 
+
+
 /* Warenkorb */
 
 body[data-rootcatid="16"] #products_grid_before {
@@ -386,7 +398,6 @@ body[data-rootcatid="16"] #products_grid_before {
 }
 
 /* Hide Meine Spende and Check out Button */
-
 
 body[data-rootcatid="16"] #products_grid_before > h3.small_cart_header {
     display: none;
@@ -454,18 +465,23 @@ body[data-rootcatid="16"] span.wsd_checkout_form_submit_button_text:after {
 }
 /* Variante 2 moderner, geht aber vielleicht bei weniger Browsern END */
 
+
 body[data-rootcatid="16"] .wsd_cfi_buttons {
     text-align: center;
 }
 
-body[data-rootcatid="16"] .oe_oroduct .oe_subdescription {
-    overflow: visible;
-}
+
 
 /* Padding im gesamten Container verringern*/
 
 body[data-rootcatid="16"] .container {
     padding-left: 7px;
     padding-right: 7px;
+}
+
+/* Anzeigen des Beschreibungstextes*/
+
+body[data-rootcatid="16"] .oe_oroduct .oe_subdescription {
+    overflow: visible;
 }
 
