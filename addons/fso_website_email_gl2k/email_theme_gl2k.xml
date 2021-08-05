@@ -95,21 +95,183 @@
 
             <head>
                 <!-- COMMON CSS-ASSETS AND <head> TAGS -->
-<!--                 <style type="text/css" data-premailer="ignore">
-                     <![CDATA[
-                     @font-face {
-                          font-family: 'Nunito Sans';
-                          font-style: normal;
-                          font-weight: 400;
-                          src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2) format('woff2');
-                          src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunito/v8/ySZTeT3IuzJj0GK6uGpbBg.ttf) format('ttf');
-                          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-                     }
-                     ]]>
-               </style>-->
-                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
+<!--                     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+                     @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');-->
+<!--                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
                 <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
-                <link data-premailer="ignore" href='/fso_website_email_gl2k/static/src/css/custom_fonts_styles.css' rel='stylesheet' type='text/css' t-ignore="true"/>
+                <link data-premailer="ignore" href='/fso_website_email_gl2k/static/src/css/custom_fonts_styles.css' rel='stylesheet' type='text/css' t-ignore="true"/>-->
+                 <style type="text/css" data-premailer="ignore">
+                     <![CDATA[
+                     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&amp;display=swap');
+                     @import url('https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap');
+                    /* latin */
+                    @font-face {
+                      font-family: 'Nunito Sans';
+                      font-style: normal;
+                      font-weight: 400;
+                      src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe0qMImSLYBIv1o4X1M8cce9I9tAcVwo.woff2) format('woff2');
+                      src: local('Nunito Sans Regular'), local('NunitoSans-Regular'), url(https://fonts.gstatic.com/s/nunito/v8/ySZTeT3IuzJj0GK6uGpbBg.ttf) format('ttf');
+                      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                        mso-font-alt: 'Arial';
+                    }
+
+                    /* latin */
+                    @font-face {
+                      font-family: 'Rubik';
+                      font-style: normal;
+                      font-weight: 400;
+                      src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV7nBrXyw023e.woff2) format('woff2');
+                      src: local('Rubik Regular'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v3/4sMyW_teKWHB3K8Hm-Il6A.ttf) format('ttf');
+                      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                        mso-font-alt: 'Arial';
+                    }
+
+                    /* latin */
+                    @font-face {
+                      font-family: 'Rubik';
+                      font-style: normal;
+                      font-weight: 500;
+                      src: local('Rubik Medium'), local('Rubik-Medium'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjmmd8WD07oB-.woff2) format('woff2');
+                      src: local('Rubik Medium'), local('Rubik-Medium'), url(http://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7Eyjlma-2HW7ZB_.ttf) format('ttf');
+                      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                        mso-font-alt: 'Arial';
+                    }
+
+                    /* latin */
+                    @font-face {
+                      font-family: 'Rubik';
+                      font-style: normal;
+                      font-weight: 700;
+                      src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iGmd8WD07oB-.woff2) format('woff2');
+                      src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iFma-2HW7ZB_.ttf) format('ttf');
+                      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                        mso-font-alt: 'Arial';
+                    }
+
+                    /* latin */
+                    @font-face {
+                      font-family: 'Rubik';
+                      font-style: normal;
+                      font-weight: 900;
+                      src: local('Rubik Black'), local('Rubik-Black'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7FCimmd8WD07oB-.woff2) format('woff2');
+                      src: local('Rubik Black'), local('Rubik-Black'), url(http://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7FCilma-2HW7ZB_.ttf) format('ttf');
+                      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                        mso-font-alt: 'Arial';
+                    }
+                    ]]>
+               </style>
+                <!--<style type="text/css" data-premailer="ignore">>-->
+                    <!--<![CDATA[-->
+                        <!--/* Remove space around the email design. */-->
+                        <!--html,-->
+                        <!--body {-->
+                            <!--margin: 0 auto !important;-->
+                            <!--padding: 0 !important;-->
+                            <!--height: 100% !important;-->
+                            <!--width: 100% !important;-->
+                        <!--}-->
+
+                        <!--/* Stop Outlook resizing small text. */-->
+                        <!--* {-->
+                            <!-- -ms-text-size-adjust: 100%;-->
+                        <!--}-->
+
+                        <!--/* Stop Outlook from adding extra spacing to tables. */-->
+                        <!--table,-->
+                        <!--td {-->
+                            <!--mso-table-lspace: 0pt !important;-->
+                            <!--mso-table-rspace: 0pt !important;-->
+                        <!--}-->
+
+                        <!--/* Use a better rendering method when resizing images in Outlook IE. */-->
+                        <!--img {-->
+                            <!-- -ms-interpolation-mode:bicubic;-->
+                        <!--}-->
+
+                        <!--/* Prevent Windows 10 Mail from underlining links. Styles for underlined links should be inline. */-->
+                        <!--a {-->
+                        <!--text-decoration: none;-->
+                        <!--}-->
+                    <!--]]>-->
+                <!--</style>-->
+                <t t-set="olconditionals">
+                <![CDATA[
+                <!--[if mso 14]>
+                    <style type="text/css">
+                        h1, h2, h3, h4, h5, h6,
+                        .headerCell, .footerCell,
+                        .textContent, .textContentLast,
+                        .buttonContent,
+                        .emailCalendarDay, .emailCalendarMonth {
+                            font-family: Arial, sans-serif !important;
+                            mso-line-height-rule: exactly;
+                        }
+                    </style>
+                <![endif]-->
+                <!--[if mso 16]>
+                    <style type="text/css">
+                        h1, h2, h3, h4, h5, h6,
+                        .headerCell, .footerCell,
+                        .textContent, .textContentLast,
+                        .buttonContent,
+                        .emailCalendarDay, .emailCalendarMonth {
+                            font-family: Arial, sans-serif !important;
+                            mso-line-height-rule: exactly;
+                        }
+                    </style>
+                <![endif]-->
+
+                <!--[if mso]>
+                    <style type="text/css">
+                            /* Stop Outlook resizing small text. */
+                            * {
+                                 -ms-text-size-adjust: 100%;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Stop Outlook from adding extra spacing to tables. */
+                            table,
+                            td {
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Use a better rendering method when resizing images in Outlook IE. */
+                            img {
+                                 -ms-interpolation-mode:bicubic;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Prevent Windows 10 Mail from underlining links. Styles for underlined links should be inline. */
+                            a {
+                            text-decoration: none;
+                            }
+                    </style>
+                    <style type="text/css">
+                        * {
+                            font-family: Arial, sans-serif !important;
+                        }
+                    </style>
+                    <style type="text/css">
+                      body,
+                      p,
+                      a,
+                      #emailBody ul li,
+                      #emailBody ol li {
+                            font-family: Arial, sans-serif !important;
+                        }
+                    </style>
+                <![endif]-->
+            ]]>
+                </t>
+                <t t-raw="olconditionals">
+
+                </t>
+
+<!--            <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
+                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
+                <link data-premailer="ignore" href='/fso_website_email_gl2k/static/src/css/custom_fonts_styles.css' rel='stylesheet' type='text/css' t-ignore="true"/>-->
                 <t t-call="fso_website_email.theme_head_common"/>
                 
                 <!-- THEME gl2k CSS-ASSETS IN EDIT MODE ONLY -->
