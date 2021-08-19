@@ -315,7 +315,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_facebook.png"
-                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="middle" vspace="10" hspace="10"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="middle" vspace="10" hspace="10" alt="Facebook Icon"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -336,7 +336,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_twitter.png"
-                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="middle" vspace="10" hspace="10"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="middle" vspace="10" hspace="10" alt="Twitter Icon"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -357,7 +357,7 @@
                                                                                                                target="_blank">
                                                                                                                 <img class="flexibleImage mediaicon"
                                                                                                                      src="/fso_website_email_gl2k/static/src/icons/gl2k_youtube.png"
-                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="left" vspace="10" hspace="10"/>
+                                                                                                                     style="display: inline-block; text-align:center; width:32px; height:32px; border:0 none;" align="left" vspace="10" hspace="10" alt="Youtube Icon"/>
                                                                                                             </a>
                                                                                                         </td>
                                                                                                     </tr>
@@ -481,7 +481,8 @@
                                                                                                      style="width:32px; border:0 none; -ms-interpolation-mode: bicubic;"
                                                                                                      align="left"
                                                                                                      vspace="10"
-                                                                                                     hspace="10"/>
+                                                                                                     hspace="10"
+                                                                                                     alt="Facebook Icon"/>
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align="center"
@@ -493,7 +494,8 @@
                                                                                                      style="width:32px; border:0 none; -ms-interpolation-mode: bicubic;"
                                                                                                      align="left"
                                                                                                      vspace="10"
-                                                                                                     hspace="10"/>
+                                                                                                     hspace="10"
+                                                                                                     alt="Instagram Icon"/>
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align="center"
@@ -505,7 +507,8 @@
                                                                                                      style="width:32px; border:0 none; -ms-interpolation-mode: bicubic;"
                                                                                                      align="left"
                                                                                                      vspace="10"
-                                                                                                     hspace="10"/>
+                                                                                                     hspace="10"
+                                                                                                     alt="Youtube Icon"/>
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align="center"
@@ -517,7 +520,8 @@
                                                                                                      style="width:32px; border:0 none; -ms-interpolation-mode: bicubic;"
                                                                                                      align="left"
                                                                                                      vspace="10"
-                                                                                                     hspace="10"/>
+                                                                                                     hspace="10"
+                                                                                                     alt="Twitter Icon"/>
                                                                                             </a>
                                                                                         </td>
                                                                                     </tr>
@@ -736,7 +740,8 @@
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <a href="#">
                                                                                                 <img style="border:0 none;" class="flexibleImage snippet_block_banner_image"
-                                                                                                     src="/fso_website_email_gl2k/static/src/icons/AbsetzenUndSpendenguetesiegel.png"/>
+                                                                                                     src="/fso_website_email_gl2k/static/src/icons/AbsetzenUndSpendenguetesiegel.png"
+                                                                                                     alt=""/>
                                                                                             </a>
                                                                                         </td>
                                                                                     </tr>
