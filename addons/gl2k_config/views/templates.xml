@@ -90,6 +90,7 @@
             <script>
               var _paq = window._paq = window._paq || [];
               /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+              _paq.push(["disableCookies"]);
               _paq.push(['trackPageView']);
               _paq.push(['enableLinkTracking']);
               (function() {
@@ -101,6 +102,26 @@
               })();
             </script>
             <!-- End Matomo Code -->
+        </xpath>
+    </template>
+
+    <!-- Cookie Tool Code -->
+    <template id="cookie_tool_code" inherit_id="website.layout" name="cookie_tool_code">
+        <xpath expr="//head//title" position="after">
+            <!-- cookie_tool_code -->
+            <script>
+                window.onmessage = function(e) {
+                    if (event.origin.indexOf('global2000.at') >= 0) {
+                        if (e.data) {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: e.data,
+                            });
+                        }
+                    } else { return; }
+                };
+            </script>
+            <!-- End cookie_tool_code -->
         </xpath>
     </template>
 
