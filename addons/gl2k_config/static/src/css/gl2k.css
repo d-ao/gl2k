@@ -431,6 +431,11 @@ body .btn-danger .badge {
 }
 /* COOKIE NOTICE END */
 
+/* Modal Box Behavior When alt Tags image Modul is installed, save button moves out of screen */
+.modal-dialog.select-media .modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
 /* IFRAME MODAL BOX BEHAVIOR BEGIN */
 
 #wsd_checkout_form .form-group {
