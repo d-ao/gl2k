@@ -205,7 +205,9 @@ p {
 div, span, td {
     font-size: inherit;
 }
-
+#emailBody p {
+        margin: 0 0 0 !important;
+}
 p {
     /* Top */
     margin-top: 0;
@@ -239,8 +241,8 @@ a:hover {
 #emailBody .snippet_block > h1, h2, h3 {
     margin-top: 0;
 }
-#emailBody .snippet_block > .h1, .h2, .h3, .h4, .h5, .h6,
-#emailBody .snippet_block > h1, h2, h3, h4, h5, h6 {
+#emailBody .h1, .h2, .h3, .h4, .h5, .h6,
+#emailBody h1, h2, h3, h4, h5, h6 {
     /*font-family: 'PT Sans', 'Trebuchet MS', sans-serif;*/
     font-family: 'Rubik' , 'Arial black';
     line-height: 140%;
@@ -259,36 +261,43 @@ a:hover {
     -webkit-margin-start: inherit;
     -webkit-margin-end: inherit;
 }
-#emailBody .snippet_block > .h1, h1 {
+#emailBody .h1,
+#emailBody h1 {
     font-family: 'Rubik' , 'Arial black', 'Nunito Sans';
     font-size: 32px; /*customers whish 2rem but no not use it for compatibility reasons*/
     font-weight: 900;
     color: #75b836;
     text-transform: uppercase;
 }
-#emailBody .snippet_block > .h2, h2 {
+
+#emailBody .h2,
+#emailBody h2 {
     font-family: 'Rubik' , 'Arial black' , 'Nunito Sans';
     font-size: 24px; /*customers whish 1.5rem but no not use it for compatibility reasons*/
     font-weight: 700 !important;
     color: #003d84 !important;
     font-weight: bold !important;
 }
-#emailBody .snippet_block > .h3, h3 {
+#emailBody .h3,
+#emailBody h3 {
     font-family: 'Rubik' , 'Arial black' , 'Nunito Sans';
     font-size: 21px; /*customers whish 1.3rem but no not use it for compatibility reasons*/
     font-weight: 700;
     color: #75b836;
     font-weight: bold;
 }
-#emailBody .snippet_block > .h4, h4 {
+#emailBody .h4,
+#emailBody h4 {
     font-size: 18px;
     font-weight: 300;
 }
-#emailBody > .h5, h5 {
+#emailBody .h5,
+#emailBody h5 {
     font-size: 16px;
     font-weight: 300;
 }
-#emailBody > .h6, h6 {
+#emailBody .h6,
+#emailBody h6 {
     font-size: 14px;
     font-weight: 300;
 }
