@@ -32,7 +32,7 @@ Synchronize gardens between FS-Online and FundraisingStudio
     'installable': True,
     'depends': [
         'gl2k_gardenvis',
-        'fso_sosync'
+        'fso_sosync_base',
     ],
     'data': [],
 }
