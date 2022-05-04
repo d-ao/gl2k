@@ -263,6 +263,11 @@
                         }
                     </style>
                 <![endif]-->
+                <!--[if mso]>
+                    <style>
+                    * {-webkit-text-size-adjust: none}
+                    </style>
+                <![endif]-->
             ]]>
                 </t>
                 <t t-raw="olconditionals">
