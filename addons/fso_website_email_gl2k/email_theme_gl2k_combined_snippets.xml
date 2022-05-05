@@ -2133,6 +2133,13 @@
                                                                                 <tbody>
                                                                                     <tr>
                                                                                         <td class="textContent">
+                                                                                             <![CDATA[
+                                                                                                 <!--[if mso]>
+                                                                                                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
+                                                                                                <tr>
+                                                                                              <td valign="top">
+                                                                                                 <![endif]-->
+                                                                                             ]]>
                                                                                             <table align="left"
                                                                                                    border="0"
                                                                                                    cellpadding="0"
@@ -2140,7 +2147,7 @@
                                                                                                    class="flexibleContainer33 flexibleContainer33left">
                                                                                                 <tbody>
                                                                                                     <tr>
-                                                                                                        <td align="center"
+                                                                                                        <td align="left"
                                                                                                             class="textContent ckediting_enabled"
                                                                                                             style="text-align:center;"
                                                                                                             valign="top">
@@ -2164,7 +2171,7 @@
                                                                                                                 Schoko-Form
                                                                                                                 einen
                                                                                                                 Besuch
-                                                                                                                abstatten.&amp;nbsp;
+                                                                                                                abstatten.
                                                                                                             </p>
 
                                                                                                             <p style="text-align: left;">
@@ -2184,7 +2191,12 @@
                                                                                                     </tr>
                                                                                                 </tbody>
                                                                                             </table>
-
+                                                                                            <![CDATA[
+                                                                                                 <!--[if mso]>
+                                                                                              </td>
+                                                                                              <td valign="top">
+                                                                                                 <![endif]-->
+                                                                                             ]]>
                                                                                             <table align="left"
                                                                                                    border="0"
                                                                                                    cellpadding="0"
@@ -2216,7 +2228,7 @@
                                                                                                                 Schoko-Form
                                                                                                                 einen
                                                                                                                 Besuch
-                                                                                                                abstatten.&amp;nbsp;
+                                                                                                                abstatten.
                                                                                                             </p>
 
                                                                                                             <p style="text-align: left;">
@@ -2236,7 +2248,12 @@
                                                                                                     </tr>
                                                                                                 </tbody>
                                                                                             </table>
-
+                                                                                            <![CDATA[
+                                                                                                 <!--[if mso]>
+                                                                                              </td>
+                                                                                              <td valign="top">
+                                                                                                 <![endif]-->
+                                                                                             ]]>
                                                                                             <table align="left"
                                                                                                    border="0"
                                                                                                    cellpadding="0"
@@ -2268,7 +2285,7 @@
                                                                                                                 Schoko-Form
                                                                                                                 einen
                                                                                                                 Besuch
-                                                                                                                abstatten.&amp;nbsp;
+                                                                                                                abstatten.
                                                                                                             </p>
 
                                                                                                             <p style="text-align: left;">
@@ -2288,6 +2305,13 @@
                                                                                                     </tr>
                                                                                                 </tbody>
                                                                                             </table>
+                                                                                             <![CDATA[
+                                                                                                 <!--[if mso]>
+                                                                                              </td>
+                                                                                              </tr>
+                                                                                              </table>
+                                                                                                 <![endif]-->
+                                                                                             ]]>
                                                                                         </td>
                                                                                     </tr>
                                                                                 </tbody>

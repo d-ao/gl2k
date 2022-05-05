@@ -100,10 +100,95 @@
 <!--                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
                 <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
                 <link data-premailer="ignore" href='/fso_website_email_gl2k/static/src/css/custom_fonts_styles.css' rel='stylesheet' type='text/css' t-ignore="true"/>-->
+                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
+                <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
+
+                <t t-set="olconditionals">
+                <![CDATA[
+                <!--[if mso 14]>
+                    <style type="text/css">
+                        h1, h2, h3, h4, h5, h6,
+                        .headerCell, .footerCell,
+                        .textContent, .textContentLast,
+                        .buttonContent,
+                        .emailCalendarDay, .emailCalendarMonth {
+                            font-family: 'Arial' !important;
+                            mso-line-height-rule: exactly;
+                        }
+                    </style>
+                <![endif]-->
+                <!--[if mso 16]>
+                    <style type="text/css">
+                        h1, h2, h3, h4, h5, h6,
+                        .headerCell, .footerCell,
+                        .textContent, .textContentLast,
+                        .buttonContent,
+                        .emailCalendarDay, .emailCalendarMonth {
+                            font-family: 'Arial' !important;
+                            mso-line-height-rule: exactly;
+                        }
+                    </style>
+                <![endif]-->
+
+                <!--[if mso]>
+                    <style type="text/css">
+                            /* Stop Outlook resizing small text. */
+                            * {
+                                 -ms-text-size-adjust: 100%;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Stop Outlook from adding extra spacing to tables. */
+                            table,
+                            td {
+                                mso-table-lspace: 0pt;
+                                mso-table-rspace: 0pt;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Use a better rendering method when resizing images in Outlook IE. */
+                            img {
+                                 -ms-interpolation-mode:bicubic;
+                            }
+                    </style>
+                    <style type="text/css">
+                            /* Prevent Windows 10 Mail from underlining links. Styles for underlined links should be inline. */
+                            a {
+                            text-decoration: none;
+                            }
+                    </style>
+                    <style type="text/css">
+                        * {
+                            font-family: 'Arial' !important;
+                        }
+                    </style>
+                    <style type="text/css">
+                      body,
+                      p,
+                      a,
+                      #emailBody ul li,
+                      #emailBody ol li {
+                            font-family: 'Arial' !important;
+                        }
+                    </style>
+                <![endif]-->
+                <!--[if mso]>
+                    <style>
+                    * {-webkit-text-size-adjust: none}
+                    </style>
+                <![endif]-->
+            ]]>
+                </t>
+                <t t-raw="olconditionals">
+
+                </t>
+
+                <t t-set="conditionals">
+
                  <style type="text/css" data-premailer="ignore">
-                     <![CDATA[
                      @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&amp;display=swap');
                      @import url('https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap');
+                     <![CDATA[
                     /* latin */
                     @font-face {
                       font-family: 'Nunito Sans';
@@ -160,6 +245,9 @@
                     }
                     ]]>
                </style>
+                </t>
+                <t t-raw="conditionals">
+                </t>
                 <!--<style type="text/css" data-premailer="ignore">>-->
                     <!--<![CDATA[-->
                         <!--/* Remove space around the email design. */-->
@@ -194,85 +282,7 @@
                         <!--}-->
                     <!--]]>-->
                 <!--</style>-->
-                <t t-set="olconditionals">
-                <![CDATA[
-                <!--[if mso 14]>
-                    <style type="text/css">
-                        h1, h2, h3, h4, h5, h6,
-                        .headerCell, .footerCell,
-                        .textContent, .textContentLast,
-                        .buttonContent,
-                        .emailCalendarDay, .emailCalendarMonth {
-                            font-family: Arial, sans-serif !important;
-                            mso-line-height-rule: exactly;
-                        }
-                    </style>
-                <![endif]-->
-                <!--[if mso 16]>
-                    <style type="text/css">
-                        h1, h2, h3, h4, h5, h6,
-                        .headerCell, .footerCell,
-                        .textContent, .textContentLast,
-                        .buttonContent,
-                        .emailCalendarDay, .emailCalendarMonth {
-                            font-family: Arial, sans-serif !important;
-                            mso-line-height-rule: exactly;
-                        }
-                    </style>
-                <![endif]-->
 
-                <!--[if mso]>
-                    <style type="text/css">
-                            /* Stop Outlook resizing small text. */
-                            * {
-                                 -ms-text-size-adjust: 100%;
-                            }
-                    </style>
-                    <style type="text/css">
-                            /* Stop Outlook from adding extra spacing to tables. */
-                            table,
-                            td {
-                                mso-table-lspace: 0pt;
-                                mso-table-rspace: 0pt;
-                            }
-                    </style>
-                    <style type="text/css">
-                            /* Use a better rendering method when resizing images in Outlook IE. */
-                            img {
-                                 -ms-interpolation-mode:bicubic;
-                            }
-                    </style>
-                    <style type="text/css">
-                            /* Prevent Windows 10 Mail from underlining links. Styles for underlined links should be inline. */
-                            a {
-                            text-decoration: none;
-                            }
-                    </style>
-                    <style type="text/css">
-                        * {
-                            font-family: Arial, sans-serif !important;
-                        }
-                    </style>
-                    <style type="text/css">
-                      body,
-                      p,
-                      a,
-                      #emailBody ul li,
-                      #emailBody ol li {
-                            font-family: Arial, sans-serif !important;
-                        }
-                    </style>
-                <![endif]-->
-                <!--[if mso]>
-                    <style>
-                    * {-webkit-text-size-adjust: none}
-                    </style>
-                <![endif]-->
-            ]]>
-                </t>
-                <t t-raw="olconditionals">
-
-                </t>
 
 <!--            <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
                 <link data-premailer="ignore" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet" type="text/css" t-ignore="true"/>
