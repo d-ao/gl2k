@@ -2135,7 +2135,7 @@
                                                                                         <td class="textContent">
                                                                                              <![CDATA[
                                                                                                  <!--[if mso]>
-                                                                                                 <table border="0" cellpadding="0" cellspacing="0" align="left" width="100%">
+                                                                                                 <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
                                                                                                 <tr>
                                                                                               <td valign="top">
                                                                                                  <![endif]-->
@@ -2158,7 +2158,6 @@
                                                                                                                 Überschift
                                                                                                                 1
                                                                                                             </h3>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 Vielen
                                                                                                                 wird
@@ -2173,7 +2172,6 @@
                                                                                                                 Besuch
                                                                                                                 abstatten.
                                                                                                             </p>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2183,7 +2181,6 @@
                                                                                                                     Check
                                                                                                                 </a>
                                                                                                             </span>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2215,7 +2212,6 @@
                                                                                                                 Überschrift
                                                                                                                 2
                                                                                                             </h3>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 Vielen
                                                                                                                 wird
@@ -2230,7 +2226,6 @@
                                                                                                                 Besuch
                                                                                                                 abstatten.
                                                                                                             </p>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2240,7 +2235,6 @@
                                                                                                                     Check
                                                                                                                 </a>
                                                                                                             </span>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2272,7 +2266,6 @@
                                                                                                                 Überschrift
                                                                                                                 3
                                                                                                             </h3>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 Vielen
                                                                                                                 wird
@@ -2287,7 +2280,6 @@
                                                                                                                 Besuch
                                                                                                                 abstatten.
                                                                                                             </p>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2297,7 +2289,6 @@
                                                                                                                     Check
                                                                                                                 </a>
                                                                                                             </span>
-
                                                                                                             <p style="text-align: left;">
                                                                                                                 <br/>
                                                                                                             </p>
@@ -2364,7 +2355,6 @@
                                                                                     <tr>
                                                                                         <td class="textContent ckediting_enabled">
                                                                                             <p style="text-align: start; ">
-                                                                                                <span style="font-size: 16px; background-color: transparent; text-align: center;">
                                                                                                     Vestibulum vitae
                                                                                                     metus sed purus
                                                                                                     elementum malesuada.
@@ -2376,7 +2366,6 @@
                                                                                                     in, rhoncus nec,
                                                                                                     tempor eleifend,
                                                                                                     sem. ...
-                                                                                                </span>
                                                                                             </p>
 
                                                                                             <p>Vestibulum vitae metus
