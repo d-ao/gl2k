@@ -123,7 +123,7 @@ class GL2KGardenVis(http.Controller):
 
     # Export for Fotowettbewerb
     @http.route('/gl2k/garden/zipexport', website=True, auth='public')
-    def gl2k_garden_zipexport(self, only_records_with_images=True, **kwargs):
+    def gl2k_garden_zipexport(self, only_records_with_images=True, full_resolution=False, **kwargs):
         # https://stackabuse.com/the-python-tempfile-module/
         # https://www.datacamp.com/community/tutorials/zip-file#CZF
         # https://docs.python.org/2/library/zipfile.html
@@ -200,8 +200,12 @@ class GL2KGardenVis(http.Controller):
 
             # EXPORT IMAGE V2 (hopefully this will save memory)
             if image_name:
-                zip_archive.writestr(image_name,
-                                     base64.b64decode(r.cmp_image_file if r.cmp_image_file else r.garden_image_file))
+                if bool(full_resolution):
+                    zip_archive.writestr(image_name,
+                                         base64.b64decode(r.garden_image_file))
+                else:
+                    zip_archive.writestr(image_name,
+                                         base64.b64decode(r.cmp_image_file if r.cmp_image_file else r.garden_image_file))
 
         # Add the finished CSV file to the zip archive
         csv_temp_file.seek(0)
