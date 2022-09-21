@@ -47,7 +47,7 @@ $(document).ready(function () {
                 organisation_name_label.text("Name der Gemeinde");
             }
             else if (type_selected === "verein") {
-                organisation_name_label.text("Vereinsname");
+                organisation_name_label.text("Name");
             }
             else if (type_selected === "schule") {
                 organisation_name_label.text("Name der Schule");

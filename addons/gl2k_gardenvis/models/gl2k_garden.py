@@ -165,7 +165,7 @@ class GL2KGarden(models.Model):
     type = fields.Selection(string="Typ", selection=[('privat', 'Privat'),
                                                      ('gemeinde', 'Gemeinde'),
                                                      ('schule', 'Schule'),
-                                                     ('verein', 'Verein')],
+                                                     ('verein', 'Andere')],
                             track_visibility='onchange')
     organisation_name = fields.Char(string="Organisationsname")
     #
