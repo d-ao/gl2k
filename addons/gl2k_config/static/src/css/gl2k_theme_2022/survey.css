@@ -1,8 +1,0 @@
-
-/*#wrapwrap > main > div > div.container > div.survey_page_snippets.survey_page_snippets_top > div > section > div > div > div > h1 {
-  font-size: 41px;
-}*/
-
-#wrapwrap > main > div > div.container > div.page-header > h1[data-oe-model="survey.page"] {
-    font-size: 26px;
-}
